@@ -6,7 +6,6 @@ html {
 
 body {
   background-color: white;
-  /* background-color: #f1f5f8; */
   height: 100vh;
   font-family: 'Mooli', sans-serif;
 }
@@ -21,7 +20,26 @@ body {
 
 .first-two-divs {
   display: flex;
-  flex-direction: column; /* Stack them vertically */
+  flex-direction: column; 
+}
+
+.boxOne {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.boxTwo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.boxThree {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .firstIMG {
@@ -30,9 +48,9 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/whySwimm.jpg);
-  background-size: cover; /* Add this line to make the image cover the div */
-  box-shadow: 5px 5px 5px black;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
   border-radius: 6px;
   margin-top: 20px;
 }
@@ -58,31 +76,31 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/schedule.svg);
-  background-size: cover; 
-  box-shadow: 5px 5px 5px black;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
   border-radius: 6px;
-  margin-top: 40px;
-
+  margin-top: 20px;
 }
 
 .secondP {
   display: flex;
-  align-items: baseline;
-  flex-direction: row-reverse;
-  align-content: flex-end;
-  list-style: none;
-  color: black;
-  font-size: 22px;
-  justify-content: center;
-  text-shadow: 0 0 1px black;
-  font-weight: 550;
-  font-size: 25px;
-  margin-top: -33px;
+    align-items: baseline;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    list-style: none;
+    color: white;
+    font-size: 22px;
+    justify-content: center;
+    text-shadow: 0 0 1px white;
+    font-weight: 700;
 }
 
 .anchorStyle {
+  margin-left: -10px;
+    margin-right: -10px;
   text-decoration: none;
+  flex: 1;
 }
 
 .thirdIMG {
@@ -91,12 +109,11 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background: url(/images/calendar.svg);
-  background-size: cover; 
-  box-shadow: 5px 5px 5px black;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
   border-radius: 6px;
-  background-position: bottom 230px; 
-  margin-top: 40px;
+  margin-top: 20px;
 
 }
 
@@ -106,12 +123,11 @@ body {
   flex-direction: row-reverse;
   align-content: flex-end;
   list-style: none;
-  color: black;
+  color: white;
   font-size: 22px;
   justify-content: center;
   text-shadow: 0 0 1px black;
   font-weight: 550;
-  margin-top: -45px;
   width: 100%;
   
 }
@@ -122,12 +138,11 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background: url(/images/history.jpg);
-  background-size: cover; /* Add this line to make the image cover the div */
-  box-shadow: 5px 5px 5px black;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
   border-radius: 6px;
-  margin-top: 40px;
-  background-position:  10px; /* Move it 20 pixels from the bottom */
+  margin-top: 20px;
 
 }
 
@@ -137,73 +152,16 @@ body {
   flex-direction: row-reverse;
   align-content: flex-end;
   list-style: none;
-  color: black;
+  color: white;
   font-size: 22px;
   justify-content: center;
   text-shadow: 0 0 1px black;
   font-weight: 550;
   font-size: 25px;
-  margin-top: -25px;
+  
   
 }
 
-.welcome {
-  background: url(/images/pool.gif);
-    height: 440px;
-    background-size: cover;
-    width: 100%;
-    display: block;
-    padding: 12px;
-    background-position: bottom;
-    
-}
-
-.welcomeHeader {
-  width: 330px;
-  margin: 0 auto;
-font-size: 25px;
-padding-left: 15px;
-letter-spacing: 1.5px;
-line-height: 1.8;
-font-weight: 500;
-color: white;
-}
-
-.welcomeText1 {
-  width: 330px;
-    margin: 0 auto;
-    font-size: 21px;
-    color: rgb(26, 4, 4);
-    margin-top: 15px;
-    padding-left: 40px;
-    font-weight: 600;
-    margin-top: 40px;
-    color: white;
-}
-
-.welcomeText2{ 
-  width: 330px;
-    margin: 0 auto;
-    font-size: 21px;
-    color: black;
-    margin-top: 15px;
-    padding-left: 45px;
-    font-weight: 600;
-    margin-top: 30px;
-    color: white;
-}
-
-.welcomeText3 {
-  width: 330px;
-  margin: 0 auto;
-  font-size: 21px;
-  color: black;
-  margin-top: 15px;
-  padding-left: 55px;
-  font-weight: 600;
-  margin-top: 30px;
-  color: white;
-}
 
 .offer{
   margin-top: 40px;
@@ -273,10 +231,61 @@ color: white;
   
 }
 
-
 .headerWhoFor {
-  margin-top: 15px;
+  margin-top: 50px;
+  width: 300px;
+  margin: 0 auto;
 }
+
+.headerContacts { 
+  width: 150px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-size: 35px;
+}
+
+.address {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 45px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.addressText {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+
+
+.contacts {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ffbc00bf;
+  height: 1000px;
+  padding-top: 20px;
+}
+
+.phoneNumbers {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 45px;
+}
+
+
+
 
 .beneffits {
   color: black;
@@ -342,5 +351,45 @@ color: white;
   color: white;
   box-shadow: 5px 5px 5px black;
   
+}
+
+
+@media (min-width: 920px ) {
+
+  .boxOne {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .boxTwo {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+  }
+
+  .boxThree {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+  }
+
+  .firstIMG, .secondIMG, .thirdIMG, .fourthIMG {
+    height: 240px;
+  }
+
+  .threeDivs {
+    display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  }
+
+  .secondThreeDivs {
+    display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  }
+  
+
 }
 

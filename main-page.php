@@ -16,15 +16,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <title>Начална страница</title>
 </head>
 
 <body>
 
+
+
+
   <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
-        <a class="navbar-brand" href="/main-page.php"><img class="logo" src="/images/по-нова_снимка-removebg-preview.png" height="60" /></a>
+        <a class="navbar-brand" href="/main-page.php"><img class="logo" src="/images/NAME-removebg-preview.png" height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span id="togglerID" class="navbar-toggler-icon"></span>
         </button>
@@ -56,24 +60,9 @@
 
   <main>
 
-  
-  
+    
+    <div id="first" class="boxOne">
 
-    <div class="welcome">
-
-    <span id="imgP"></span>
-
-      <h1 class="welcomeHeader">Добре дошли в Спортен &nbsp &nbsp клуб по плуване &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Велико Търново.</h1>
-      <p class="welcomeText1">Не сте се родили научени &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp да плувате?</p>
-      <p class="welcomeText2">Не се притеснявайте,</p>
-      <p class="welcomeText3">ние ще ви научим!</p>
-
-    </div>
-
-
-
-    <div class="boxOne">
-      
       <a class="anchorStyle" href="#">
         <div class="firstIMG">
           <p class="imgP">Защо плуване?</p>
@@ -88,21 +77,86 @@
 
     </div>
 
-    <div class="boxTwo">
+    <div id="second" class="boxTwo">
 
       <a class="anchorStyle" href="#">
         <div class="thirdIMG">
-          <p class="thirdP">Календар на събитията</p>
+          <p class="thirdP">Календар</p>
         </div>
       </a>
 
       <a class="anchorStyle" href="#">
         <div class="fourthIMG">
-          <p class="fourthP">История на клуба</p>
+          <p class="fourthP">История</p>
         </div>
       </a>
 
     </div>
+
+    <div id="third" class="boxThree">
+
+      <a class="anchorStyle" href="#">
+        <div class="thirdIMG">
+          <p class="thirdP">Календар</p>
+        </div>
+      </a>
+
+      <a class="anchorStyle" href="#">
+        <div class="fourthIMG">
+          <p class="fourthP">История</p>
+        </div>
+      </a>
+
+    </div>
+
+
+    <!-- THIS IS THE LOGIC TO MAKE 3 DIVS BE DISPLAYED NEXT TO EACH OTHER IF WE RESIZE OVER 1050PX -->
+
+   <div id="threeDivs">
+
+  <a class="anchorStyle" href="#">
+        <div class="firstIMG">
+          <p class="imgP">Защо плуване?</p>
+        </div>
+      </a>
+
+      <a class="anchorStyle" href="#">
+        <div class="secondIMG">
+          <p class="secondP">График</p>
+        </div>
+      </a>
+
+      <a class="anchorStyle" href="#">
+        <div class="thirdIMG">
+          <p class="thirdP">Календар</p>
+        </div>
+      </a>
+
+  </div>
+
+  <div id="secondThreeDivs">
+  
+  <a class="anchorStyle" href="#">
+        <div class="firstIMG">
+          <p class="imgP">Защо плуване?</p>
+        </div>
+      </a>
+
+      <a class="anchorStyle" href="#">
+        <div class="secondIMG">
+          <p class="secondP">График</p>
+        </div>
+      </a>
+
+      <a class="anchorStyle" href="#">
+        <div class="thirdIMG">
+          <p class="thirdP">Календар</p>
+        </div>
+      </a>
+  </div> 
+
+
+    <!--  THIS IS THE LOGIC TO MAKE 3 DIVS BE DISPLAYED IF WE RESIZE OVER 1050PX -->
 
     <div class="offer">
       <b>
@@ -179,21 +233,69 @@
       </p>
     </div>
 
+    <div class="contacts">
+
+      <h1 class="headerWhoFor"> &nbsp &nbsp Къде се провеждат &nbsp &nbsp &nbsp &nbsp заниманията?</h1>
+      <p class="address">Адрес: </p>
+      <p class="addressText">ул. Бяла Бона 10, <br>гр. Велико Търново</p>
+
+
+      <h1 class="headerContacts">Контакти</h1>
+      <h2 class="phoneNumbers">Даниел Стоянов: <br>0878 687 555</h2>
+      <h2 class="phoneNumbers">Панайот Паздерков: <br>0898 579 010</h2>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
   </main>
 
+  <?php include "footer.php" ?>
 
 
 
+  <script>
+    const boxOne = document.getElementById('first')
+    const boxTwo = document.getElementById('second');
+    const boxThree = document.getElementById('third');
+
+    const firstThreeDivs = document.getElementById('threeDivs');
+    const secondThreeDivs = document.getElementById('secondThreeDivs');
+
+    function resizeWidth() {
+      if (window.innerWidth > 920) {
+
+        boxOne.style.display = "none";
+        boxTwo.style.display = "none";
+        boxThree.style.display = "none";
+
+        firstThreeDivs.style.display = "flex";
+        secondThreeDivs.style.display = "flex";
+
+      } if (window.innerWidth < 920) {
+        boxOne.style.display = "flex";
+        boxTwo.style.display = "flex";
+        boxThree.style.display = "flex";
+
+        firstThreeDivs.style.display = "none";
+        secondThreeDivs.style.display = "none";
+      }
+
+    } resizeWidth ();
+
+    window.addEventListener('resize', resizeWidth);
 
 
 
-
-
-
-
-
-
-
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
