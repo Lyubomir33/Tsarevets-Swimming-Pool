@@ -28,7 +28,7 @@
   <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
-        <a class="navbar-brand" href="/main-page.php"><img class="logo" src="/images/NAME-removebg-preview.png" height="60" /></a>
+        <a class="logo" class="navbar-brand" href="/main-page.php">СКП ЦАРЕВЕЦ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span id="togglerID" class="navbar-toggler-icon"></span>
         </button>
@@ -96,13 +96,13 @@
     <div id="third" class="boxThree">
 
       <a class="anchorStyle" href="#">
-        <div class="thirdIMG">
+        <div class="fifthIMG">
           <p class="thirdP">Календар</p>
         </div>
       </a>
 
       <a class="anchorStyle" href="#">
-        <div class="fourthIMG">
+        <div class="sixthIMG">
           <p class="fourthP">История</p>
         </div>
       </a>
@@ -137,19 +137,19 @@
   <div id="secondThreeDivs">
   
   <a class="anchorStyle" href="#">
-        <div class="firstIMG">
+        <div class="fourthIMG">
           <p class="imgP">Защо плуване?</p>
         </div>
       </a>
 
       <a class="anchorStyle" href="#">
-        <div class="secondIMG">
+        <div class="fifthIMG">
           <p class="secondP">График</p>
         </div>
       </a>
 
       <a class="anchorStyle" href="#">
-        <div class="thirdIMG">
+        <div class="sixthIMG  ">
           <p class="thirdP">Календар</p>
         </div>
       </a>

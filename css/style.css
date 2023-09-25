@@ -10,6 +10,19 @@ body {
   font-family: 'Mooli', sans-serif;
 }
 
+.logo {
+  font-weight: 700;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-left: 0px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
 .img-belowMenu {
   background: url(/images/swim.jpg);
   background-position: center;
@@ -160,6 +173,32 @@ body {
   font-size: 25px;
   
   
+}
+
+.fifthIMG { 
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 175px;
+  padding: 15px;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.sixthIMG { 
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 175px;
+  padding: 15px;
+  background-image: url(/images/test1.jpg);
+  background-size: cover;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 6px;
+  margin-top: 20px;
 }
 
 
@@ -373,8 +412,9 @@ body {
     margin-top: 30px;
   }
 
-  .firstIMG, .secondIMG, .thirdIMG, .fourthIMG {
+  .firstIMG, .secondIMG, .thirdIMG, .fourthIMG, .fifthIMG, .sixthIMG {
     height: 240px;
+    
   }
 
   .threeDivs {
@@ -388,7 +428,10 @@ body {
     display: none;
   justify-content: space-evenly;
   align-items: center;
+  
   }
+
+ 
   
 
 }
