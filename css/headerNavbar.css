@@ -4,6 +4,11 @@
   border-radius: 6px;
   
 }
+
+#neubar {
+  box-shadow: 0 0 3px black;
+}
+
 #neubar .dropdown-menu a:hover {
   color: #454545
 }
@@ -11,7 +16,7 @@
   margin : auto 4px;
 }
 #neubar a {
-
+  
   padding-left:12px;
   padding-right:12px;
 }

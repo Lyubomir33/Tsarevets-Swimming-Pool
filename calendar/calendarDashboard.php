@@ -4,307 +4,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
-  <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="../css/headerNavbar.css">
   <link rel="stylesheet" href="../css/calendar.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <title>Document</title>
 </head>
+
 <body>
 
-  
-<div class="container">
-      <div class="header">
-        <div id="month"></div>
-        <div>
-          <button id="btnBack"><i class="fa fa-angle-left"></i></button>
-          <button id="btnNext"><i class="fa fa-angle-right"></i></button>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+      <div class="container">
+        <a class="logo" class="navbar-brand" href="/calendar/calendarDashboard.php">СКП ЦАРЕВЕЦ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span id="togglerID" class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ">
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">НОВИНИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">КОНТАКТИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">ОТЗИВИ</a>
+            </li>
+
+
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="weekdays">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-      </div>
-      <div id="calendar"></div>
-    </div>
-    <div id="modal"></div>
-    <div id="addEvent">
-      <h2>Add Event</h2>
-      <input type="text" id="txtTitle" placeholder="Event Title" />
-      <button id="btnSave">Save</button>
-      <button class="btnClose">Close</button>
-    </div>
+    </nav>
+  </header>
 
-    <div id="viewEvent">
-      <h2>Event</h2>
-      <p id="eventText">This is Sample Event</p>
-      <button id="btnDelete">Delete</button>
-      <button class="btnClose">Close</button>
-    </div>
+  <div>
+    <h1 class="schedule">График</h1>
+  </div>
 
+  <div class="move-around">
+    <table>
+      <thead>
+        <tr>
+          <th data-label="Account">Account</th>
+          <th data-label="Due Date">Due Date</th>
+          <th data-label="Amount">Amount</th>
+          <th data-label="Period">Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Account">Visa - 3412</td>
+          <td data-label="Due Date">04/01/2016</td>
+          <td data-label="Amount">$1,190</td>
+          <td data-label="Period">03/01/2016 - 03/31/2016</td>
+        </tr>
 
+        <tr>
+          <td data-label="Account">Visa - 6076</td>
+          <td data-label="Due Date">03/01/2016</td>
+          <td data-label="Amount">$2,443</td>
+          <td data-label="Period">02/01/2016 - 02/29/2016</td>
+        </tr>
 
-  
-
-
-
-<script>
- const holidays = [
-  {
-    hdate: "01-01-2023",
-    holiday: "New Year Day",
-  },
-  {
-    hdate: "15-01-2023",
-    holiday: "Pongal",
-  },
-  {
-    hdate: "16-01-2023",
-    holiday: "Thiruvalluvar Day",
-  },
-  {
-    hdate: "17-01-2023",
-    holiday: "Uzhavar Thirunal",
-  },
-  {
-    hdate: "26-01-2023",
-    holiday: "Republic Day",
-  },
-  {
-    hdate: "05-02-2023",
-    holiday: "Thai Poosam",
-  },
-  {
-    hdate: "22-03-2023",
-    holiday: "Telugu New Year Day",
-  },
-  {
-    hdate: "01-04-2023",
-    holiday: "Annual closing of Accounts for Commercial Banks and Co-operative Banks",
-  },
-  {
-    hdate: "04-04-2023",
-    holiday: "Mahaveer Jayanthi",
-  },
-  {
-    hdate: "07-04-2023",
-    holiday: "Good Friday",
-  },
-  {
-    hdate: "14-04-2023",
-    holiday: "Tamil New Years Day and Dr.B.R.Ambedkars Birthday",
-  },
-  {
-    hdate: "22-04-2023",
-    holiday: "Ramzan (Idul Fitr)",
-  },
-  {
-    hdate: "01-05-2023",
-    holiday: "May Day",
-  },
-  {
-    hdate: "29-06-2023",
-    holiday: "Bakrid(Idul Azha)",
-  },
-  {
-    hdate: "29-07-2023",
-    holiday: "Muharram",
-  },
-  {
-    hdate: "15-08-2023",
-    holiday: "Independence Day",
-  },
-  {
-    hdate: "06-09-2023",
-    holiday: "Krishna Jayanthi",
-  },
-  {
-    hdate: "17-09-2023",
-    holiday: "Vinayakar Chathurthi",
-  },
-  {
-    hdate: "28-09-2023",
-    holiday: "Milad-un-Nabi",
-  },
-  {
-    hdate: "23-10-2023",
-    holiday: "Ayutha Pooja",
-  },
-  {
-    hdate: "24-10-2023",
-    holiday: "Vijaya Dasami",
-  },
-  {
-    hdate: "12-11-2023",
-    holiday: "Deepavali",
-  },
-  {
-    hdate: "25-12-2023",
-    holiday: "Christmas",
-  },
-];
-const calendar = document.querySelector("#calendar");
-const monthBanner = document.querySelector("#month");
-let navigation = 0;
-let clicked = null;
-let events = localStorage.getItem("events") ? JSON.parse(localStorage.getItem("events")) : [];
-const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-function loadCalendar() {
-  const dt = new Date();
-
-  if (navigation != 0) {
-    dt.setMonth(new Date().getMonth() + navigation);
-  }
-  const day = dt.getDate();
-  const month = dt.getMonth();
-  const year = dt.getFullYear();
-  monthBanner.innerText = `${dt.toLocaleDateString("en-us", {
-    month: "long",
-  })} ${year}`;
-  calendar.innerHTML = "";
-  const dayInMonth = new Date(year, month + 1, 0).getDate();
-  const firstDayofMonth = new Date(year, month, 1);
-  const dateText = firstDayofMonth.toLocaleDateString("en-us", {
-    weekday: "long",
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  });
-
-  const dayString = dateText.split(", ")[0];
-  const emptyDays = weekdays.indexOf(dayString);
-
-  for (let i = 1; i <= dayInMonth + emptyDays; i++) {
-    const dayBox = document.createElement("div");
-    dayBox.classList.add("day");
-    const monthVal = month + 1 < 10 ? "0" + (month + 1) : month + 1;
-    const dateVal = i - emptyDays < 10 ? "0" + (i - emptyDays) : i - emptyDays;
-    const dateText = `${dateVal}-${monthVal}-${year}`;
-    if (i > emptyDays) {
-      dayBox.innerText = i - emptyDays;
-      //Event Day
-      const eventOfTheDay = events.find((e) => e.date == dateText);
-      //Holiday
-      const holidayOfTheDay = holidays.find((e) => e.hdate == dateText);
-
-      if (i - emptyDays === day && navigation == 0) {
-        dayBox.id = "currentDay";
-      }
-
-      if (eventOfTheDay) {
-        const eventDiv = document.createElement("div");
-        eventDiv.classList.add("event");
-        eventDiv.innerText = eventOfTheDay.title;
-        dayBox.appendChild(eventDiv);
-      }
-      if (holidayOfTheDay) {
-        const eventDiv = document.createElement("div");
-        eventDiv.classList.add("event");
-        eventDiv.classList.add("holiday");
-        eventDiv.innerText = holidayOfTheDay.holiday;
-        dayBox.appendChild(eventDiv);
-      }
-
-      dayBox.addEventListener("click", () => {
-        showModal(dateText);
-      });
-    } else {
-      dayBox.classList.add("plain");
-    }
-    calendar.append(dayBox);
-  }
-}
-function buttons() {
-  const btnBack = document.querySelector("#btnBack");
-  const btnNext = document.querySelector("#btnNext");
-  const btnDelete = document.querySelector("#btnDelete");
-  const btnSave = document.querySelector("#btnSave");
-  const closeButtons = document.querySelectorAll(".btnClose");
-  const txtTitle = document.querySelector("#txtTitle");
-
-  btnBack.addEventListener("click", () => {
-    navigation--;
-    loadCalendar();
-  });
-  btnNext.addEventListener("click", () => {
-    navigation++;
-    loadCalendar();
-  });
-  modal.addEventListener("click", closeModal);
-  closeButtons.forEach((btn) => {
-    btn.addEventListener("click", closeModal);
-  });
-  btnDelete.addEventListener("click", function () {
-    events = events.filter((e) => e.date !== clicked);
-    localStorage.setItem("events", JSON.stringify(events));
-    closeModal();
-  });
-
-  btnSave.addEventListener("click", function () {
-    if (txtTitle.value) {
-      txtTitle.classList.remove("error");
-      events.push({
-        date: clicked,
-        title: txtTitle.value.trim(),
-      });
-      txtTitle.value = "";
-      localStorage.setItem("events", JSON.stringify(events));
-      closeModal();
-    } else {
-      txtTitle.classList.add("error");
-    }
-  });
-}
-
-const modal = document.querySelector("#modal");
-const viewEventForm = document.querySelector("#viewEvent");
-const addEventForm = document.querySelector("#addEvent");
-
-function showModal(dateText) {
-  clicked = dateText;
-  const eventOfTheDay = events.find((e) => e.date == dateText);
-  if (eventOfTheDay) {
-    //Event already Preset
-    document.querySelector("#eventText").innerText = eventOfTheDay.title;
-    viewEventForm.style.display = "block";
-  } else {
-    //Add new Event
-    addEventForm.style.display = "block";
-  }
-  modal.style.display = "block";
-}
-
-//Close Modal
-function closeModal() {
-  viewEventForm.style.display = "none";
-  addEventForm.style.display = "none";
-  modal.style.display = "none";
-  clicked = null;
-  loadCalendar();
-}
-
-buttons();
-loadCalendar();
-</script>
+        <tr>
+          <td data-label="Account">Corporate AMEX</td>
+          <td data-label="Due Date">03/01/2016</td>
+          <td data-label="Amount">$1,181</td>
+          <td data-label="Period">02/01/2016 - 02/29/2016</td>
+        </tr>
 
 
+      </tbody>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"> </script>
+    </table>
+
+
+  </div>
+
+  <div class="questions">
+    <p>Имате въпроси свързани с графика? <br><br>
+    <p> Бихте искали да получите повече информация относно записвания за плуване?</p>
+  </div>
+
+  <div>
+    <h1 class="headerContacts">Контакти</h1>
+    <h2 class="phoneNumbers">Даниел Стоянов: <br>0878 687 555</h2>
+    <h2 class="phoneNumbers">Панайот Паздерков: <br>0898 579 010</h2>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/0e55d70a76.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
 </body>
 
