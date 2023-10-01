@@ -8,35 +8,37 @@ body {
   background-color: white;
   height: 100vh;
   font-family: 'Mooli', sans-serif;
+
 }
 
 .logo {
   font-weight: 700;
-    letter-spacing: 1.5px;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-left: 0px;
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: 0px;
+  font-size: 26px;
+  text-decoration: none;
+  color: black;
 }
 
 .img-belowMenu {
   background: url(/images/swim.jpg);
   background-position: center;
-  
-  height: 350px; 
+
+  height: 350px;
 
 }
 
 .first-two-divs {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .boxOne {
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -61,14 +63,28 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/deca.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
   margin-top: 20px;
+  /* filter: brightness(60%); */
+  transform: scale(1.0);
+
 }
 
-.imgP{
+.firstIMG:hover {
+  transform: scale(1.1);
+  /* filter: brightness(100%);  */
+  transition: 0.7s;
+
+}
+
+.firstIMG:not(:hover) {
+  transition: 0.7s;
+}
+
+
+
+.imgP {
   display: flex;
   align-items: baseline;
   flex-direction: row-reverse;
@@ -79,7 +95,7 @@ body {
   justify-content: center;
   text-shadow: 0 0 1px white;
   font-weight: 450;
-    
+  /* filter: brightness(100%);  */
 }
 
 
@@ -89,29 +105,38 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/poyas.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
+  filter: brightness(60%);
+
   margin-top: 20px;
+}
+
+.secondIMG:hover {
+  transition: 0.5s;
+  filter: brightness(100%);
+}
+
+.secondIMG:not(:hover) {
+  transition: 0.5s;
 }
 
 .secondP {
   display: flex;
-    align-items: baseline;
-    flex-direction: row-reverse;
-    align-content: flex-end;
-    list-style: none;
-    color: white;
-    font-size: 22px;
-    justify-content: center;
-    text-shadow: 0 0 1px white;
-    font-weight: 700;
+  align-items: baseline;
+  flex-direction: row-reverse;
+  align-content: flex-end;
+  list-style: none;
+  color: white;
+  font-size: 22px;
+  justify-content: center;
+  text-shadow: 0 0 1px white;
+  font-weight: 700;
 }
 
 .anchorStyle {
   margin-left: -10px;
-    margin-right: -10px;
+  margin-right: -10px;
   text-decoration: none;
   flex: 1;
 }
@@ -122,10 +147,10 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/pluvec.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
+
+
   margin-top: 20px;
 
 }
@@ -142,7 +167,7 @@ body {
   text-shadow: 0 0 1px black;
   font-weight: 550;
   width: 100%;
-  
+
 }
 
 .fourthIMG {
@@ -151,10 +176,8 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/vtoriPluvec.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
   margin-top: 20px;
 
 }
@@ -171,11 +194,11 @@ body {
   text-shadow: 0 0 1px black;
   font-weight: 550;
   font-size: 25px;
-  
-  
+
+
 }
 
-.fifthIMG { 
+.fifthIMG {
   width: 80%;
   margin: 0 auto;
   margin-top: 25px;
@@ -183,12 +206,11 @@ body {
   padding: 15px;
   background-image: url(/images/test1.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
+
   margin-top: 20px;
 }
 
-.sixthIMG { 
+.sixthIMG {
   width: 80%;
   margin: 0 auto;
   margin-top: 25px;
@@ -196,16 +218,16 @@ body {
   padding: 15px;
   background-image: url(/images/test1.jpg);
   background-size: cover;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 6px;
+
+
   margin-top: 20px;
 }
 
 
-.offer{
+.offer {
   margin-top: 40px;
   width: 100%;
-  height: 1900px;
+  height: 1750px;
   background-color: rgb(0, 55, 255, 0.7);
 
 }
@@ -214,31 +236,32 @@ body {
   margin-top: 40px;
   width: 100%;
   height: 400px;
-  
+
 }
-.ourOffer { 
+
+.ourOffer {
   width: 100%;
-    display: flex;
-    padding-top: 15px;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    font-size: 39px;
-    text-shadow: 1px 0 2px black;
-    letter-spacing: 1px;
+  display: flex;
+  padding-top: 15px;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 39px;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
 }
 
 .courses {
   width: 300px;
-    margin: 0 auto;
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 25px;
-    padding: 0px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 0 2px black;
-    letter-spacing: 1px;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 25px;
+  padding: 0px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
 }
 
 .kidsAge {
@@ -248,7 +271,7 @@ body {
   font-weight: 600;
   margin-top: 10px;
   color: black;
-  
+
 }
 
 
@@ -267,20 +290,30 @@ body {
   margin: 0 auto;
   height: 400px;
   margin-top: 50px;
-  
+
 }
 
 .headerWhoFor {
-  margin-top: 50px;
   width: 300px;
   margin: 0 auto;
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
-.headerContacts { 
+.headerContacts {
   width: 150px;
-    margin: 0 auto;
-    padding-top: 80px;
-    font-size: 35px;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-size: 35px;
+  color: white;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+  line-height: 1.5;
+
 }
 
 .address {
@@ -292,6 +325,11 @@ body {
   align-items: center;
   font-size: 24px;
   font-weight: 600;
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 
@@ -304,6 +342,11 @@ body {
   align-items: center;
   font-size: 20px;
   line-height: 1.5;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+
 }
 
 
@@ -312,15 +355,27 @@ body {
 .contacts {
   margin-top: 20px;
   width: 100%;
-  background-color: #ffbc00bf;
-  height: 1000px;
+  /* background-color: rgb(0, 55, 255, 0.7); */
+  background-color: currentColor;
+  ;
+  height: 1250px;
   padding-top: 20px;
 }
 
 .phoneNumbers {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 38px;
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+  line-height: 1.5;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 45px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
 }
 
 
@@ -335,15 +390,14 @@ body {
   font-size: 18px;
   font-weight: 600;
   display: flex;
-}
-
-.secondOffer {
-  margin-top: 50px;
+  margin-right: 50px;
 }
 
 
 
-.beneffits ul li{
+
+
+.beneffits ul li {
   width: 100%;
   margin-top: 23px;
   list-style: none;
@@ -378,26 +432,113 @@ body {
 }
 
 .textSwimming {
-  height: 500px;
+  height: 690px;
   margin-top: 10px;
   padding: 25px;
   letter-spacing: 1.5px;
   line-height: 1.8;
 }
 
+.textSwimming p {
+  font-size: 19px;
+  display: flex;
+  
+}
+
 .learnMore {
   background-color: black;
   color: white;
   box-shadow: 5px 5px 5px black;
-  
+
+}
+
+.fab.fa-facebook-messenger {
+  font-size: 100px;
+}
+
+.fab.fa-facebook-messenger:hover {
+  font-size: 120px;
+  transition: 0.5s;
+}
+
+.messenger {
+  display: flex;
+  width: 174px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+}
+
+.messenger:hover {
+  width: 195px;
+  transition: 0.5s;
+}
+
+.messenger:not(:hover) {
+  transition: 0.5s;
+}
+
+.writeToUs {
+  width: 295px;
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: 700;
+
+}
+
+.write {
+  margin-top: 15px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 0 2px black;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  width: 280px;
+}
+
+.secondOffer {
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.ourValues {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.phoneBackground {
+  background-color: black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 8px;
 }
 
 
-@media (min-width: 920px ) {
+
+
+
+@media (min-width: 920px) {
+
+ 
+  
+  
+  
 
   .boxOne {
     padding-left: 100px;
     padding-right: 100px;
+  }
+
+  .textSwimming {
+    height: 785px;
   }
 
   .boxTwo {
@@ -412,27 +553,81 @@ body {
     margin-top: 30px;
   }
 
-  .firstIMG, .secondIMG, .thirdIMG, .fourthIMG, .fifthIMG, .sixthIMG {
+  .firstIMG,
+  .secondIMG,
+  .thirdIMG,
+  .fourthIMG,
+  .fifthIMG,
+  .sixthIMG {
     height: 240px;
-    
+
   }
 
   .threeDivs {
     display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  
+    justify-content: space-evenly;
+    align-items: center;
+
   }
 
   .secondThreeDivs {
     display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  }
+    justify-content: space-evenly;
+    align-items: center;
 
- 
-  
+  }
 
 }
 
+@media (min-width: 550px) {
+  #firstTwoOfffers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  .offer {
+    height: 1150px;
+  }
+
+  .textSwimming {
+    height: 785px;
+  }
+
+  .textSwimming p {
+    display: flex;
+    font-size: 23px;
+    align-content: center;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+
+}
+
+@media (min-width: 950px) {
+  #allThreeOffers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+
+  .textSwimming {
+    height: 500px;
+  }
+
+  .secondOffer {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .offer {
+    height: 770px;
+  }
+
+  
+  
+}

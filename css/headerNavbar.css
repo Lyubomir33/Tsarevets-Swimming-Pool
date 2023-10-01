@@ -48,5 +48,43 @@ a.navbar-brand {
   transition: 0.5s ;
 }
 
+#togglerID {
+  width: 2em;
+  border: none;
+}
+
+.navbar-toggler.collapsed {
+  border: none;
+}
+
+.navbar-toggler { 
+  border: none;
+
+}
+
+
+
+#xToggler {
+  width: 2em;
+  
+}
+
+
+
+#xToggler {
+  font-size: 28px;
+  width: 2em;
+  height: -0.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: none;
+  padding-left: 17px;
+
+}
+
+
+
 
 
