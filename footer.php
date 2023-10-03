@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/footer.css">
+
 <script src="https://kit.fontawesome.com/0e55d70a76.js" crossorigin="anonymous"></script>
 
 <footer>
@@ -20,8 +21,7 @@
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 location">
-          <h4 id="location" class="mt-lg-0 mt-sm-4 text-white-50">Локация</h4>
-          <p class="text-white-50">Велико търново, България<img class="bulgarian-flag" src="../images/bulgaria-flag.png" alt=""></p>
+          <p style="margin-top: 15px;" class="text-white-50">Велико търново, България<img class="bulgarian-flag" src="../images/bulgaria-flag.png" alt=""></p>
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0898 579 010</p>
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0878 687 555</p>
           <p class="text-white-50"><i class="fa fa-envelope-o mr-3 "></i>&nbsp skmp_carevec@abv.bg</p>

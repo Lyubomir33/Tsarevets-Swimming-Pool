@@ -11,6 +11,10 @@ body {
 
 }
 
+#navBtn {
+  border: none;
+}
+
 .logo {
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -21,7 +25,7 @@ body {
   margin-left: 0px;
   font-size: 26px;
   text-decoration: none;
-  color: black;
+  color: #fcc900;
 }
 
 .img-belowMenu {
@@ -71,14 +75,13 @@ body {
 
 }
 
-.firstIMG:hover {
+.firstIMG:hover, .secondIMG:hover, .thirdIMG:hover, .fourthIMG:hover, .fifthIMG:hover, .sixthIMG:hover {
   transform: scale(1.1);
-  /* filter: brightness(100%);  */
   transition: 0.7s;
 
 }
 
-.firstIMG:not(:hover) {
+.firstIMG:not(:hover), .secondIMG:not(:hover), .thirdIMG:not(:hover), .fourthIMG:not(:hover), .fifthIMG:not(:hover), .sixthIMG:not(:hover) {
   transition: 0.7s;
 }
 
@@ -91,11 +94,10 @@ body {
   align-content: flex-end;
   list-style: none;
   color: white;
-  font-size: 22px;
+  font-size: 28px;
   justify-content: center;
-  text-shadow: 0 0 1px white;
+  text-shadow: 2px 2px 3px black;
   font-weight: 450;
-  /* filter: brightness(100%);  */
 }
 
 
@@ -107,14 +109,12 @@ body {
   padding: 15px;
   background-image: url(/images/poyas.jpg);
   background-size: cover;
-  filter: brightness(60%);
-
   margin-top: 20px;
 }
 
 .secondIMG:hover {
   transition: 0.5s;
-  filter: brightness(100%);
+
 }
 
 .secondIMG:not(:hover) {
@@ -128,9 +128,9 @@ body {
   align-content: flex-end;
   list-style: none;
   color: white;
-  font-size: 22px;
+  font-size: 28px;
   justify-content: center;
-  text-shadow: 0 0 1px white;
+  text-shadow: 2px 2px 3px black;
   font-weight: 700;
 }
 
@@ -162,9 +162,9 @@ body {
   align-content: flex-end;
   list-style: none;
   color: white;
-  font-size: 22px;
+  font-size: 28px;
   justify-content: center;
-  text-shadow: 0 0 1px black;
+  text-shadow: 2px 2px 3px black;
   font-weight: 550;
   width: 100%;
 
@@ -176,7 +176,7 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/vtoriPluvec.jpg);
+  background-image: url(/images/olympicGames.jpg);
   background-size: cover;
   margin-top: 20px;
 
@@ -191,7 +191,7 @@ body {
   color: white;
   font-size: 22px;
   justify-content: center;
-  text-shadow: 0 0 1px black;
+  text-shadow: 2px 2px 3px black;
   font-weight: 550;
   font-size: 25px;
 
@@ -204,7 +204,7 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/galerry.svg);
   background-size: cover;
 
   margin-top: 20px;
@@ -216,7 +216,7 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/vtoriPluvec.jpg);
   background-size: cover;
 
 
@@ -293,6 +293,8 @@ body {
 
 }
 
+
+
 .headerWhoFor {
   width: 300px;
   margin: 0 auto;
@@ -353,6 +355,7 @@ body {
 
 
 .contacts {
+  display: none;
   margin-top: 20px;
   width: 100%;
   /* background-color: rgb(0, 55, 255, 0.7); */
@@ -405,7 +408,7 @@ body {
   font-weight: bold;
   color: white;
   text-shadow: 1px 0 2px black;
-  letter-spacing: 1px;
+  
 }
 
 .cloud {
@@ -437,6 +440,7 @@ body {
   padding: 25px;
   letter-spacing: 1.5px;
   line-height: 1.8;
+  margin-bottom: 150px;
 }
 
 .textSwimming p {
@@ -506,6 +510,7 @@ body {
   margin: 0 auto;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
 }
 
 .skills {
@@ -521,16 +526,26 @@ body {
   border-radius: 8px;
 }
 
+/* LOCATION AND CONTACTS */
 
 
 
 
 @media (min-width: 920px) {
 
+ .addressText, .address,.headerWhoFor {
+  font-size: 35px;
+  width: 100%;
+  letter-spacing: 1.5;
+  display: flex;
+  justify-content: center;
+ }
+
  
   
-  
-  
+ .phoneBackground {
+  width: 201px;
+ }
 
   .boxOne {
     padding-left: 100px;

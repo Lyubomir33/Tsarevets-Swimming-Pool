@@ -24,8 +24,8 @@
 <body>
 
 
-
-  <header class="header">
+ 
+<header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
@@ -64,7 +64,7 @@
 
     <div id="first" class="boxOne">
 
-      <a class="anchorStyle" href="./images/deca.jpg">
+      <a class="anchorStyle" href="#">
         <div class="firstIMG">
           <p class="imgP">Защо плуване?</p>
         </div>
@@ -115,7 +115,7 @@
 
     <div id="threeDivs">
 
-      <a class="anchorStyle" href="./images/deca.jpg">
+      <a class="anchorStyle" href="#">
         <div class="firstIMG">
           <p class="imgP">Защо плуване?</p>
         </div>
@@ -174,14 +174,14 @@
 
             <img class="sixYearsOld" src="/images/5-6 years old.png">
             <u>
-              <p class="kidsAge">Деца на възраст 5 или 6г.</p>
+              <p class="kidsAge">Деца на възраст 5+ г.</p>
             </u>
             <div class="beneffits">
               <ul>
-                <li>- Обучение по плуване с иновативни подходи</li>
-                <li class="liMargin">- Чист и топъл басейн</li>
-                <li class="liMargin">- Екип от опитни професионалисти</li>
-                <li class="liMargin">- Групови занимания</li>
+                <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Обучение по плуване с иновативни подходи</li>
+                <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Чист и топъл басейн</li>
+                <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Екип от опитни професионалисти</li>
+                <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Групови занимания</li>
               </ul>
             </div>
           </div>
@@ -194,9 +194,9 @@
             </u>
             <div class="beneffits">
               <ul>
-                <li>- Усъвършенстване в плувния спорт</li>
-                <li class="liMargin">- Участие в спортни състезания</li>
-                <li class="liMargin">- Достигане на високо спортно майсторство</li>
+                <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Усъвършенстване в плувния спорт</li>
+                <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Участие в спортни състезания</li>
+                <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Достигане на високо спортно майсторство</li>
               </ul>
             </div>
           </div>
@@ -211,9 +211,9 @@
           </u>
           <div class="beneffits">
             <ul>
-              <li>- Изграждане на правилна техника от нулата</li>
-              <li class="liMargin">- Индивидуален подход спрямо нуждите (съобразен с работния график на клиента)</li>
-              <li class="liMargin">- Подходящо за абсолютно начинаещи</li>
+              <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Изграждане на правилна техника от нулата</li>
+              <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Индивидуален подход спрямо нуждите (съобразен с работния график на клиента)</li>
+              <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Подходящо за абсолютно начинаещи</li>
             </ul>
           </div>
         </div>
@@ -221,7 +221,7 @@
       </div>
     </div>
 
-    <button class="btnSignIn">Искам да се запиша</button>
+    <!-- <button class="btnSignIn">Искам да се запиша</button> -->
 
 
 
@@ -229,43 +229,45 @@
 
     <!-- <p><img class="cloud" src="/images/laodz (2).svg" alt=""></p> -->
     <!-- </div> -->
-
+<!-- 
     <h1 class="ourValues"><b>НАШИТЕ ЦЕННОСТИ</b></h1>
 
     <div class="textSwimming">
-      <p>Ние от спортен клуб СКП вярваме, че плуването е един от най-хубавите спортове, който може да изберете за вас и вашето дете.</p> <br>
-      <p>Съчетава двигателен активизъм и релаксация, предоставяйки ни уникален начин за намаляване на стреса и подобряване на менталната ни яснота.</p>
-      <br>
-      <p>Нашата мисия е не само да ви научим да плувате.</p> <br>
-      <p>Ние целим да изградим полезни навици, които ще ви помагат не само в спорта, но и в живота:
-        Трудолюбие, дисциплина, упоритост, постоянство, кураж и устойчивост. </p> <br><br>
+      <p>Ние от спортен клуб СКП вярваме, че плуването е един от най-хубавите спортове, който може да изберете за вас и вашето дете. <br><br>
+        Съчетава двигателен активизъм и релаксация, предоставяйки ни уникален начин за намаляване на стреса и подобряване на менталната ни яснота.
+        <br><br>Нашата мисия е не само да ви научим да плувате. <br><br>Ние целим да изградим полезни навици, които ще ви помагат не само в спорта, но и в живота:
+         Трудолюбие, дисциплина, упоритост, постоянство, кураж и устойчивост.  <br><br>
       </p>
+    
 
+    </div> -->
 
-    </div>
+    <?php include "./contacts.php"; ?>
 
-    <div id="contactsDiv" class="contacts">
+    <!-- <div class="contacts">
 
-     
-        <h1 class="headerWhoFor"> &nbsp &nbsp Къде се провеждат &nbsp &nbsp &nbsp &nbsp заниманията?</h1>
-        <p class="address">Адрес: </p>
+      <h1 class="headerWhoFor"> &nbsp &nbsp Къде се провеждат &nbsp &nbsp &nbsp &nbsp заниманията?</h1>
+      <p class="address">Адрес: </p>
         <p class="addressText">ул. Бяла Бона 10, <br>гр. Велико Търново</p>
-     
+      -->
+
+
+
+      <!-- <h1 id="anchorID" class="headerContacts">Контакти</h1>
+
+      <h2 class="phoneNumbers">Даниел Стоянов: </h2>
+      <p class="phoneNumbers"><span class="phoneBackground">0878 687 555</span></p>
+
+      <h2 class="phoneNumbers">Панайот Паздерков: </h2>
+      <p class="phoneNumbers"><span class="phoneBackground">0898 579 010</span></p>
 
       <div class="writeToUs">
-        <h1 id="anchorID" class="headerContacts">Контакти</h1>
-
-        <h2 class="phoneNumbers">Даниел Стоянов: </h2>
-        <p class="phoneNumbers"><span class="phoneBackground">0878 687 555</span></p>
-
-        <h2 class="phoneNumbers">Панайот Паздерков: </h2>
-        <p class="phoneNumbers"><span class="phoneBackground">0898 579 010</span></p>
         <p class="write">Не успяхте да се свържете с нас по телефона? <br><br> Нашият чат е на един клик разстояние от вас!<br></p>
         <p class="write">Натиснете върху Messenger иконката и ни пишете.</p>
         <p class="write">Ще се свържем с вас при първа възможност!</p>
         <a href=""><img class="messenger" src="./images/mess-removebg-preview.png" alt=""></a>
-        <!-- https://www.facebook.com/profile.php?id=100057188630835 -->
-      </div>
+         https://www.facebook.com/profile.php?id=100057188630835 -->
+      <!-- </div> --> 
 
     </div>
 
@@ -336,17 +338,17 @@
     </div>
 
 
-
   </main>
 
-  <?php include "footer.php" ?>
+  <?php include "./footer.php"; ?>
 
 
 
-  <script>
+  <script >
+
     //CODE TO RESIZE 2 ICONS INTO 3 
 
-    const boxOne = document.getElementById('first')
+const boxOne = document.getElementById('first')
     const boxTwo = document.getElementById('second');
     const boxThree = document.getElementById('third');
 
@@ -394,7 +396,7 @@
 
     window.addEventListener('resize', resizeOffers);
 
-    const menu = document.getElementById('togglerID');
+const menu = document.getElementById('togglerID');
     const xMenu = document.getElementById('xToggler');
 
     function changeMenuIcon() {
@@ -402,10 +404,12 @@
       menu.style.display = "none";
     }
 
-    function changeXIcon() {
+    function changeXIcon () {
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
+
+    
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
