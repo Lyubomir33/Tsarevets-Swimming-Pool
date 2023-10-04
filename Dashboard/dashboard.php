@@ -1,13 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <title>Табло за управление</title>
 </head>
+
 <body>
 
-<h1>Welcome </h1>
-  
-</body>
+  <body>
+
+    <!-- for header part -->
+    <header>
+
+      <div class="logosec">
+        <div class="logo">СКП ЦАРЕВЕЦ</div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png" class="icn menuicn" id="menuicn" alt="menu-icon">
+      </div>
+
+      <div class="searchbar">
+        <input type="text" placeholder="Search">
+        <div class="searchbtn">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-icon">
+        </div>
+      </div>
+
+      <div class="message">
+        <div class="circle"></div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
+        <div class="dp">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png" class="dpicn" alt="dp">
+        </div>
+      </div>
+
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <div id="eventsOption" class="nav-option option1">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
+              <h3> Събития</h3>
+            </div>
+
+            <a href="/Dashboard/schedule.php">
+            <div class="nav-option option2">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
+              <h3> График</h3>
+            </div>
+
+            </a>
+                  
+           <a href="./news.php">
+           <div class="nav-option option3">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+              <h3> Новини</h3>
+            </div>
+           </a>
+
+            <!-- <div class="nav-option option4">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+              <h3> Institution</h3>
+            </div>
+
+            <div class="nav-option option5">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
+              <h3> Profile</h3>
+            </div>
+
+            <div class="nav-option option6">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
+              <h3> Settings</h3>
+            </div> -->
+
+           <a href="./logout.html">
+           <div class="nav-option logout">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
+              <h3>Изход</h3>
+            </div>
+           </a>
+
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+
+        <div class="searchbar2">
+          <input type="text" name="" id="" placeholder="Search">
+          <div class="searchbtn">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-button">
+          </div>
+        </div>
+
+
+        <div class="report-container">
+          <div class="report-header">
+            <h1 class="recent-Articles">Предстоящи Събития</h1>
+            <div>
+              <button id="btn-trigger-remove" class="view" onclick="hideEvents()">Премахни събитието</button>
+              <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button>
+              <script>
+                function hideEvents() {
+                  alert("Събитието беше премахнато!");
+                  localStorage.setItem('hideEvents', 'true');
+                  toggleEventsVisibility();
+
+                }
+
+                function addEvent() {
+                  alert("Събитието беше добавено!");
+                  localStorage.setItem('hideEvents', 'false');
+                  toggleEventsVisibility();
+
+                }
+
+                // Function to toggle the visibility based on localStorage
+                function toggleEventsVisibility() {
+                  const eventsElement = document.getElementById('events');
+                  if (localStorage.getItem('hideEvents') === 'true') {
+                    eventsElement.style.display = 'none';
+
+                  } else {
+                    eventsElement.style.display = 'block';
+
+                  }
+                }
+
+                toggleEventsVisibility();
+              </script>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+      let menuicn = document.querySelector(".menuicn");
+      let nav = document.querySelector(".navcontainer");
+
+      menuicn.addEventListener("click", () => {
+        nav.classList.toggle("navclose");
+      })
+
+      
+
+      
+    </script>
+
+  </body>
+
 </html>

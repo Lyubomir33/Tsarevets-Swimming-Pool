@@ -204,7 +204,7 @@ body {
   margin-top: 25px;
   height: 175px;
   padding: 15px;
-  background-image: url(/images/galerry.svg);
+  background-image: url(/images/galerry.jpg);
   background-size: cover;
 
   margin-top: 20px;
@@ -526,7 +526,13 @@ body {
   border-radius: 8px;
 }
 
-/* LOCATION AND CONTACTS */
+.futureEvents {
+  
+  background-color: red;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+}
 
 
 

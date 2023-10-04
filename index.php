@@ -24,8 +24,7 @@
 <body>
 
 
- 
-<header class="header">
+  <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
@@ -58,6 +57,24 @@
       </div>
     </nav>
   </header>
+
+  <a id="events" class="futureEvents" href="www.google.com" target="_blank">
+    <div>
+      <!-- Content here -->
+    </div>
+  </a>
+
+  <script>
+   const eventsElement = document.getElementById('events');
+
+if (localStorage.getItem('hideEvents') === 'true') {
+  eventsElement.style.display = 'none';
+} else {
+  eventsElement.style.display = 'block'; 
+}
+  </script>
+
+
 
   <main>
 
@@ -229,7 +246,7 @@
 
     <!-- <p><img class="cloud" src="/images/laodz (2).svg" alt=""></p> -->
     <!-- </div> -->
-<!-- 
+    <!-- 
     <h1 class="ourValues"><b>НАШИТЕ ЦЕННОСТИ</b></h1>
 
     <div class="textSwimming">
@@ -253,7 +270,7 @@
 
 
 
-      <!-- <h1 id="anchorID" class="headerContacts">Контакти</h1>
+    <!-- <h1 id="anchorID" class="headerContacts">Контакти</h1>
 
       <h2 class="phoneNumbers">Даниел Стоянов: </h2>
       <p class="phoneNumbers"><span class="phoneBackground">0878 687 555</span></p>
@@ -267,7 +284,7 @@
         <p class="write">Ще се свържем с вас при първа възможност!</p>
         <a href=""><img class="messenger" src="./images/mess-removebg-preview.png" alt=""></a>
          https://www.facebook.com/profile.php?id=100057188630835 -->
-      <!-- </div> --> 
+    <!-- </div> -->
 
     </div>
 
@@ -344,11 +361,10 @@
 
 
 
-  <script >
-
+  <script>
     //CODE TO RESIZE 2 ICONS INTO 3 
 
-const boxOne = document.getElementById('first')
+    const boxOne = document.getElementById('first')
     const boxTwo = document.getElementById('second');
     const boxThree = document.getElementById('third');
 
@@ -396,7 +412,7 @@ const boxOne = document.getElementById('first')
 
     window.addEventListener('resize', resizeOffers);
 
-const menu = document.getElementById('togglerID');
+    const menu = document.getElementById('togglerID');
     const xMenu = document.getElementById('xToggler');
 
     function changeMenuIcon() {
@@ -404,12 +420,10 @@ const menu = document.getElementById('togglerID');
       menu.style.display = "none";
     }
 
-    function changeXIcon () {
+    function changeXIcon() {
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
-
-    
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
