@@ -47,19 +47,24 @@
             </div>
 
             <a href="/Dashboard/schedule.php">
-            <div class="nav-option option2">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
-              <h3> График</h3>
-            </div>
+              <div class="nav-option option2">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
+                <h3> График</h3>
+              </div>
 
             </a>
-                  
-           <a href="./news.php">
-           <div class="nav-option option3">
+
+            <a href="./news.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Новини</h3>
+              </div>
+            </a>
+
+            <div class="nav-option option3">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-              <h3> Новини</h3>
+              <h3> Отзиви</h3>
             </div>
-           </a>
 
             <!-- <div class="nav-option option4">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
@@ -76,12 +81,12 @@
               <h3> Settings</h3>
             </div> -->
 
-           <a href="./logout.html">
-           <div class="nav-option logout">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
-              <h3>Изход</h3>
-            </div>
-           </a>
+            <a href="./logout.html">
+              <div class="nav-option logout">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
+                <h3>Изход</h3>
+              </div>
+            </a>
 
           </div>
         </nav>
@@ -102,41 +107,8 @@
             <div>
               <button id="btn-trigger-remove" class="view" onclick="hideEvents()">Премахни събитието</button>
               <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button>
-              <script>
-                function hideEvents() {
-                  alert("Събитието беше премахнато!");
-                  localStorage.setItem('hideEvents', 'true');
-                  toggleEventsVisibility();
-
-                }
-
-                function addEvent() {
-                  alert("Събитието беше добавено!");
-                  localStorage.setItem('hideEvents', 'false');
-                  toggleEventsVisibility();
-
-                }
-
-                // Function to toggle the visibility based on localStorage
-                function toggleEventsVisibility() {
-                  const eventsElement = document.getElementById('events');
-                  if (localStorage.getItem('hideEvents') === 'true') {
-                    eventsElement.style.display = 'none';
-
-                  } else {
-                    eventsElement.style.display = 'block';
-
-                  }
-                }
-
-                toggleEventsVisibility();
-              </script>
-
             </div>
           </div>
-
-
-
 
         </div>
       </div>
@@ -152,9 +124,33 @@
         nav.classList.toggle("navclose");
       })
 
-      
+      function hideEvents() {
+        alert("Събитието беше премахнато!");
+        localStorage.setItem('hideEvents', 'true');
+        toggleEventsVisibility();
 
-      
+      }
+
+      function addEvent() {
+        alert("Събитието беше добавено!");
+        localStorage.setItem('hideEvents', 'false');
+        toggleEventsVisibility();
+
+      }
+
+      // Function to toggle the visibility based on localStorage
+      function toggleEventsVisibility() {
+        const eventsElement = document.getElementById('events');
+        if (localStorage.getItem('hideEvents') === 'true') {
+          eventsElement.style.display = 'none';
+
+        } else {
+          eventsElement.style.display = 'block';
+
+        }
+      }
+
+      toggleEventsVisibility();
     </script>
 
   </body>

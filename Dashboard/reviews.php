@@ -48,17 +48,18 @@
               </div>
             </a>
 
-            <div class="nav-option option2">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
-              <h3> График</h3>
-            </div>
+            <a href="./schedule.php">
+              <div class="nav-option option2">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
+                <h3> График</h3>
+              </div>
+            </a>
 
-            <a href="/Dashboard/news.php">
+            <a href="./news.php">
               <div class="nav-option option3">
                 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-                <h3> Новини </h3>
+                <h3> Новини</h3>
               </div>
-
             </a>
 
             <div class="nav-option option3">
@@ -86,8 +87,8 @@
                 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
                 <h3>Изход</h3>
               </div>
-            </a>
 
+            </a>
           </div>
         </nav>
       </div>
@@ -103,20 +104,14 @@
 
         <div class="report-container">
           <div class="report-header">
-            <h1 class="recent-Articles">График</h1>
+            <h1 class="recent-Articles"></h1>
           </div>
 
-          <!-- TUK TRQBVA DA SE PISHE GRAFIKA -->
 
         </div>
-
       </div>
-
     </div>
-
     </div>
-
-
 
     <script>
       let menuicn = document.querySelector(".menuicn");
@@ -128,7 +123,5 @@
     </script>
 
   </body>
-
-
 
 </html>

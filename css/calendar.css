@@ -65,6 +65,18 @@ table tr td {
 .backgroundCalendarContacts {
   background-color: currentColor;
 }
+.newArticles {
+  width: 400px;
+  height: 300px;
+ 
+  margin: 0 auto;
+}
+
+.blogFirstThreeDivs {
+  display: flex;
+  width: 100%;
+  background-color: red;
+}
 
 @media screen and (max-width: 600px) {
 

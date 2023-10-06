@@ -60,6 +60,13 @@
               <h3> Новини</h3>
             </div>
 
+            <a href="./reviews.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Отзиви</h3>
+              </div>
+            </a>
+
             <!-- <div class="nav-option option4">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
               <h3> Institution</h3>
@@ -100,8 +107,43 @@
             <h1 class="recent-Articles">Новини</h1>
           </div>
 
+          <?php
 
+          require "../databaseConnection/database.php";
+
+
+
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $title = $_POST['title'];
+            $link = $_POST['link'];
+
+            $target_dir = "./";
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+
+            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
+            $sqlForm = "INSERT INTO blog_main_page (title, image, link) VALUES ('$title', '$target_file', '$link')";
+            $queryForm = mysqli_query($conn, $sqlForm);
+          }
+
+          ?>
+
+          <form enctype="multipart/form-data" method="POST">
+            <label for="title">Заглавие</label>
+            <input type="text" name="title" id="title"><br>
+            <label for="image">Снимка</label>
+            <input type="file" name="image" id="image"><br>
+            <label for="link">Линк</label>
+            <input type="text" name="link" id="link"><br>
+            <label for="url">Име на линк:</label>
+            <input type="text">
+
+            <button type="submit">Запиши</button>
+
+          </form>
         </div>
+
       </div>
     </div>
     </div>

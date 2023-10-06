@@ -41,7 +41,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">НОВИНИ</a>
+              <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
@@ -87,7 +87,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="./calendar/calendarDashboard.php">
+      <a class="anchorStyle" href="./test.php">
         <div class="secondIMG">
           <p class="secondP">График</p>
         </div>
@@ -138,7 +138,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="./calendar/calendarDashboard.php">
+      <a class="anchorStyle" href="./Dashboard/calendarDashboard.php">
         <div class="secondIMG">
           <p class="secondP">График</p>
         </div>
