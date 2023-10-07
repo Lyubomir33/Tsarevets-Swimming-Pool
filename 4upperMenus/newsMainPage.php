@@ -78,7 +78,7 @@
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
-        echo " <a href='/Dashboard/{$row['link']}'>
+        echo " <a href='/Dashboard/articleFiles/{$row['link']}'>
             <div style='background: url(/Dashboard/{$row['image']})' class='addNews'> 
                 <h1 class='headerNews'>{$row['title']}</h1>
             </div></a>";

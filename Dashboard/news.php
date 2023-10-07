@@ -123,7 +123,7 @@
 
 
 
-            $target_dir = "./";
+            $target_dir = "./dashboardImages/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
 
             move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
@@ -131,20 +131,23 @@
             $sqlForm = "INSERT INTO blog_main_page (title, image, link) VALUES ('$title', '$target_file', '$link')";
             $queryForm = mysqli_query($conn, $sqlForm);
 
-            $content = '<!DOCTYPE html>  <html>
-           <head>
-         <title>Article One</title>
-            </head>
-          <body>
-           <h1>This is Article One</h1>
-           </body>
-         </html>';
-
-
-
-            file_put_contents($link, $content);
-
+            $directory = "./articleFiles/"; 
+            $fullPath = $directory . $link;
+            
+            $content = '<!DOCTYPE html>
+            <html>
+              <head>
+                <title>Article One</title>
+              </head>
+              <body>
+                <h1>This is Article One</h1>
+              </body>
+            </html>';
+            
+            file_put_contents($fullPath, $content);
+            
             echo 'Файлът беше създаден успешно.';
+
           }
 
 
