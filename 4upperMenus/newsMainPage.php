@@ -63,7 +63,7 @@
 
     <div class="news">
 
-      <a href="http://localhost:3000/4upperMenus/newsMainPage/ArticleOne">
+      <a href="/Dashboard/петър-петров.php">
       <div style="background: url(/Dashboard/);" class="addNews">
         <h1 class="headerNews">Header</h1>
       </div>
@@ -78,12 +78,14 @@
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
-        echo " <a href='http://localhost:3000/4upperMenus/newsMainPage/{$row['link']}'>
+        echo " <a href='/Dashboard/{$row['link']}'>
             <div style='background: url(/Dashboard/{$row['image']})' class='addNews'> 
                 <h1 class='headerNews'>{$row['title']}</h1>
             </div></a>";
+
     }
 
+    
 
 
       ?>

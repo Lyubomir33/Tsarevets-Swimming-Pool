@@ -107,7 +107,7 @@
             <h1 class="recent-Articles">Новини</h1>
           </div>
 
-          
+
 
           <?php
 
@@ -119,9 +119,9 @@
 
             $title = $_POST['title'];
             $link = $_POST['link'];
-        
 
-          
+
+
 
             $target_dir = "./";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -130,7 +130,26 @@
 
             $sqlForm = "INSERT INTO blog_main_page (title, image, link) VALUES ('$title', '$target_file', '$link')";
             $queryForm = mysqli_query($conn, $sqlForm);
+
+            $content = '<!DOCTYPE html>  <html>
+           <head>
+         <title>Article One</title>
+            </head>
+          <body>
+           <h1>This is Article One</h1>
+           </body>
+         </html>';
+
+
+
+            file_put_contents($link, $content);
+
+            echo 'Файлът беше създаден успешно.';
           }
+
+
+
+
 
           ?>
 
@@ -141,9 +160,11 @@
             <input type="file" name="image" id="image"><br>
             <label for="link">Линк</label>
             <input type="text" name="link" id="link"><br>
-           
+
 
             <button type="submit">Запиши</button>
+
+
 
           </form>
         </div>
@@ -165,12 +186,12 @@
 
 
       inputFields.forEach((input) => {
-       
+
         const storageKey = `userInput_${input.id}`;
 
         const storedValue = localStorage.getItem(storageKey);
 
-       
+
         if (storedValue) {
           input.value = storedValue;
         }
@@ -179,7 +200,6 @@
           localStorage.setItem(storageKey, input.value);
         });
       });
-
     </script>
 
   </body>

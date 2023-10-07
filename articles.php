@@ -16,7 +16,7 @@
   </form>
 
   <a href="./<?php echo $URL; ?>">
-      Link to new page
+      Link to new page 
   </a>
 
 </body>
