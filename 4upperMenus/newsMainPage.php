@@ -63,7 +63,7 @@
 
     <div class="news">
 
-      <a href="">
+      <a href="http://localhost:3000/4upperMenus/newsMainPage/ArticleOne">
       <div style="background: url(/Dashboard/);" class="addNews">
         <h1 class="headerNews">Header</h1>
       </div>
@@ -77,11 +77,11 @@
 
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
-
       while ($row = mysqli_fetch_assoc($query)) {
-        echo "<div style='background: url(/Dashboard/" . $row['image'] . ")' class='addNews'> 
-            <h1 class='headerNews'>" . $row["title"] . "</h1>
-        </div>";
+        echo " <a href='http://localhost:3000/4upperMenus/newsMainPage/{$row['link']}'>
+            <div style='background: url(/Dashboard/{$row['image']})' class='addNews'> 
+                <h1 class='headerNews'>{$row['title']}</h1>
+            </div></a>";
     }
 
 
@@ -111,6 +111,8 @@
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
+
+    
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

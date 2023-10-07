@@ -107,6 +107,8 @@
             <h1 class="recent-Articles">Новини</h1>
           </div>
 
+          
+
           <?php
 
           require "../databaseConnection/database.php";
@@ -117,6 +119,9 @@
 
             $title = $_POST['title'];
             $link = $_POST['link'];
+        
+
+          
 
             $target_dir = "./";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -136,8 +141,7 @@
             <input type="file" name="image" id="image"><br>
             <label for="link">Линк</label>
             <input type="text" name="link" id="link"><br>
-            <label for="url">Име на линк:</label>
-            <input type="text">
+           
 
             <button type="submit">Запиши</button>
 
@@ -155,6 +159,27 @@
       menuicn.addEventListener("click", () => {
         nav.classList.toggle("navclose");
       })
+
+
+      const inputFields = document.querySelectorAll('input[type="text"]');
+
+
+      inputFields.forEach((input) => {
+       
+        const storageKey = `userInput_${input.id}`;
+
+        const storedValue = localStorage.getItem(storageKey);
+
+       
+        if (storedValue) {
+          input.value = storedValue;
+        }
+
+        input.addEventListener('input', () => {
+          localStorage.setItem(storageKey, input.value);
+        });
+      });
+
     </script>
 
   </body>
