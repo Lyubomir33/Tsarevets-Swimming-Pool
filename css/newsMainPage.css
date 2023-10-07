@@ -6,6 +6,8 @@
 }
 
 .addNews {
+  display: flex;
+  justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
   height: 300px;
@@ -18,11 +20,78 @@
   
 }
 
+.header u {
+  text-decoration: none;
+}
+
 .headerNews {
   font-size: 32px;
     padding: 34px;
     color: white;
     text-shadow: 2px 2px 3px black;
+}
+
+.formStyles {
+  display: flex;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 8px;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.labelNews {
+  font-size: 20px;
+}
+
+#title, #link {
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 5px;
+  height: 35px;
+  padding: 2px;
+  border: 2px solid black;
+}
+
+#image {
+
+  font-size: 15px;
+  margin: 5px;
+  height: 35px;
+  padding: 2px;
+
+}
+
+.btnSubmitArticle {
+  font-size: 18px;
+    color: black;
+    background: white;
+    padding: 5px;
+    margin: 20px;
+}
+
+.textMandatory {
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btnSubmitArticle:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
+
+.btnSubmitArticle:not(:hover) {
+  transition: 0.5s;
+}
+
+#content {
+  padding: 15px;
 }
 
 @media (min-width: 1000px) {

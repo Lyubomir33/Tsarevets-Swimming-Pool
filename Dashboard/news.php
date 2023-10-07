@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <link rel="stylesheet" href="/css/newsMainPage.css"> <!-- HERE ARE LOCATED THE STYLES FOR THIS PAGE -->
   <title>Табло за управление</title>
 </head>
 
@@ -119,21 +120,22 @@
 
             $title = $_POST['title'];
             $link = $_POST['link'];
+            $content = $_POST['content'];
 
 
 
 
-            $target_dir = "./dashboardImages/";
+            $target_dir = "dashboardImages/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
 
             move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-            $sqlForm = "INSERT INTO blog_main_page (title, image, link) VALUES ('$title', '$target_file', '$link')";
+            $sqlForm = "INSERT INTO blog_main_page (title, image, link, content) VALUES ('$title', '$target_file', '$link', ' $content')";
             $queryForm = mysqli_query($conn, $sqlForm);
 
-            $directory = "./articleFiles/"; 
+            $directory = "./articleFiles/";
             $fullPath = $directory . $link;
-            
+
             $content = '<!DOCTYPE html>
             <html>
               <head>
@@ -143,11 +145,10 @@
                 <h1>This is Article One</h1>
               </body>
             </html>';
-            
-            file_put_contents($fullPath, $content);
-            
-            echo 'Файлът беше създаден успешно.';
 
+            file_put_contents($fullPath, $content);
+
+            echo 'Файлът беше създаден успешно.';
           }
 
 
@@ -156,23 +157,80 @@
 
           ?>
 
-          <form enctype="multipart/form-data" method="POST">
-            <label for="title">Заглавие</label>
-            <input type="text" name="title" id="title"><br>
-            <label for="image">Снимка</label>
-            <input type="file" name="image" id="image"><br>
-            <label for="link">Линк</label>
-            <input type="text" name="link" id="link"><br>
+          <form id="templateForm" class='formStyles' enctype="multipart/form-data" method="POST">
 
 
-            <button type="submit">Запиши</button>
+            <div>
+              <h1>Създаване на визия</h1>
+
+              <label class="labelNews" for="title">Заглавие: </label>
+              <input type="text" name="title" id="title"><br>
+              <label class="labelNews" for="image">Снимка: </label>
+              <input type="file" name="image" id="image"><br>
+              <label class="labelNews" for="link">Линк: </label>
+              <input placeholder="Пр: име-на-статия.php" type="text" name="link" id="link"><u>
+                <p class="textMandatory">ЗАДЪЛЖИТЕЛНО СЕ СЛАГА ФОРМАТ .php</p>
+              </u>
+
+              <button id="save" class="btnSubmitArticle" type="submit">Запиши</button>
+
+            </div>
+
+            <div class="articleText">
+              <h1>Съдържание</h1>
+              <textarea name="content" id="content" cols="150" rows="12"></textarea>
+
+
+            </div>
 
 
 
           </form>
+
+
+          <?php
+
+
+          $sqlGet = "SELECT * FROM blog_main_page";
+          $queryGet = mysqli_query($conn, $sqlGet);
+          while ($rowGet = mysqli_fetch_assoc($queryGet)) {
+
+            echo "<form class='formStyles'>";
+            echo "<div>";
+            echo "<h1>Информация</h1>";
+
+            echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
+            echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"title\" id=\"title\"><br>";
+
+
+
+            echo "<label class=\"labelNews\" for=\"link\">Линк: </label>";
+            echo "<input value=\"" . $rowGet['link'] . "\" placeholder=\"Пр: име-на-статия.php\" type=\"text\" name=\"link\" id=\"link\"><u>";
+            echo "<br>";
+
+            echo "<button id=\"save\" class=\"btnSubmitArticle\" type=\"submit\">Запиши</button>";
+            echo "<button class=\"btnSubmitArticle\" type=\"submit\">Редактирай</button>";
+
+            echo "</div>";
+
+            echo "<div class=\"articleText\">";
+            echo "<h1 class='header' '>Статия</h1>";
+            echo "<textarea name=\"content\" id=\"content\" cols=\"150\" rows=\"12\">" . $rowGet['content'] . "</textarea>";
+            echo "</div>";
+
+            echo "</form>";
+          }
+
+
+          ?>
+
         </div>
 
+        <div></div>
+
       </div>
+
+    </div>
     </div>
     </div>
 
@@ -183,26 +241,6 @@
       menuicn.addEventListener("click", () => {
         nav.classList.toggle("navclose");
       })
-
-
-      const inputFields = document.querySelectorAll('input[type="text"]');
-
-
-      inputFields.forEach((input) => {
-
-        const storageKey = `userInput_${input.id}`;
-
-        const storedValue = localStorage.getItem(storageKey);
-
-
-        if (storedValue) {
-          input.value = storedValue;
-        }
-
-        input.addEventListener('input', () => {
-          localStorage.setItem(storageKey, input.value);
-        });
-      });
     </script>
 
   </body>

@@ -63,11 +63,11 @@
 
     <div class="news">
 
-      <a href="/Dashboard/петър-петров.php">
-      <div style="background: url(/Dashboard/);" class="addNews">
+      <!-- <a href="/Dashboard/петър-петров.php">
+      <div style="background: url(/Dashboard/dashboardImages/ПетърСтойчев.jpg);" class="addNews">
         <h1 class="headerNews">Header</h1>
       </div>
-      </a>
+      </a> -->
 
       <?php
 
@@ -78,8 +78,9 @@
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
-        echo " <a href='/Dashboard/articleFiles/{$row['link']}'>
-            <div style='background: url(/Dashboard/{$row['image']})' class='addNews'> 
+        echo " <a style='text-decoration: none;' href='/Dashboard/articleFiles/{$row['link']}'>
+            <div style='background: url(/Dashboard/{$row['image']}); 
+            background-repeat: no-repeat; background-position: center;' class='addNews'>
                 <h1 class='headerNews'>{$row['title']}</h1>
             </div></a>";
 

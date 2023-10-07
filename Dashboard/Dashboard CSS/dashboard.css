@@ -167,7 +167,7 @@ header {
 }
 
 .nav {
-  min-height: 91vh;
+  min-height: 105vh;
   width: 250px;
   background-color: var(--background-color2);
   position: absolute;
@@ -285,8 +285,10 @@ header {
 }
 
 .report-container {
+  height: -30vh;
+  width: 1600px;
   min-height: 300px;
-  max-width: 1200px;
+  
   margin: 70px auto 0px auto;
   background-color: #ffffff;
   border-radius: 30px;
