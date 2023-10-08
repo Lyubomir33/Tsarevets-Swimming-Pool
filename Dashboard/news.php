@@ -171,7 +171,7 @@
               $directory = "./articleFiles/";
               $fullPath = $directory . $link;
 
-           
+
 
               $sql = "SELECT * FROM blog_main_page";
               $query = mysqli_query($conn, $sql);
@@ -182,27 +182,30 @@
                 $content .= "<!DOCTYPE html>";
                 $content .= "<html lang=\"en\">";
                 $content .= "<head></head>";
-               
+
                 $content .= "<body>";
+                $content .= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ';
 
-                $content.= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ?>';
+                $content .= "\$sql = 'SELECT * FROM blog_main_page';
+                \$query = mysqli_query(\$conn, \$sql);
+                while (\$row = mysqli_fetch_assoc(\$query)) {
+                  ?>";
+                
+                  $content .= "<div class='divBlog'>
+                  <h3><?php echo \$row['title_in_blog']; ?></h3>
+                  <img class='imageFforBlogs' src='../<?php echo \$row['image']; ?>'>
+                  <p><?php echo \$row['content']; ?></p>
+              </div>
+              <?php
+              }";
 
-                $content .= "<div class=\"divBlog\">";
-                $content .= "<h3>{$row['title_in_blog']}</h3>";
-                $content .= "<img class=\"imageFforBlogs\" src=\"../{$row['image']}\">";
-                $content .= "<p>{$row['content']}</p>";
-                $content .= "</div>";
-
-                $content .=  '<?php require "../../footer.php"?>';
+                $content .=  ' require "../../footer.php"?> ';
                 $content .= "</body>";
                 $content .= "</html>";
-
-                
-                
               }
 
               file_put_contents($fullPath, $content);
-            
+
 
               echo 'Файлът беше създаден успешно.';
             } elseif ($formType === "makeChanges") {
