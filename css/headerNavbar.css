@@ -48,7 +48,7 @@ a.navbar-brand {
   transition: 0.5s ;
 }
 
-#togglerID {
+#togglerID,#menu {
   width: 2em;
   border: none;
 }
@@ -64,7 +64,7 @@ a.navbar-brand {
 
 
 
-#xToggler {
+#xToggler,#xxx {
   width: 2em;
   
 }
@@ -82,6 +82,18 @@ a.navbar-brand {
   display: none;
   padding-left: 17px;
 
+}
+
+#xxx {
+  font-size: 28px;
+  width: 2em;
+  height: -0.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: none;
+  padding-left: 17px;
 }
 
 

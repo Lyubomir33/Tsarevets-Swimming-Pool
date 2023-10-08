@@ -534,6 +534,77 @@ body {
     height: 200px;
 }
 
+.imageFforBlogs {
+  width: 93%;
+    display: flex;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.divBlog p{
+  height: auto;
+  line-height: 1.8;
+  padding: 22px;
+  letter-spacing: 1.4px;
+}
+
+.divBlog h3 {
+  display: flex;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* CSS FOR THE NEW BLOG ARTICLES */
+
+@media (min-width: 650px) {
+  .divBlog p {
+    height: 228px;
+    line-height: 1.8;
+    padding: 22px;
+    letter-spacing: 1.4px;
+  }
+
+  .imageFforBlogs {
+    width: 70%;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .divBlog p {
+    height: 228px;
+    line-height: 2.5;
+    padding: 22px;
+    letter-spacing: 1.4px;
+    padding-left: 131px;
+    padding-right: 130px;
+  }
+
+  .imageFforBlogs {
+    height: 300px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .divBlog p {
+    height: 100%;
+    line-height: 2.5;
+    padding: 26px;
+    letter-spacing: 1.4px;
+    padding-left: 290px;
+    padding-right: 280px;
+  }
+
+  .imageFforBlogs {
+    height: 346px;
+    width: 559px;
+  }
+}
+
+/* CSS FOR THE NEW BLOG ARTICLES */
 
 
 

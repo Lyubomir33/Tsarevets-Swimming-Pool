@@ -118,8 +118,13 @@
 
               <label class="labelNews" for="title">Заглавие: </label>
               <input type="text" name="title" id="title"><br>
+
+              <label class="labelNews" for="title">Заглавие вътре в статията: </label>
+              <input type="text" name="titleBlog" id="titleBlog"><br>
+
               <label class="labelNews" for="image">Снимка: </label>
               <input type="file" name="image" id="image"><br>
+
               <label class="labelNews" for="link">Линк: </label>
               <input placeholder="Пр: име-на-статия.php" type="text" name="link" id="link"><u>
                 <p class="textMandatory">ЗАДЪЛЖИТЕЛНО СЕ СЛАГА ФОРМАТ .php</p>
@@ -138,7 +143,7 @@
           </form>
 
 
-          <?php  
+          <?php
 
           require "../databaseConnection/database.php";
 
@@ -150,6 +155,7 @@
               $title = $_POST['title'];
               $link = $_POST['link'];
               $content = $_POST['content'];
+              $titleBlog = $_POST['titleBlog'];
 
 
 
@@ -159,35 +165,62 @@
 
               move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-              $sqlForm = "INSERT INTO blog_main_page (title, image, link, content) VALUES ('$title', '$target_file', '$link', ' $content')";
+              $sqlForm = "INSERT INTO blog_main_page (title, image, link, content, title_in_blog) VALUES ('$title', '$target_file', '$link', ' $content', '$titleBlog')";
               $queryForm = mysqli_query($conn, $sqlForm);
 
               $directory = "./articleFiles/";
               $fullPath = $directory . $link;
 
-              $content = '<!DOCTYPE html>
-    <html>
-      <head>
-        <title>Article One</title>
-      </head>
-      <body>
-        <h1>This is Article One</h1>
-      </body>
-    </html>';
+           
+
+              $sql = "SELECT * FROM blog_main_page";
+              $query = mysqli_query($conn, $sql);
+              while ($row = mysqli_fetch_assoc($query)) {
+
+                $content = '';
+
+                $content .= "<!DOCTYPE html>";
+                $content .= "<html lang=\"en\">";
+                $content .= "<head></head>";
+               
+                $content .= "<body>";
+
+                $content.= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ?>';
+
+                $content .= "<div class=\"divBlog\">";
+                $content .= "<h3>{$row['title_in_blog']}</h3>";
+                $content .= "<img class=\"imageFforBlogs\" src=\"../{$row['image']}\">";
+                $content .= "<p>{$row['content']}</p>";
+                $content .= "</div>";
+
+                $content .=  '<?php require "../../footer.php"?>';
+                $content .= "</body>";
+                $content .= "</html>";
+
+                
+                
+              }
 
               file_put_contents($fullPath, $content);
+            
 
               echo 'Файлът беше създаден успешно.';
             } elseif ($formType === "makeChanges") {
               $titleSet = $_POST['titleSet'];
               $linkSet = $_POST['linkSet'];
               $contentSet = $_POST['contentSet'];
-              $idToUpdate = $_POST['updateID']; 
-      
-              
-              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet' WHERE ID = $idToUpdate";
+              $idToUpdate = $_POST['updateID'];
+              $titleBlogSet = $_POST['titleBlog'];
+
+
+              $target_dirNewIMG = "dashboardImages/";
+              $target_fileNewIMG = $target_dirNewIMG . basename($_FILES["imageChange"]["name"]);
+
+              move_uploaded_file($_FILES["imageChange"]["tmp_name"], $target_fileNewIMG);
+
+
+              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet', image='$target_fileNewIMG', title_in_blog='$titleBlogSet' WHERE ID = $idToUpdate";
               $querySet = mysqli_query($conn, $sqlSet);
-          
             }
           }
 
@@ -196,30 +229,37 @@
 
           $sqlGet = "SELECT * FROM blog_main_page";
           $queryGet = mysqli_query($conn, $sqlGet);
-          
+
           while ($rowGet = mysqli_fetch_assoc($queryGet)) {
-              echo "<form class='formStyles' method='POST'>";
-              echo "<div>";
-              echo "<h1>Информация</h1>";
-              echo "<input type='hidden' name='updateID' value='" . $rowGet['ID'] . "'>";
-              echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
-              echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"titleSet\" id=\"title\"><br>";
-          
-              echo "<label class=\"labelNews\" for=\"link\">Линк: </label>";
-              echo "<input value=\"" . $rowGet['link'] . "\" placeholder=\"Пр: име-на-статия.php\" type=\"text\" name=\"linkSet\" id=\"link\"><u>";
-              echo "<br>";
-          
-              echo "<button id=\"saveChanges\" class=\"btnSubmitArticle\" type=\"submit\">Запази промените</button>";
-              echo "<input type='hidden' name='formType' value='makeChanges'>";
-          
-              echo "</div>";
-          
-              echo "<div class=\"articleText\">";
-              echo "<h1 class='header'>Статия</h1>";
-              echo "<textarea name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
-              echo "</div>";
-          
-              echo "</form>";
+            echo "<form class='formStyles' method='POST' enctype='multipart/form-data'>";
+            echo "<div>";
+            echo "<h1>Информация</h1>";
+            echo "<input type='hidden' name='updateID' value='" . $rowGet['ID'] . "'>";
+            echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
+            echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"titleSet\" id=\"title\"><br>";
+
+            echo "<label class=\"labelNews\" for=\"title\">Заглавие вътре в статията: </label>";
+            echo "<input value=\"" . $rowGet['title_in_blog'] . "\" type=\"text\" name=\"titleBlog\" id=\"titleBlog\"><br>";
+
+            echo "<label class='labelNews' for='image'>Снимка: </label>";
+            echo "<input type='file' name='imageChange' id='imageChange'><br>";
+
+
+            echo "<label class=\"labelNews\" for=\"link\">Линк: </label>";
+            echo "<input value=\"" . $rowGet['link'] . "\" placeholder=\"Пр: име-на-статия.php\" type=\"text\" name=\"linkSet\" id=\"link\"><u>";
+            echo "<br>";
+
+            echo "<button id=\"saveChanges\" class=\"btnSubmitArticle\" type=\"submit\">Запази промените</button>";
+            echo "<input type='hidden' name='formType' value='makeChanges'>";
+
+            echo "</div>";
+
+            echo "<div class=\"articleText\">";
+            echo "<h1 class='header'>Статия</h1>";
+            echo "<textarea name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
+            echo "</div>";
+
+            echo "</form>";
           }
 
           ?>
@@ -244,5 +284,7 @@
     </script>
 
   </body>
+
+
 
 </html>
