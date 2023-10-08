@@ -286,7 +286,7 @@ header {
 
 .report-container {
   height: -30vh;
-  width: 1600px;
+  width: 100%;
   min-height: 300px;
   
   margin: 70px auto 0px auto;

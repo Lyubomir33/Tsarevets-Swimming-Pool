@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,55 +110,6 @@
             <h1 class="recent-Articles">Новини</h1>
           </div>
 
-
-
-          <?php
-
-          require "../databaseConnection/database.php";
-
-
-
-          if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-            $title = $_POST['title'];
-            $link = $_POST['link'];
-            $content = $_POST['content'];
-
-
-
-
-            $target_dir = "dashboardImages/";
-            $target_file = $target_dir . basename($_FILES["image"]["name"]);
-
-            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-
-            $sqlForm = "INSERT INTO blog_main_page (title, image, link, content) VALUES ('$title', '$target_file', '$link', ' $content')";
-            $queryForm = mysqli_query($conn, $sqlForm);
-
-            $directory = "./articleFiles/";
-            $fullPath = $directory . $link;
-
-            $content = '<!DOCTYPE html>
-            <html>
-              <head>
-                <title>Article One</title>
-              </head>
-              <body>
-                <h1>This is Article One</h1>
-              </body>
-            </html>';
-
-            file_put_contents($fullPath, $content);
-
-            echo 'Файлът беше създаден успешно.';
-          }
-
-
-
-
-
-          ?>
-
           <form id="templateForm" class='formStyles' enctype="multipart/form-data" method="POST">
 
 
@@ -172,55 +125,102 @@
                 <p class="textMandatory">ЗАДЪЛЖИТЕЛНО СЕ СЛАГА ФОРМАТ .php</p>
               </u>
 
-              <button id="save" class="btnSubmitArticle" type="submit">Запиши</button>
+              <button id="save" class="btnSubmitArticle" type="submit">Създай статия</button>
+              <input type='hidden' name='formType' value='createNew'>
 
             </div>
 
             <div class="articleText">
               <h1>Съдържание</h1>
-              <textarea name="content" id="content" cols="150" rows="12"></textarea>
-
-
+              <textarea name="content" cols="120" rows="10" id="content"></textarea>
             </div>
-
-
 
           </form>
 
 
-          <?php
+          <?php  
 
+          require "../databaseConnection/database.php";
+
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $formType = $_POST['formType'];
+
+            if ($formType === "createNew") {
+              $title = $_POST['title'];
+              $link = $_POST['link'];
+              $content = $_POST['content'];
+
+
+
+
+              $target_dir = "dashboardImages/";
+              $target_file = $target_dir . basename($_FILES["image"]["name"]);
+
+              move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
+              $sqlForm = "INSERT INTO blog_main_page (title, image, link, content) VALUES ('$title', '$target_file', '$link', ' $content')";
+              $queryForm = mysqli_query($conn, $sqlForm);
+
+              $directory = "./articleFiles/";
+              $fullPath = $directory . $link;
+
+              $content = '<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Article One</title>
+      </head>
+      <body>
+        <h1>This is Article One</h1>
+      </body>
+    </html>';
+
+              file_put_contents($fullPath, $content);
+
+              echo 'Файлът беше създаден успешно.';
+            } elseif ($formType === "makeChanges") {
+              $titleSet = $_POST['titleSet'];
+              $linkSet = $_POST['linkSet'];
+              $contentSet = $_POST['contentSet'];
+              $idToUpdate = $_POST['updateID']; 
+      
+              
+              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet' WHERE ID = $idToUpdate";
+              $querySet = mysqli_query($conn, $sqlSet);
+          
+            }
+          }
+
+
+          //////////////////////////////////////////////////////////////////////////////
 
           $sqlGet = "SELECT * FROM blog_main_page";
           $queryGet = mysqli_query($conn, $sqlGet);
+          
           while ($rowGet = mysqli_fetch_assoc($queryGet)) {
-
-            echo "<form class='formStyles'>";
-            echo "<div>";
-            echo "<h1>Информация</h1>";
-
-            echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
-            echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"title\" id=\"title\"><br>";
-
-
-
-            echo "<label class=\"labelNews\" for=\"link\">Линк: </label>";
-            echo "<input value=\"" . $rowGet['link'] . "\" placeholder=\"Пр: име-на-статия.php\" type=\"text\" name=\"link\" id=\"link\"><u>";
-            echo "<br>";
-
-            echo "<button id=\"save\" class=\"btnSubmitArticle\" type=\"submit\">Запиши</button>";
-            echo "<button class=\"btnSubmitArticle\" type=\"submit\">Редактирай</button>";
-
-            echo "</div>";
-
-            echo "<div class=\"articleText\">";
-            echo "<h1 class='header' '>Статия</h1>";
-            echo "<textarea name=\"content\" id=\"content\" cols=\"150\" rows=\"12\">" . $rowGet['content'] . "</textarea>";
-            echo "</div>";
-
-            echo "</form>";
+              echo "<form class='formStyles' method='POST'>";
+              echo "<div>";
+              echo "<h1>Информация</h1>";
+              echo "<input type='hidden' name='updateID' value='" . $rowGet['ID'] . "'>";
+              echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
+              echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"titleSet\" id=\"title\"><br>";
+          
+              echo "<label class=\"labelNews\" for=\"link\">Линк: </label>";
+              echo "<input value=\"" . $rowGet['link'] . "\" placeholder=\"Пр: име-на-статия.php\" type=\"text\" name=\"linkSet\" id=\"link\"><u>";
+              echo "<br>";
+          
+              echo "<button id=\"saveChanges\" class=\"btnSubmitArticle\" type=\"submit\">Запази промените</button>";
+              echo "<input type='hidden' name='formType' value='makeChanges'>";
+          
+              echo "</div>";
+          
+              echo "<div class=\"articleText\">";
+              echo "<h1 class='header'>Статия</h1>";
+              echo "<textarea name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
+              echo "</div>";
+          
+              echo "</form>";
           }
-
 
           ?>
 
