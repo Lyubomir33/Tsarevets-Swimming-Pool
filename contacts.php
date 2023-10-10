@@ -8,7 +8,7 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="contact-info">
 
-          <h2 class="contact-title">Локация и Контакти</h2>
+          <h2 id="anchorID" class="contact-title">Локация и Контакти</h2>
 
           <ul class="contact-info">
               <li>

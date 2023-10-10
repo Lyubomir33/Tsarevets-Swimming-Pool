@@ -83,13 +83,13 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div id="first" class="boxOne">
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./whySwimm.php">
         <div class="firstIMG">
           <p class="imgP">Защо плуване?</p>
         </div>
       </a>
 
-      <a class="anchorStyle" href="./test.php">
+      <a class="anchorStyle" href="./scheduleMainPage.php">
         <div class="secondIMG">
           <p class="secondP">График</p>
         </div>
@@ -99,7 +99,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div id="second" class="boxTwo">
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./Dashboard/calendarDashboard.php">
         <div class="thirdIMG">
           <p class="thirdP">Календар</p>
         </div>
@@ -134,19 +134,19 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div id="threeDivs">
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./whySwimm.php">
         <div class="firstIMG">
           <p class="imgP">Защо плуване?</p>
         </div>
       </a>
 
-      <a class="anchorStyle" href="./Dashboard/calendarDashboard.php">
+      <a class="anchorStyle" href="./scheduleMainPage.php">
         <div class="secondIMG">
           <p class="secondP">График</p>
         </div>
       </a>
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./Dashboard/calendarDashboard.php">
         <div class="thirdIMG">
           <p class="thirdP">Календар</p>
         </div>

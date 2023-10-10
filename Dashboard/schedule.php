@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <title>Табло за управление</title>
 </head>
 
@@ -106,7 +107,25 @@
             <h1 class="recent-Articles">График</h1>
           </div>
 
-          <!-- TUK TRQBVA DA SE PISHE GRAFIKA -->
+          <h1>Въведете графика тук</h1>
+
+          <form method="POST">
+            <textarea name="schedule" id="schedule" cols="100" rows="10">
+
+              <?php require "../databaseConnection/database.php";
+
+              $sqlGetData = "SELECT * FROM schedule_table";
+              $queryGEtData = mysqli_query($conn, $sqlGetData);
+
+              while ($rowData = mysqli_fetch_assoc($queryGEtData)) {
+                echo $rowData['schedule'];
+              } ?>
+         </textarea>
+         <button class="btnSubmitArticle" type="submit" name="formType" value="saveSchedule">Запиши</button>
+            <button class="btnSubmitArticle" type="submit" name="formType" value="rewriteSchedule">Презапиши</button>
+
+
+          </form>
 
         </div>
 
@@ -116,6 +135,27 @@
 
     </div>
 
+    <?php
+
+    require "../databaseConnection/database.php";
+
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+      $formSubmit = $_POST['formType'];
+      $scheduleText = $_POST['schedule'];
+
+      if ($formSubmit == "saveSchedule") {
+        $SQL = "INSERT INTO schedule_table (schedule) VALUES ('$scheduleText')";
+        $querySchedule = mysqli_query($conn, $SQL);
+      } else if ($formSubmit === "rewriteSchedule") {
+        $sqlSet = "UPDATE schedule_table SET schedule ='$scheduleText'";
+        $querySet = mysqli_query($conn, $sqlSet);
+      }
+    }
+
+
+    ?>
+
 
 
     <script>
@@ -124,7 +164,25 @@
 
       menuicn.addEventListener("click", () => {
         nav.classList.toggle("navclose");
-      })
+      });
+
+      
+
+      //TINYMCE TEXT AREA EDITOR//
+
+      
+      tinymce.init({
+      selector: '#schedule',
+      plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ],
+      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
+    });
     </script>
 
   </body>

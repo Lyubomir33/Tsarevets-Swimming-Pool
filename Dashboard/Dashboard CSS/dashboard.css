@@ -365,3 +365,31 @@ header {
   color: white;
   border-radius: 4px;
 }
+
+#schedule {
+  font-size: 17px;
+  margin: 20px;
+  display: flex;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 5px black;
+}
+
+.btnSubmitArticle {
+  border-radius: 8px;
+  font-size: 18px;
+  color: black;
+  background: white;
+  padding: 5px;
+  margin: 20px;
+}
+
+.btnSubmitArticle:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
+
+.btnSubmitArticle:not(:hover) {
+  transition: 0.5s;
+}
