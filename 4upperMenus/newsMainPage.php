@@ -22,7 +22,7 @@
   <title>Начална страница</title>
 </head>
 
-<body>
+<body class="">
 
 
   <header class="header">
@@ -59,7 +59,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="mainNewsPage">
 
     <div class="news">
 
@@ -75,14 +75,18 @@
 
       require "../databaseConnection/database.php";
 
+    
+
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
         echo " <a style='text-decoration: none;' href='/Dashboard/articleFiles/{$row['link']}'>
+        <div>
+            <h1 class='headerNews'>{$row['title']}</h1>
             <div style='background: url(/Dashboard/{$row['image']}); 
             background-repeat: no-repeat; background-position: center;' class='addNews'>
-                <h1 class='headerNews'>{$row['title']}</h1>
-            </div></a>";
+                
+           </div> </div></a>";
 
     }
 
@@ -97,8 +101,8 @@
 
   </main>
 
-  <?php include "../footer.php"; ?>
-  <span id="spanFooter" ></span>
+  <span class="backgroundColor"><?php include "../footer.php"; ?></span>
+ 
 
 
 

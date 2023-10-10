@@ -172,42 +172,48 @@
               $fullPath = $directory . $link;
 
 
-
               $sql = "SELECT * FROM blog_main_page";
               $query = mysqli_query($conn, $sql);
+              
+              // Initialize a counter variable
+              $i = 0;
+              
               while ($row = mysqli_fetch_assoc($query)) {
-
-                $content = '';
-
-                $content .= "<!DOCTYPE html>";
-                $content .= "<html lang=\"en\">";
-                $content .= "<head></head>";
-
-                $content .= "<body>";
-                $content .= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ';
-
-                $content .= "\$sql = 'SELECT * FROM blog_main_page';
-                \$query = mysqli_query(\$conn, \$sql);
-                while (\$row = mysqli_fetch_assoc(\$query)) {
-                  ?>";
-                
+                  $content = '';
+              
+                  $content .= "<!DOCTYPE html>";
+                  $content .= "<html lang=\"en\">";
+                  $content .= "<head></head>";
+                  $content .= "<body>";
+                  $content .= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ';
+              
+                  $content .= "\$sql = 'SELECT * FROM blog_main_page LIMIT 1 OFFSET {$i}';
+                  \$query = mysqli_query(\$conn, \$sql);
+                  while (\$row = mysqli_fetch_assoc(\$query)) {
+                      ?>";
+              
                   $content .= "<div class='divBlog'>
-                  <h3><?php echo \$row['title_in_blog']; ?></h3>
-                  <img class='imageFforBlogs' src='../<?php echo \$row['image']; ?>'>
-                  <p><?php echo \$row['content']; ?></p>
-              </div>
-              <?php
-              }";
+                                <h3><?php echo \$row['title_in_blog']; ?></h3>
+                                <img class='imageFforBlogs' src='../<?php echo \$row['image']; ?>'>
+                                <p><?php echo \$row['content']; ?></p>
+                            </div>
+                            <?php
+                            }";
+              
+                  $content .=  ' require "../../footer.php"?> ';
+                  $content .= "</body>";
+                  $content .= "</html>";
+              
+                
+                  // Save the content to the file
 
-                $content .=  ' require "../../footer.php"?> ';
-                $content .= "</body>";
-                $content .= "</html>";
+                  file_put_contents($fullPath, $content);              
+                  
+                  $i++;
               }
-
-              file_put_contents($fullPath, $content);
-
-
-              echo 'Файлът беше създаден успешно.';
+              
+              echo 'Файловете бяха създадени успешно.';
+              
             } elseif ($formType === "makeChanges") {
               $titleSet = $_POST['titleSet'];
               $linkSet = $_POST['linkSet'];

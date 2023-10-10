@@ -121,6 +121,8 @@
       </div>
     </div>
 
+    
+  <?php include "./contactUs.php"; ?>
 
 
   <script >
