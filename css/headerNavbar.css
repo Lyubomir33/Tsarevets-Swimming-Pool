@@ -6,6 +6,7 @@
 }
 
 #neubar {
+  background-color: white;
   box-shadow: 0 0 3px black;
 }
 
@@ -32,6 +33,10 @@ a.navbar-brand {
     height: 81px;
     margin: -7px;
     margin-left: -23px;
+}
+
+.logo:hover {
+  color: #fcc900;
 }
 
 

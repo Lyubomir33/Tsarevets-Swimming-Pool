@@ -34,17 +34,17 @@
           <ul class="navbar-nav ms-auto ">
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
+              <a id="forClub" class="nav-link mx-2" href="#">ЗА КЛУБА</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">НОВИНИ</a>
+              <a id="news" class="nav-link mx-2" href="#">НОВИНИ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
+              <a id="contacts" class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+              <a id="reviews" class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>
 
 

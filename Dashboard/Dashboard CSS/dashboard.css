@@ -403,13 +403,24 @@ header {
   flex: 0 0 calc(33.33% - 20px); /* Adjust the width to fit three items in a row */
   margin: 10px;
   border: 2px solid black;
-  height: 250px; /* Set a fixed height to make them consistent */
+  height: 260px; /* Set a fixed height to make them consistent */
   width: 100%;
   padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 8px;
  
 }
 
+.inputStyles {
+  font-size: 16px;
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+}
+
 .textAreaOpinion{
+  font-size: 15px;
+  padding: 5px;
   margin: 10px;
   width: 380px;
   height: 150px;

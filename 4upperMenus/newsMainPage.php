@@ -22,7 +22,7 @@
   <title>Начална страница</title>
 </head>
 
-<body class="">
+<body class="newsMainPageBody">
 
 
   <header class="header">

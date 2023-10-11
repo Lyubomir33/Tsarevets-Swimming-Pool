@@ -29,6 +29,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+ 
 }
 .wrapper .box{
   background: #fff;
@@ -80,6 +81,12 @@
 .box:hover .content .image img{
   border-color: #fff;
 }
+
+
+#forClub:hover, #news:hover, #reviews:hover, #contacts:hover {
+  color: white;
+}
+
 @media (max-width: 1045px) {
   .wrapper .box{
     width: calc(50% - 10px);
@@ -91,3 +98,4 @@
     width: 100%;
   }
 }
+

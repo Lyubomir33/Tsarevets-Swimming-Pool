@@ -123,9 +123,9 @@
 
                 echo "<div class='reviewStage'>
                         <label for='names'>Имена: </label>
-                        <input value='$rowRequest[names]' disabled type='text'><br>
-                        <label for='emails'>Имейл</label>
-                        <input value ='$rowRequest[email]' disabled type='text'>
+                        <input class='inputStyles' value='$rowRequest[names]' disabled type='text'><br>
+                        <label for='emails'>Имейл:</label>
+                        <input class='inputStyles' value ='$rowRequest[email]' disabled type='text'>
                         <textarea disabled class='textAreaOpinion'>$rowRequest[opinion]</textarea>
 
                         </div>";
@@ -133,8 +133,8 @@
 
               ?>
 
-
-
+             
+              
 
 
 
