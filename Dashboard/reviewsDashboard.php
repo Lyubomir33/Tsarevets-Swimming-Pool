@@ -104,13 +104,50 @@
 
         <div class="report-container">
           <div class="report-header">
+            <h1 class="recent-Articles">Отзиви</h1>
             <h1 class="recent-Articles"></h1>
+
+          </div>
+
+          <div>
+
+            <div class="flexDiv">
+              <?php
+
+              require "../databaseConnection/database.php";
+
+              $sqlRequest = "SELECT * FROM contactform";
+              $queryGet = mysqli_query($conn, $sqlRequest);
+
+              while ($rowRequest = mysqli_fetch_assoc($queryGet)) {
+
+                echo "<div class='reviewStage'>
+                        <label for='names'>Имена: </label>
+                        <input value='$rowRequest[names]' disabled type='text'><br>
+                        <label for='emails'>Имейл</label>
+                        <input value ='$rowRequest[email]' disabled type='text'>
+                        <textarea disabled class='textAreaOpinion'>$rowRequest[opinion]</textarea>
+
+                        </div>";
+              }
+
+              ?>
+
+
+
+
+
+
+
+            </div>
+
+
+
           </div>
 
 
         </div>
       </div>
-    </div>
     </div>
 
     <script>

@@ -12,20 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
   <link rel="stylesheet" href="/css/reviews.css">
-  <link rel="stylesheet" href="/css/headerNavbar.css">
+  <link rel="stylesheet" href="../css/headerNavbar.css">
   <link rel="stylesheet" href="/css/style.css">
   <title>Мнения</title>
 </head>
 <body id="bodyReviews">
+
 
 <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span  id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
-          <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000; border: none;"></i>
+          <span  id="optionOne" style="border: none;" onclick="changeMenuIcon()" class="navbar-toggler-icon" "></span>
+          <i id="optionTwo" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000; border: none; "></i>
         </button>
 
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
@@ -52,6 +54,29 @@
       </div>
     </nav>
   </header>
+
+  
+<script >
+    
+    
+    const menu = document.getElementById('optionOne');
+    const xMenu = document.getElementById('optionTwo');
+
+    function changeMenuIcon() {
+      xMenu.style.display = "block";
+      menu.style.display = "none";
+    }
+
+    function changeXIcon() {
+      xMenu.style.display = "none";
+      menu.style.display = "block";
+    }
+
+
+   
+	
+
+    </script>
 
 
 
@@ -121,28 +146,16 @@
       </div>
     </div>
 
+
+
     
   <?php include "./contactUs.php"; ?>
 
 
-  <script >
-    
-    const menu = document.getElementById('togglerID');
-    const xMenu = document.getElementById('xToggler');
-
-    function changeMenuIcon() {
-      xMenu.style.display = "block";
-      menu.style.display = "none";
-    }
-
-    function changeXIcon () {
-      xMenu.style.display = "none";
-      menu.style.display = "block";
-    }
-
-    </script>
-
 <?php include "../footer.php" ?>
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

@@ -16,7 +16,7 @@
   margin : auto 4px;
 }
 #neubar a {
-  
+  text-decoration: none;
   padding-left:12px;
   padding-right:12px;
 }
@@ -50,23 +50,31 @@ a.navbar-brand {
 
 #togglerID,#menu {
   width: 2em;
+  
+}
+
+.navbar-light .navbar-toggler {
   border: none;
+  border-color: 0;
 }
 
 .navbar-toggler.collapsed {
-  border: none;
+  
+  border-color: 0;
+  border: 0;
 }
 
 .navbar-toggler { 
-  border: none;
+  border-color: 0;
+  border: 0;
 
 }
 
 
 
-#xToggler,#xxx {
+#xToggler,#xxx,#optionTwo {
   width: 2em;
-  
+  border: 0;
 }
 
 
@@ -82,6 +90,30 @@ a.navbar-brand {
   display: none;
   padding-left: 17px;
 
+}
+
+#optionTwo {
+  font-size: 32px;
+  width: 2em;
+  height: -0.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: none;
+  padding-left: 17px;
+}
+
+#optionOne {
+  font-size: 32px;
+ 
+  height: -0.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  
+  padding-left: 17px;
 }
 
 #xxx {

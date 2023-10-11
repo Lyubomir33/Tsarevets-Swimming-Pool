@@ -14,10 +14,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html,body{
+/* html,body{
   display: grid;
   height: 100%;
-}
+} */
 ::selection{
   background: rgba(23,162,184,0.3);
 }
@@ -33,7 +33,7 @@ html,body{
 .wrapper .box{
   background: #fff;
   width: calc(33% - 10px);
-  padding: 25px;
+  padding: 35px;
   border-radius: 3px;
   box-shadow: 1px 4px 8px rgba(0,0,0,0.5);
 }

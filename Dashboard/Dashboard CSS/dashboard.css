@@ -288,7 +288,7 @@ header {
   height: -30vh;
   width: 100%;
   min-height: 300px;
-  
+
   margin: 70px auto 0px auto;
   background-color: #ffffff;
   border-radius: 30px;
@@ -392,4 +392,25 @@ header {
 
 .btnSubmitArticle:not(:hover) {
   transition: 0.5s;
+}
+
+.flexDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviewStage {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust the width to fit three items in a row */
+  margin: 10px;
+  border: 2px solid black;
+  height: 250px; /* Set a fixed height to make them consistent */
+  width: 100%;
+  padding: 10px;
+ 
+}
+
+.textAreaOpinion{
+  margin: 10px;
+  width: 380px;
+  height: 150px;
 }
