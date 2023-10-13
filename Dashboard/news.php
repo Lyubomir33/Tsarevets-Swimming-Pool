@@ -175,7 +175,6 @@
               $sql = "SELECT * FROM blog_main_page";
               $query = mysqli_query($conn, $sql);
               
-              // Initialize a counter variable
               $i = 0;
               
               while ($row = mysqli_fetch_assoc($query)) {
@@ -205,7 +204,6 @@
                   $content .= "</html>";
               
                 
-                  // Save the content to the file
 
                   file_put_contents($fullPath, $content);              
                   

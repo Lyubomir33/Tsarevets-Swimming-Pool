@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
   <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+  <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
   <title>Табло за управление</title>
 </head>
 
@@ -42,41 +43,38 @@
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
-            <a href="./dashboard.php">
-              <div class="nav-option option1">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
-                <h3> Събития</h3>
-              </div>
-            </a>
-
-            <div class="nav-option option2">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
-              <h3> График</h3>
+            <div id="eventsOption" class="nav-option option1">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
+              <h3> Събития</h3>
             </div>
 
-            <a href="/Dashboard/news.php">
-              <div class="nav-option option3">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-                <h3> Новини </h3>
+            <a href="/Dashboard/schedule.php">
+              <div class="nav-option option2">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
+                <h3> График</h3>
               </div>
 
+            </a>
+
+            <a href="./news.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Новини</h3>
+              </div>
             </a>
 
             <a href="./reviewsDashboard.php">
-            <div class="nav-option option3">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-              <h3> Отзиви</h3>
-            </div>
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Отзиви</h3>
+              </div>
             </a>
 
-        <a href="./adjustCalendar.php">
-        <div class="nav-option option4">
+            <!-- <div class="nav-option option4">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Календар</h3>
+              <h3> Institution</h3>
             </div>
-        </a>
 
-                <!-- 
             <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
               <h3> Profile</h3>
@@ -100,7 +98,7 @@
       <div class="main">
 
         <div class="searchbar2">
-          <input type="text" name="" id="" placeholder="Search">
+          <input type="text" placeholder="Search">
           <div class="searchbtn">
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-button">
           </div>
@@ -109,59 +107,62 @@
 
         <div class="report-container">
           <div class="report-header">
-            <h1 class="recent-Articles">График</h1>
+            <h1 class="recent-Articles">Създаване на календар</h1>
           </div>
 
-          <h1>Въведете графика тук</h1>
-
           <form method="POST">
-            <textarea name="schedule" id="schedule" cols="100" rows="10">
+            <input type="hidden" name="formType" value="calendarText"> <!-- Add a hidden input for formType -->
+            <textarea name="textareaClander" id="textareaClander" cols="30" rows="10">
 
-              <?php require "../databaseConnection/database.php";
+            <?php 
+            
+            require "../databaseConnection/database.php";
 
-              $sqlGetData = "SELECT * FROM schedule_table";
-              $queryGEtData = mysqli_query($conn, $sqlGetData);
+            $sqlGET = "SELECT * FROM calendar";
+            $queryGET = mysqli_query($conn, $sqlGET);
 
-              while ($rowData = mysqli_fetch_assoc($queryGEtData)) {
-                echo $rowData['schedule'];
-              } ?>
-         </textarea>
-         <!-- <button class="btnSubmitArticle" type="submit" name="formType" value="saveSchedule">Запиши</button> -->
-            <button class="btnSubmitArticle" type="submit" name="formType" value="rewriteSchedule">Запази промените</button>
+            while($rowG = mysqli_fetch_assoc($queryGET)) {
+                echo $rowG['calendar_info'];
+            }
+
+            
+            
+            ?>
 
 
+            </textarea>
+            <button class="btnSubmitArticle" type="submit">Запиши промените</button>
           </form>
 
+
         </div>
-
       </div>
-
     </div>
-
+    </div>
     </div>
 
     <?php
 
     require "../databaseConnection/database.php";
 
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  
 
-      $formSubmit = $_POST['formType'];
-      $scheduleText = $_POST['schedule'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $formType = $_POST['formType'];
 
-      if ($formSubmit == "saveSchedule") {
-        $SQL = "INSERT INTO schedule_table (schedule) VALUES ('$scheduleText')";
-        $querySchedule = mysqli_query($conn, $SQL);
-      } else if ($formSubmit === "rewriteSchedule") {
-        $sqlSet = "UPDATE schedule_table SET schedule ='$scheduleText'";
-        $querySet = mysqli_query($conn, $sqlSet);
-      }
-    }
+  if ($formType === "calendarText") {
+
+    $calendarText = $_POST['textareaClander'];
+
+    $sqlSet = "UPDATE calendar SET calendar_info = '$calendarText'";
+    $query = mysqli_query($conn, $sqlSet);
+
+  }
+}
+
 
 
     ?>
-
-
 
     <script>
       let menuicn = document.querySelector(".menuicn");
@@ -169,29 +170,29 @@
 
       menuicn.addEventListener("click", () => {
         nav.classList.toggle("navclose");
-      });
+      })
 
-      
 
-      //TINYMCE TEXT AREA EDITOR//
 
-      
       tinymce.init({
-      selector: '#schedule',
-      plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
-      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-      tinycomments_mode: 'embedded',
-      tinycomments_author: 'Author name',
-      mergetags_list: [
-        { value: 'First.Name', title: 'First Name' },
-        { value: 'Email', title: 'Email' },
-      ],
-      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
-    });
+        selector: '#textareaClander',
+        plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [{
+            value: 'First.Name',
+            title: 'First Name'
+          },
+          {
+            value: 'Email',
+            title: 'Email'
+          },
+        ],
+        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
+      });
     </script>
 
   </body>
-
-
 
 </html>

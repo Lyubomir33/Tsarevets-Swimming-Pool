@@ -62,7 +62,7 @@
      
         <div id="mapDiv" class="map">
           <iframe id="iframeLocation" class="locationFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9976632541934!2d25.6005263!3d43.062516699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9267ef2908953%3A0xf479f4e02c57e384!2sul.%20%22Byala%20Bona%22%2010%2C%205000%20g.k.%20Cholakovtsi%2C%20Veliko%20Tarnovo!5e0!3m2!1sen!2sbg!4v1696226521080!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img class="logoMess" src="/images/mess-removebg-preview.png" alt="">
+        <img class="logoMess heartbeat" src="/images/mess-removebg-preview.png" alt="">
         </div>
         
       </div>
@@ -129,12 +129,14 @@ resizeIframe();
   }
 
   .logoMess {
+    margin-right: 100px;
     border-radius: 15px;
     height: 150px;
     
   }
 
   .logoMess:hover {
+    cursor: pointer;
     transform: scale(1.3);
     transition: 0.5s;
   }
@@ -241,5 +243,11 @@ resizeIframe();
     align-content: space-around;
     
   } 
+
+  .background {
+    margin-bottom: -400px;
+  }
+
+
   }
 </style>

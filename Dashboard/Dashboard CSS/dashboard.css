@@ -425,3 +425,8 @@ header {
   width: 380px;
   height: 150px;
 }
+
+#textareaClander {
+  margin: 15px;
+  padding: 15px;
+}

@@ -528,7 +528,6 @@ body {
 
 .futureEvents {
   
-  background-color: red;
     margin: 0 auto;
     width: 400px;
     height: 200px;
@@ -539,6 +538,10 @@ body {
     display: flex;
     margin: 0px auto;
     margin-bottom: 20px;
+}
+
+.navbar-toggler-icon {
+  color: black;
 }
 
 .divBlog p{
@@ -557,6 +560,11 @@ body {
   margin-bottom: 20px;
   justify-content: center;
 
+}
+
+.oldImage {
+  height: 52px;
+  margin-left: -8px;
 }
 
 /* CSS FOR THE NEW BLOG ARTICLES */
@@ -599,6 +607,11 @@ body {
     letter-spacing: 1.4px;
     padding-left: 290px;
     padding-right: 280px;
+  }
+
+  .oldImage {
+    height: 75px;
+    margin-right: 8px;
   }
 
   .imageFforBlogs {

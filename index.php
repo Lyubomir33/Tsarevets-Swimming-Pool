@@ -29,17 +29,25 @@
   <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
+        <div style="display: flex;">
+        <img class="oldImage" src="./images/най-стара_снимка-removebg-preview.png">
         <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
+
+        </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
           <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000;"></i>
         </button>
 
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto ">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
+
+          <li class="nav-item">
+              <a style="color: red;" class="nav-link mx-2 heartbeat" href="/4upperMenus/events.php">СЪБИТИЯ</a>
+            </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
+              <a class="nav-link mx-2" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
             <li class="nav-item">
@@ -85,7 +93,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
       <a class="anchorStyle" href="./whySwimm.php">
         <div class="firstIMG">
-          <p class="imgP">Защо плуване?</p>
+          <p class="imgP">Ползи от плуването</p>
         </div>
       </a>
 
@@ -123,7 +131,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
       <a class="anchorStyle" href="#">
         <div class="sixthIMG">
-          <p class="fourthP">Запиши се тук</p>
+          <p class="fourthP">Медалисти</p>
         </div>
       </a>
 
@@ -136,7 +144,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
       <a class="anchorStyle" href="./whySwimm.php">
         <div class="firstIMG">
-          <p class="imgP">Защо плуване?</p>
+          <p class="imgP">Ползи от плуването</p>
         </div>
       </a>
 
@@ -170,7 +178,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
       <a class="anchorStyle" href="#">
         <div class="sixthIMG  ">
-          <p class="thirdP">Запиши се тук</p>
+          <p class="thirdP">Медалисти</p>
         </div>
       </a>
     </div>
@@ -240,121 +248,14 @@ if (localStorage.getItem('hideEvents') === 'true') {
       </div>
     </div>
 
-    <!-- <button class="btnSignIn">Искам да се запиша</button> -->
-
-
-
-    <!-- <div class="whoForDiv"> -->
-
-    <!-- <p><img class="cloud" src="/images/laodz (2).svg" alt=""></p> -->
-    <!-- </div> -->
-    <!-- 
-    <h1 class="ourValues"><b>НАШИТЕ ЦЕННОСТИ</b></h1>
-
-    <div class="textSwimming">
-      <p>Ние от спортен клуб СКП вярваме, че плуването е един от най-хубавите спортове, който може да изберете за вас и вашето дете. <br><br>
-        Съчетава двигателен активизъм и релаксация, предоставяйки ни уникален начин за намаляване на стреса и подобряване на менталната ни яснота.
-        <br><br>Нашата мисия е не само да ви научим да плувате. <br><br>Ние целим да изградим полезни навици, които ще ви помагат не само в спорта, но и в живота:
-         Трудолюбие, дисциплина, упоритост, постоянство, кураж и устойчивост.  <br><br>
-      </p>
-    
-
-    </div> -->
+  
 
     <?php include "./contacts.php"; ?>
 
-    <!-- <div class="contacts">
-
-      <h1 class="headerWhoFor"> &nbsp &nbsp Къде се провеждат &nbsp &nbsp &nbsp &nbsp заниманията?</h1>
-      <p class="address">Адрес: </p>
-        <p class="addressText">ул. Бяла Бона 10, <br>гр. Велико Търново</p>
-      -->
-
-
-
-    <!-- <h1 id="anchorID" class="headerContacts">Контакти</h1>
-
-      <h2 class="phoneNumbers">Даниел Стоянов: </h2>
-      <p class="phoneNumbers"><span class="phoneBackground">0878 687 555</span></p>
-
-      <h2 class="phoneNumbers">Панайот Паздерков: </h2>
-      <p class="phoneNumbers"><span class="phoneBackground">0898 579 010</span></p>
-
-      <div class="writeToUs">
-        <p class="write">Не успяхте да се свържете с нас по телефона? <br><br> Нашият чат е на един клик разстояние от вас!<br></p>
-        <p class="write">Натиснете върху Messenger иконката и ни пишете.</p>
-        <p class="write">Ще се свържем с вас при първа възможност!</p>
-        <a href=""><img class="messenger" src="./images/mess-removebg-preview.png" alt=""></a>
-         https://www.facebook.com/profile.php?id=100057188630835 -->
-    <!-- </div> -->
-
+  
     </div>
 
-    <div class="cleintsReviews">
-      МНЕНИЯ НА КЛИЕНТИ
-    </div>
-
-    <div class="wrapper">
-      <div class="box">
-        <i class="fas fa-quote-left quote"></i>
-        <p>Реших да запиша 8 годишната си дъщеря и с ръка на сърцето мога да кажа, че това беше страхотно решение.
-          Теди обожава да плува! Водата е топла, а треньорите са страхотни. Препоръчвам!
-        </p>
-        <div class="content">
-          <div class="info">
-            <div class="name">Мария Йорданова</div>
-            <div class="job">Брокер</div>
-            <div class="stars">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="box">
-        <i class="fas fa-quote-left quote"></i>
-        <p>Запознах се с Дидо покрай футбола. Реших да пробвам плуване при него и горещо препоръчвам на всеки да го направи.
-          Чувствам се много добре и сънят ми доста се подобри.
-        </p>
-        <div class="content">
-          <div class="info">
-            <div class="name">Любомир Стоянов</div>
-            <div class="job">Програмист</div>
-            <div class="stars">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="box">
-        <i class="fas fa-quote-left  quote"></i>
-        <p>Всеки ден говоря с много хора и обичам да ходя да плувам понякога.
-          След плуването се чувствам релаксирана и спокойна.
-          Условията в залата са добри и цените са достъпни.
-        </p>
-        <div class="content">
-          <div class="info">
-            <div class="name">Ивелина Таева</div>
-            <div class="job">Учителка</div>
-            <div class="stars">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
 
   </main>
