@@ -25,39 +25,44 @@
 <body>
 
 
-  <header class="header">
-    <nav style="padding: 10px" class="navbar navbar-expand-sm navbar-light" id="neubar">
-      <div style="display: flex;">
-
+<header class="header">
+    <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+      <div class="container">
+        <div style="display: flex;">
+        
         <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
-        <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000; border: none;"></i>
-      </button>
+        </div>
+        <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
+          <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000;"></i>
+        </button>
 
-      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto ">
-
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
-          </li>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
 
           <li class="nav-item">
-            <a class="nav-link mx-2" href="#">НОВИНИ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
-          </li>
+              <a style="color: red;" class="nav-link mx-2 heartbeat" href="/4upperMenus/events.php">СЪБИТИЯ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            </li>
 
 
-          </li>
-        </ul>
-      </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>

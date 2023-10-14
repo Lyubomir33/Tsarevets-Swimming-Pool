@@ -191,7 +191,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         <h1 class="ourOffer">Ние предлагаме</h1>
       </b>
 
-      <p class="courses">Обучение по плуване за:</p>
+      <p class="courses">обучение по плуване за:</p>
 
       <div id="firstTwoOfffers">
         <div id="allThreeOffers">
@@ -215,11 +215,11 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
           <div class="secondOffer">
 
-            <img class="sixYearsOld" src="/images/test10teenagers.png">
+            <img class="tenYearsOld" src="/images/test10teenagers.png">
             <u>
               <p class="kidsAge">Деца на възраст 10+ г.</p>
             </u>
-            <div class="beneffits">
+            <div class="beneffits10yearsOld">
               <ul>
                 <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Усъвършенстване в плувния спорт</li>
                 <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Участие в спортни състезания</li>

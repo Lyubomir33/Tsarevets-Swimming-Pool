@@ -18,6 +18,10 @@
   height: 25px;
 }
 
+.row-mt-5 {
+  margin-top: -60px;
+}
+
 @media (min-width: 600px) {
       .footer {
         width: 100%;
@@ -35,6 +39,14 @@
   }
 
   .col.copyright {
-    margin-top: 70px;
+    margin-top: 30px;
+  }
+
+
+}
+
+@media (min-width: 900px) {
+  .pt-5.pb-5.footer {
+    height: 375px;
   }
 }

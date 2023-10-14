@@ -83,7 +83,7 @@ function resizeIframe() {
     iframeLocation.style.display = "none";
     mapDiv.style.display = "flex";
     mapDiv.style.height = "120px";
-    backgroundSetup.style.height = "790px"; 
+    backgroundSetup.style.height = "750px"; 
 
   } else {
     iframeLocation.style.display = "block";
