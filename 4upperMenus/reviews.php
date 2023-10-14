@@ -24,9 +24,9 @@
 <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
     <div class="container">
-        <div style="display: flex;">
-        <img class="oldImage" src="../images/най-стара_снимка-removebg-preview.png">
-        <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
+    <div style="display: flex;">
+        
+        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

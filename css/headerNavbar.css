@@ -13,7 +13,7 @@
 }
 
 #neubar .dropdown-menu a:hover {
-  color: #454545
+  color: #454545;
 }
 
 #neubar .nav-item {
@@ -35,15 +35,16 @@ a.navbar-brand {
 }
 
 .logo {
-  width: 205px;
+  padding-left: 8px;
+  width: 260px;
   height: 81px;
-  margin: -7px;
+  margin: -20px;
   margin-left: -23px;
 }
 
 .logo:hover {
   text-decoration: none;
-  color: #fcc900;
+  color: #e7d172;
 }
 
 
@@ -54,8 +55,8 @@ a.navbar-brand {
 
 .nav-link.mx-2:hover {
 
-  background-color: black;
-  color: white;
+  /* background-color: black; */
+  color: black;
   transition: 0.5s;
   font-size: 20px;
 }

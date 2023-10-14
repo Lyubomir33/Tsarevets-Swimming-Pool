@@ -26,36 +26,38 @@
 
 
   <header class="header">
-    <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
-      <div class="container">
-        
-        <a class="logo" class="navbar-brand" id="headerCKP" href="/index.php">СКП ЦАРЕВЕЦ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
-          <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000; border: none;"></i>
-        </button>
+    <nav style="padding: 10px" class="navbar navbar-expand-sm navbar-light" id="neubar">
+      <div style="display: flex;">
 
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto ">
+        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
-            </li>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
+        <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000; border: none;"></i>
+      </button>
 
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#">НОВИНИ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
-            </li>
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">НОВИНИ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+          </li>
 
 
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
+      </div>
       </div>
     </nav>
   </header>
@@ -63,30 +65,30 @@
   <div>
     <h1 class="schedule">Календар на събитията 2024г.</h1>
   </div>
-  
-  <?php 
 
-    require "../databaseConnection/database.php";
+  <?php
 
-    $sql = "SELECT * FROM calendar";
-    $query = mysqli_query($conn, $sql); 
+  require "../databaseConnection/database.php";
+
+  $sql = "SELECT * FROM calendar";
+  $query = mysqli_query($conn, $sql);
 
 
-    while($row = mysqli_fetch_assoc($query)) {
-          echo "<div class='calD'>";
-          echo "$row[calendar_info]";
-          echo "</div>";
-    }
+  while ($row = mysqli_fetch_assoc($query)) {
+    echo "<div class='calD'>";
+    echo "$row[calendar_info]";
+    echo "</div>";
+  }
 
-    
 
-  
+
+
   ?>
 
 
 
   <div class="move-around">
-   
+
 
   </div>
 
@@ -97,7 +99,7 @@
 
   <div class="backgroundCalendarContacts">
 
-   
+
 
   </div>
 
@@ -114,7 +116,7 @@
 
 
 
-  
+
   <script>
     const menu = document.getElementById('togglerID');
     const xMenu = document.getElementById('xToggler');

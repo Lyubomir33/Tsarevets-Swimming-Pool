@@ -6,3 +6,37 @@
     flex-direction: column;
 
 }
+
+.textWhySwimm b {
+  text-shadow: 2px 2px 3px black;
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.textWhySwimm h1 {
+  text-shadow: 2px 2px 3px black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.imgWhySwimm {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.bodyWhySwimm {
+  background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%);
+  
+  
+}

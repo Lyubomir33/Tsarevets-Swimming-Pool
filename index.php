@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
-  <title>Начална страница</title>
+  <title>Начална страница тест среда</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <div style="display: flex;">
-        <img class="oldImage" src="./images/най-стара_снимка-removebg-preview.png">
-        <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
+        
+        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,11 +68,11 @@
     </nav>
   </header>
 
-  <a id="events" class="futureEvents" href="www.google.com" target="_blank">
+  <!-- <a id="events" class="futureEvents" href="www.google.com" target="_blank">
     <div>
-      <!-- Content here -->
-    </div>
-  </a>
+      Content here -->
+    <!-- </div>
+  </a> --> 
 
   <script>
    const eventsElement = document.getElementById('events');
@@ -188,7 +188,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div class="offer">
       <b>
-        <h1 class="ourOffer">Нашите оферти</h1>
+        <h1 class="ourOffer">Ние предлагаме</h1>
       </b>
 
       <p class="courses">Обучение по плуване за:</p>
@@ -199,7 +199,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
           <div class="firstOffer">
 
 
-            <img class="sixYearsOld" src="/images/5-6 years old.png">
+            <img class="sixYearsOld" src="/images/test5years.png">
             <u>
               <p class="kidsAge">Деца на възраст 5+ г.</p>
             </u>
@@ -215,7 +215,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
           <div class="secondOffer">
 
-            <img class="sixYearsOld" src="/images/boy 10 years old.png">
+            <img class="sixYearsOld" src="/images/test10teenagers.png">
             <u>
               <p class="kidsAge">Деца на възраст 10+ г.</p>
             </u>
@@ -232,7 +232,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
         <div class="thirdOffer">
 
-          <img class="sixYearsOld" src="/images/man.png">
+          <img class="sixYearsOld" src="/images/testAdults.png">
           <u>
             <p class="kidsAge">Обучение за възрастни</p>
           </u>

@@ -37,10 +37,10 @@
 
     <div>
 
-      <img class="imgSchedule" src="./images/olympicGames.jpg">
-      <img class="imgSchedule" src="./images/olympicGames.jpg">
-      <img class="imgSchedule" src="./images/olympicGames.jpg">
-      <img class="imgSchedule" src="./images/olympicGames.jpg">
+      <img class="imgSchedule" src="./images/pool1.jpg">
+      <img class="imgSchedule" src="./images/pool2.jpg">
+      <img class="imgSchedule" src="./images/pool3.jpg">
+      <img class="imgSchedule" src="./images/pool4.jpg">
 
     </div>
 

@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
   <title>Табло за управление</title>
 </head>
 
@@ -40,6 +42,7 @@
     <div class="main-container">
       <div class="navcontainer">
         <nav class="nav">
+          
           <div class="nav-upper-options">
             <div id="eventsOption" class="nav-option option1">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
@@ -68,12 +71,14 @@
             </div>
            </a>
 
-            <!-- <div class="nav-option option4">
+           <a href="./adjustCalendar.php">
+        <div class="nav-option option4">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Institution</h3>
+              <h3> Календар</h3>
             </div>
+        </a>
 
-            <div class="nav-option option5">
+            <!-- <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
               <h3> Profile</h3>
             </div>
@@ -81,7 +86,7 @@
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
               <h3> Settings</h3>
-            </div> -->
+            </div>  -->
 
             <a href="./logout.html">
               <div class="nav-option logout">
@@ -111,12 +116,43 @@
               <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button>
             </div>
           </div>
+            
+          <div>
+           
+          <form method="POST">
+          <label class="fileEvents" for="imageDashboard">Избери снимка: </label>
+            <input class="fileEvents" type="file">
+            <textarea name="eventsTextArea" id="eventsTextArea"></textarea>
+
+              <button type="submit" name="formType" value="saveEvents" class="button-save-changes">Запази промените</button>
+
+
+          </form>
+
+
+          </div>
 
         </div>
       </div>
     </div>
     </div>
     </div>
+
+
+    <?php 
+
+      if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $formType = $_POST['formType']; 
+
+        if($formType === "") {
+
+        }
+
+      }
+    ?>
+
+
 
     <script>
       let menuicn = document.querySelector(".menuicn");
@@ -126,33 +162,27 @@
         nav.classList.toggle("navclose");
       })
 
-      function hideEvents() {
-        alert("Събитието беше премахнато!");
-        localStorage.setItem('hideEvents', 'true');
-        toggleEventsVisibility();
 
-      }
+      
 
-      function addEvent() {
-        alert("Събитието беше добавено!");
-        localStorage.setItem('hideEvents', 'false');
-        toggleEventsVisibility();
-
-      }
-
-      // Function to toggle the visibility based on localStorage
-      function toggleEventsVisibility() {
-        const eventsElement = document.getElementById('events');
-        if (localStorage.getItem('hideEvents') === 'true') {
-          eventsElement.style.display = 'none';
-
-        } else {
-          eventsElement.style.display = 'block';
-
-        }
-      }
-
-      toggleEventsVisibility();
+      tinymce.init({
+        selector: '#eventsTextArea',
+        plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [{
+            value: 'First.Name',
+            title: 'First Name'
+          },
+          {
+            value: 'Email',
+            title: 'Email'
+          },
+        ],
+        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
+      });
+  
     </script>
 
   </body>

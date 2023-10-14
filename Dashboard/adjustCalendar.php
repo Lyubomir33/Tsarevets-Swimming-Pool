@@ -43,10 +43,14 @@
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
-            <div id="eventsOption" class="nav-option option1">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
-              <h3> Събития</h3>
-            </div>
+            <a href="./dashboard.php">
+              <div id="eventsOption" class="nav-option option1">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
+                <h3> Събития</h3>
+              </div>
+
+            </a>
+
 
             <a href="/Dashboard/schedule.php">
               <div class="nav-option option2">
@@ -70,12 +74,14 @@
               </div>
             </a>
 
-            <!-- <div class="nav-option option4">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Institution</h3>
-            </div>
+           
+              <div class="nav-option option4">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+                <h3> Календар</h3>
+              </div>
+            
 
-            <div class="nav-option option5">
+            <!-- <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
               <h3> Profile</h3>
             </div>
@@ -114,19 +120,19 @@
             <input type="hidden" name="formType" value="calendarText"> <!-- Add a hidden input for formType -->
             <textarea name="textareaClander" id="textareaClander" cols="30" rows="10">
 
-            <?php 
-            
+            <?php
+
             require "../databaseConnection/database.php";
 
             $sqlGET = "SELECT * FROM calendar";
             $queryGET = mysqli_query($conn, $sqlGET);
 
-            while($rowG = mysqli_fetch_assoc($queryGET)) {
-                echo $rowG['calendar_info'];
+            while ($rowG = mysqli_fetch_assoc($queryGET)) {
+              echo $rowG['calendar_info'];
             }
 
-            
-            
+
+
             ?>
 
 
@@ -145,20 +151,19 @@
 
     require "../databaseConnection/database.php";
 
-  
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $formType = $_POST['formType'];
 
-  if ($formType === "calendarText") {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      $formType = $_POST['formType'];
 
-    $calendarText = $_POST['textareaClander'];
+      if ($formType === "calendarText") {
 
-    $sqlSet = "UPDATE calendar SET calendar_info = '$calendarText'";
-    $query = mysqli_query($conn, $sqlSet);
+        $calendarText = $_POST['textareaClander'];
 
-  }
-}
+        $sqlSet = "UPDATE calendar SET calendar_info = '$calendarText'";
+        $query = mysqli_query($conn, $sqlSet);
+      }
+    }
 
 
 

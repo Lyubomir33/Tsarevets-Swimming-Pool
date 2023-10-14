@@ -28,9 +28,9 @@
   <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
     <div class="container">
-        <div style="display: flex;">
-        <img class="oldImage" src=".././images/най-стара_снимка-removebg-preview.png">
-        <a class="logo" class="navbar-brand" href="/index.php">СКП ЦАРЕВЕЦ</a>
+    <div style="display: flex;">
+        
+        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +40,10 @@
 
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto ">
+
+          <li class="nav-item">
+              <a style="color: red;" class="nav-link mx-2 heartbeat" href="/4upperMenus/events.php">СЪБИТИЯ</a>
+            </li>
 
             <li class="nav-item">
               <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>

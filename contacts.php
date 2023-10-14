@@ -1,5 +1,6 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="/css/CONTACTS.css">
 
 <section id="sectionAddress" class="section-bg" data-scroll-index="7">
   <div id="backgroundSetup" class="background">
@@ -81,8 +82,8 @@ function resizeIframe() {
   if (window.innerWidth < 1000) {
     iframeLocation.style.display = "none";
     mapDiv.style.display = "flex";
-    mapDiv.style.height = "200px";
-    backgroundSetup.style.height = "870px"; 
+    mapDiv.style.height = "120px";
+    backgroundSetup.style.height = "790px"; 
 
   } else {
     iframeLocation.style.display = "block";
@@ -102,152 +103,4 @@ resizeIframe();
 
 <style>
 
-  .contact-title {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-  }
-
-  /* #sectionAddress {
-   
-  } */
-
-  .locationFrame {
-    display: none;
-    margin-top: 121px;
-    margin-top: 88px;
-    width: 660px;
-    margin-bottom: 27px;
-    
-  }
-
-  .background {
-   padding: 20px;
-    background-color: #212529;
-    height: 800px;
-  }
-
-  .logoMess {
-    margin-right: 100px;
-    border-radius: 15px;
-    height: 150px;
-    
-  }
-
-  .logoMess:hover {
-    cursor: pointer;
-    transform: scale(1.3);
-    transition: 0.5s;
-  }
-
-  .logoMess:not(:hover) {
-    transition: 0.5s;
-  }
-  
-  .map {
-    display: none;
-    background-color: #212529;
-    height: 459px;
-    width: 300px;
-    flex-direction: row;
-    align-items: end;
-    justify-content: center;
-    align-content: space-around;
-    
-  }
-
-  
-
- 
-
-  
-  .contact-info {
-    padding: 0 30px 0px 0;
-  }
-
-
-
-  .contact-info p {
-    color: #ececec;
-  }
-
-  ul.contact-info {
-    margin-top: 30px;
-  }
-
-  ul.contact-info li {
-    margin-bottom: 22px;
-  }
-
-
-
-  
-  ul.contact-info li {
-    display: flex;
-    width: 100%;
-  }
-
-  .info-left {
-    width: 10%;
-  }
-
-  .info-left i {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 30px;
-    color: #ffffff;
-  }
-
-  .info-right h4 {
-    color: #fff;
-    font-size: 15px;
-  }
-
-  
-
-
-
-  @media only screen and (max-width: 767px) {
-    .contact-form {
-      padding: 30px;
-    }
-
-    .contact-form:before {
-      width: 100%;
-    }
-
-
-  }
-
-  @media (min-width: 768px) {
-    .locationFrame {
-    
-    margin-top: 85px;
-    height: 354px;
-    width: 573px;
-    margin-bottom: 27px;
-    
-  } 
-
-  .map {
-    display: grid;
-    background-color: #212529;
-    height: 459px;
-    width: 300px;
-    margin-left: 130px;
-    flex-direction: row;
-    align-items: end;
-    justify-content: center;
-    align-content: space-around;
-    
-  } 
-
-  .background {
-    margin-bottom: -400px;
-  }
-
-
-  }
 </style>

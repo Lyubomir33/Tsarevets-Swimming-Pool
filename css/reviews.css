@@ -83,9 +83,9 @@
 }
 
 
-#forClub:hover, #news:hover, #reviews:hover, #contacts:hover {
-  color: white;
-}
+/* #forClub:hover, #news:hover, #reviews:hover, #contacts:hover {
+
+} */
 
 @media (max-width: 1045px) {
   .wrapper .box{

@@ -70,12 +70,14 @@
               </div>
             </a>
 
-            <!-- <div class="nav-option option4">
+            <a href="./adjustCalendar.php">
+        <div class="nav-option option4">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Institution</h3>
+              <h3> Календар</h3>
             </div>
+        </a>
 
-            <div class="nav-option option5">
+            <!-- <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
               <h3> Profile</h3>
             </div>
@@ -83,7 +85,7 @@
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
               <h3> Settings</h3>
-            </div> -->
+            </div>  -->
 
             <a href="./logout.html">
               <div class="nav-option logout">
