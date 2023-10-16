@@ -10,8 +10,11 @@
           <p class="pr-5 text-white-50">Сайтът е плод на много труд с цел даване на актуална информация за СКП Царевец
             <img class="tarnovoLogo" src="/images/tarnovo-removebg-preview.png" alt=""><br><br>
 
-          <p class="pr-5 text-white-50"> Ако искате да разберете повече за нас и нашата дейност, може да посетите нашата Facebook страница </p><br><br>
+          <p class="pr-5 text-white-50"> Ако искате да разберете повече за нас и нашата дейност, може да посетите нашата Facebook страница </p><br>
+          <div class="fbAndSwimmer">
           <a href="https://www.facebook.com/profile.php?id=100057188630835" target="_blank"><i class="fa-brands fa-square-facebook fa-beat" style="color: #0866ff; font-size: 80px;"></a></i></p>
+          <img class="swimmer" src="/images/swimmerJPG-removebg-preview.png">
+          </div>
         </div>
         <div class="col-lg-3 col-xs-12 links">
           <ul class="m-0 p-0">

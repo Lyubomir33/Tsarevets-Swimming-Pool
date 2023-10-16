@@ -53,9 +53,7 @@
             <li class="nav-item">
               <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>
@@ -113,7 +111,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="/history.php">
         <div class="fourthIMG">
           <p class="fourthP">История</p>
         </div>
@@ -129,7 +127,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="/medalists.php">
         <div class="sixthIMG">
           <p class="fourthP">Медалисти</p>
         </div>
@@ -164,7 +162,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div id="secondThreeDivs">
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="/history.php">
         <div class="fourthIMG">
           <p class="imgP">История</p>
         </div>
@@ -176,8 +174,8 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="#">
-        <div class="sixthIMG  ">
+      <a class="anchorStyle" href="/medalists.php">
+        <div class="sixthIMG">
           <p class="thirdP">Медалисти</p>
         </div>
       </a>

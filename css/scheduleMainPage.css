@@ -8,6 +8,7 @@
 }
 
 .scheduleText { 
+  margin-top: -40px;
   font-size: 15px;
   padding: 20px;
 }
@@ -35,6 +36,10 @@
     width: 650px;
   }
 
+  .scheduleText { 
+    font-size: 15px;
+    padding: 20px;
+  }
  
   
 

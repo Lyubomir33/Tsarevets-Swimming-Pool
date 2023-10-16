@@ -77,10 +77,14 @@
             </div>
         </a>
 
-            <!-- <div class="nav-option option5">
+        <a href="./medalistsDashboard.php">
+           <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Profile</h3>
+              <h3> Медалисти</h3>
             </div>
+           </a>
+
+           <!--
 
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
@@ -115,20 +119,20 @@
           <form id="templateForm" class='formStyles' enctype="multipart/form-data" method="POST">
 
 
-            <div>
-              <h1>Създаване на визия</h1>
+            <div class="divVision">
+              <h1>Създаване на визия</h1><br>
 
-              <label class="labelNews" for="title">Заглавие: </label>
+              <label class="labelNews" for="title">Заглавие: </label><br>
               <input type="text" name="title" id="title"><br>
 
-              <label class="labelNews" for="title">Заглавие вътре в статията: </label>
+              <label class="labelNews" for="title">Заглавие в статията: </label>
               <input type="text" name="titleBlog" id="titleBlog"><br>
 
               <label class="labelNews" for="image">Снимка: </label>
               <input type="file" name="image" id="image"><br>
 
               <label class="labelNews" for="link">Линк: </label>
-              <input placeholder="Пр: име-на-статия.php" type="text" name="link" id="link"><u>
+              <input placeholder="Пр: име-на-статия.php" type="text" name="link" id="link"><br><u>
                 <p class="textMandatory">ЗАДЪЛЖИТЕЛНО СЕ СЛАГА ФОРМАТ .php</p>
               </u>
 
@@ -139,7 +143,7 @@
 
             <div class="articleText">
               <h1>Съдържание</h1>
-              <textarea name="content" cols="120" rows="10" id="content"></textarea>
+              <textarea class="textareaMain" name="content" cols="120" rows="10" id="content"></textarea>
             </div>
 
           </form>
@@ -228,8 +232,11 @@
               move_uploaded_file($_FILES["imageChange"]["tmp_name"], $target_fileNewIMG);
 
 
-              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet', image='$target_fileNewIMG', title_in_blog='$titleBlogSet' WHERE ID = $idToUpdate";
+              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet', title_in_blog='$titleBlogSet' WHERE ID = $idToUpdate";
               $querySet = mysqli_query($conn, $sqlSet);
+
+              $sqlImgUpdate = "UPDATE blog_main_page SET image='$target_fileNewIMG' WHERE ID = $idToUpdate";
+              $queryImg = mysqli_query($conn,$sqlImgUpdate);
             }
           }
 
@@ -247,7 +254,7 @@
             echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
             echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"titleSet\" id=\"title\"><br>";
 
-            echo "<label class=\"labelNews\" for=\"title\">Заглавие вътре в статията: </label>";
+            echo "<label class=\"labelNews\" for=\"title\">Заглавие в статията: </label>";
             echo "<input value=\"" . $rowGet['title_in_blog'] . "\" type=\"text\" name=\"titleBlog\" id=\"titleBlog\"><br>";
 
             echo "<label class='labelNews' for='image'>Снимка: </label>";
@@ -265,7 +272,7 @@
 
             echo "<div class=\"articleText\">";
             echo "<h1 class='header'>Статия</h1>";
-            echo "<textarea name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
+            echo "<textarea class='textareaMain' name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
             echo "</div>";
 
             echo "</form>";

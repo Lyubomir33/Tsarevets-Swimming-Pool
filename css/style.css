@@ -581,13 +581,14 @@ body {
 }
 
 .divBlog h3 {
+  text-align: center;
   line-height: 1.5;
   margin: 0 auto;
-  width: 45%;
+  width: 100%;
   padding: 12px;
   margin-top: 10px;
   margin-bottom: 20px;
-  justify-content: center;
+
 
 }
 
@@ -632,6 +633,7 @@ body {
 
 @media (min-width: 1250px) {
   .divBlog p {
+    margin-bottom: -330px;
     height: 100%;
     line-height: 2.5;
     padding: 26px;

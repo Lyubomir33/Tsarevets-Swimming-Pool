@@ -37,15 +37,28 @@
 
     <div>
 
-      <img class="imgSchedule" src="./images/pool1.jpg">
-      <img class="imgSchedule" src="./images/pool2.jpg">
+      <div>
+        <h1>Басейн "Радио"</h1>
       <img class="imgSchedule" src="./images/pool3.jpg">
-      <img class="imgSchedule" src="./images/pool4.jpg">
+      </div> 
+     
+      <div>
+        <h1>Басейн "Емилиян Станев"</h1>
+      <img class="imgSchedule" src="./images/pool2.jpg">
+      </div>
+    
+      <div>
+        <h1>Басейн "Клуб 17"</h1>
+      <img class="imgSchedule" src="./images/pool1.jpg">
+      </div>
 
     </div>
 
 
   </div>
+
+  <?php include "./contacts.php"; ?>
+
 
   <?php include "./footer.php"; ?>
 

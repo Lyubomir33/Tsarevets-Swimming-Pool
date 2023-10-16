@@ -80,11 +80,14 @@
                 <h3> Календар</h3>
               </div>
             
-
-            <!-- <div class="nav-option option5">
+              <a href="./medalistsDashboard.php">
+           <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Profile</h3>
+              <h3> Медалисти</h3>
             </div>
+           </a>
+
+           <!--
 
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">

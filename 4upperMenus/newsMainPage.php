@@ -52,9 +52,7 @@
             <li class="nav-item">
               <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#spanFooter">КОНТАКТИ</a>
-            </li>
+          
             <li class="nav-item">
               <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>

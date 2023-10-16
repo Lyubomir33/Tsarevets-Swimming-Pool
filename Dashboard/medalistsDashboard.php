@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <link rel="stylesheet" href="../css/MEDALISTS.css">
   <title>Табло за управление</title>
 </head>
 
@@ -62,26 +63,26 @@
               </div>
             </a>
 
-            <div class="nav-option option3">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-              <h3> Отзиви</h3>
-            </div>
+            <a href="./reviewsDashboard.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Отзиви</h3>
+              </div>
+            </a>
 
             <a href="./adjustCalendar.php">
-        <div class="nav-option option4">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Календар</h3>
-            </div>
-        </a>
+              <div class="nav-option option4">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+                <h3> Календар</h3>
+              </div>
+            </a>
 
-        <a href="./medalistsDashboard.php">
-           <div class="nav-option option5">
+            <div class="nav-option option5">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Медалисти</h3>
+              <h3>Медалисти</h3>
             </div>
-           </a>
 
-           <!--
+            <!-- 
 
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
@@ -117,35 +118,68 @@
 
           <div>
 
-            <div class="flexDiv">
-              <?php
+            <div class="divDashboard">
 
-              require "../databaseConnection/database.php";
+              <form method="POST" enctype="multipart/form-data" style="display: flex; align-items: center;">
 
-              $sqlRequest = "SELECT * FROM contactform";
-              $queryGet = mysqli_query($conn, $sqlRequest);
+                <div class="picAndBTN">
+                  <label><b>Изберете снимка: </b></label>
+                  <input style="margin-left: 5px;" type="file" name="choosefile">
 
-              while ($rowRequest = mysqli_fetch_assoc($queryGet)) {
+                  <img class="viewDash" src="./medalistsImages/Anna.jpg" alt="">
 
-                echo "<div class='reviewStage'>
-                        <label for='names'>Имена: </label>
-                        <input class='inputStyles' value='$rowRequest[names]' disabled type='text'><br>
-                        <label for='emails'>Имейл:</label>
-                        <input class='inputStyles' value ='$rowRequest[email]' disabled type='text'>
-                        <textarea disabled class='textAreaOpinion'>$rowRequest[opinion]</textarea>
+                  <button class="btnSubmitArticle" type="submit" name="formType" value="btnMedal">Създай</button>
 
-                        </div>";
-              }
+                </div>
 
-              ?>
+                <div class="textMedal">
 
-             
-              
+                  <label><b>Моля прикачете текст: </b></label>
+                  <textarea name="medalText" class="textareaMedal"></textarea>
 
+
+                </div>
+
+              </form>
 
 
 
             </div>
+
+            <?php
+
+            require "../databaseConnection/database.php";
+
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+              $target_dir = "../Dashboard/medalistsImages/";
+              $fileName = basename($_FILES['choosefile']['name']);
+              $targetFilePath = $target_dir . $fileName;
+              $textArea = $_POST['medalText'];
+              $formType = $_POST['formType'];
+
+              if ($formType === 'btnMedal') {
+
+                move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath);
+
+                $sql = "INSERT INTO medalists(medal_img, medal_text) VALUES ('$fileName', '$textArea')";
+                $query = mysqli_query($conn, $sql);
+
+            } else if($formType === "rewrite") {
+
+              if (move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath)) {
+                $sqlImage = "UPDATE medalists SET medal_img = '$fileName'";
+                $query = mysqli_query($conn, $sqlImage);
+              }
+
+              $sqlTextarea = "UPDATE medalists SET medal_text = '$textArea' ";
+              $queryTextare = mysqli_query($conn, $sqlTextarea);
+
+            }
+            }
+
+
+            ?>
 
 
 
@@ -155,6 +189,8 @@
         </div>
       </div>
     </div>
+
+
 
     <script>
       let menuicn = document.querySelector(".menuicn");

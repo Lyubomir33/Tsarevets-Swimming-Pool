@@ -48,9 +48,7 @@
             <li class="nav-item">
               <a id="news" class="nav-link mx-2" href="#">НОВИНИ</a>
             </li>
-            <li class="nav-item">
-              <a id="contacts" class="nav-link mx-2" href="#anchorID">КОНТАКТИ</a>
-            </li>
+          
             <li class="nav-item">
               <a id="reviews" class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>

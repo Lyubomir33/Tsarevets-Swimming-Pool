@@ -42,7 +42,7 @@
     <div class="main-container">
       <div class="navcontainer">
         <nav class="nav">
-          
+
           <div class="nav-upper-options">
             <div id="eventsOption" class="nav-option option1">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
@@ -64,25 +64,28 @@
               </div>
             </a>
 
-           <a href="./reviewsDashboard.php">
-           <div class="nav-option option3">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
-              <h3> Отзиви</h3>
+            <a href="./reviewsDashboard.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Отзиви</h3>
+              </div>
+            </a>
+
+            <a href="./adjustCalendar.php">
+              <div class="nav-option option4">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+                <h3> Календар</h3>
+              </div>
+            </a>
+
+           <a href="./medalistsDashboard.php">
+           <div class="nav-option option5">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
+              <h3> Медалисти</h3>
             </div>
            </a>
 
-           <a href="./adjustCalendar.php">
-        <div class="nav-option option4">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Календар</h3>
-            </div>
-        </a>
-
-            <!-- <div class="nav-option option5">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Profile</h3>
-            </div>
-
+            <!-- 
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
               <h3> Settings</h3>
@@ -112,23 +115,34 @@
           <div class="report-header">
             <h1 class="recent-Articles">Предстоящи Събития</h1>
             <div>
-              <button id="btn-trigger-remove" class="view" onclick="hideEvents()">Премахни събитието</button>
-              <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button>
+              <!-- <button id="btn-trigger-remove" class="view" onclick="hideEvents()">Премахни събитието</button>
+              <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button> -->
             </div>
           </div>
-            
+
           <div>
-           
-          <form method="POST">
-          <label class="fileEvents" for="imageDashboard">Избери снимка: </label>
-            <input class="fileEvents" type="file">
-            <textarea name="eventsTextArea" id="eventsTextArea"></textarea>
-
-              <button type="submit" name="formType" value="saveEvents" class="button-save-changes">Запази промените</button>
 
 
-          </form>
+            <?php
 
+            require "../databaseConnection/database.php";
+
+
+            $sqlGet = "SELECT * FROM events";
+            $qeuryGet = mysqli_query($conn, $sqlGet);
+
+            while ($row = mysqli_fetch_assoc($qeuryGet)) {
+
+              echo " 
+              <form method='POST' enctype='multipart/form-data'>
+                <label class='fileEvents' for='imageDashboard'>Избери снимка: </label>
+                <input class='fileEvents' name='imageFile' type='file'>
+                <textarea name='eventsTextArea' id='eventsTextArea'>$row[events_textarea]</textarea>
+                <button type='submit' name='formType' value='saveEvents' class='button-save-changes'>Запази промените</button>
+              </form>";
+            }
+
+            ?>
 
           </div>
 
@@ -139,17 +153,37 @@
     </div>
 
 
-    <?php 
+    <?php
 
-      if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require "../databaseConnection/database.php";
 
-        $formType = $_POST['formType']; 
 
-        if($formType === "") {
 
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+      $target_dir = "../4upperMenus/imgFiles/";
+      $fileName = basename($_FILES['imageFile']['name']);
+      $targetFilePath = $target_dir . $fileName;
+      $formType = $_POST['formType'];
+      $textArea = $_POST['eventsTextArea'];
+
+      if ($formType === "saveEvents") {
+
+        if (move_uploaded_file($_FILES['imageFile']['tmp_name'], $targetFilePath)) {
+          $sqlImage = "UPDATE events SET img_events = '$fileName'";
+          $query = mysqli_query($conn, $sqlImage);
         }
 
+
+        $sqlTextarea = "UPDATE events SET events_textarea = '$textArea' ";
+        $queryTextare = mysqli_query($conn, $sqlTextarea);
       }
+    }
+
+
+
+
     ?>
 
 
@@ -163,7 +197,7 @@
       })
 
 
-      
+
 
       tinymce.init({
         selector: '#eventsTextArea',
@@ -182,7 +216,6 @@
         ],
         ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
       });
-  
     </script>
 
   </body>

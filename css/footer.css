@@ -22,6 +22,16 @@
   margin-top: -60px;
 }
 
+.fbAndSwimmer {
+  display: flex;
+    justify-content: space-between;
+}
+
+.swimmer{
+  height: 91px;
+    margin-bottom: 70px;
+}
+
 @media (min-width: 600px) {
       .footer {
         width: 100%;
@@ -48,5 +58,11 @@
 @media (min-width: 900px) {
   .pt-5.pb-5.footer {
     height: 375px;
+  }
+
+  .swimmer{
+    height: 127px;
+    margin-top: -20px;
+    margin-bottom: 1px;
   }
 }

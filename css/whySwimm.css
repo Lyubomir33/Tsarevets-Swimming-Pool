@@ -29,16 +29,18 @@
 }
 
 .imgWhySwimm {
-  height: 200px;
-  width: 200px;
+  height: 372px;
+  width: 631px;
   display: flex;
   margin: 0 auto;
 }
 
 .bodyWhySwimm {
-  background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%);
-  background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%); 
-  
-  
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  /* background-image: linear-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad); */
   
 }
