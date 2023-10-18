@@ -52,6 +52,16 @@
       <img class="imgSchedule" src="./images/pool1.jpg">
       </div>
 
+      <div>
+        
+      <img class="imgSchedule" src="./images/club17.jpg">
+      <img class="imgSchedule" src="./images/kidos.jpg">
+      <img class="imgSchedule" src="./images/more kidos.jpg">
+      </div>
+
+
+      
+
     </div>
 
 

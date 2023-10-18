@@ -121,7 +121,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
     <div id="third" class="boxThree">
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./gallery.php">
         <div class="fifthIMG">
           <p class="thirdP">Галерия</p>
         </div>
@@ -168,7 +168,7 @@ if (localStorage.getItem('hideEvents') === 'true') {
         </div>
       </a>
 
-      <a class="anchorStyle" href="#">
+      <a class="anchorStyle" href="./gallery.php">
         <div class="fifthIMG">
           <p class="secondP">Галерия</p>
         </div>

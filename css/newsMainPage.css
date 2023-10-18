@@ -7,14 +7,16 @@
 }
 
 .addNews {
-  display: flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 300px;
   width: 300px;
   margin: 35px;
   gap: 30px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+ box-shadow: 2px 0 10px black;
+ border-radius: 8px;
 }
 
 .header u {
@@ -99,7 +101,11 @@
 }
 
 .newsMainPageBody {
-  background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%); 
+  background-color: rgb(0, 55, 255, 0.7);
+
+
+
+  /* background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%);  */
   
 }
 
@@ -151,9 +157,9 @@ u {
     background-repeat: no-repeat;
     background-position: center;
     height: 300px;
-    width: 450px;
+    width: 410px;
     margin: 50px;
-    gap: 30px;
+   
    
   }
   
@@ -165,7 +171,7 @@ u {
   .headerNews {
     margin-bottom: -20px;
     font-size: 30px;
-    width: 550px;
+    width: 450px;
     padding-left: 50px;
     margin-top: 15px;
     display: flex;

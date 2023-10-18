@@ -130,6 +130,8 @@
 
                   <button class="btnSubmitArticle" type="submit" name="formType" value="btnMedal">Създай</button>
 
+
+
                 </div>
 
                 <div class="textMedal">
@@ -150,8 +152,11 @@
 
             require "../databaseConnection/database.php";
 
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+
+
+
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               $target_dir = "../Dashboard/medalistsImages/";
               $fileName = basename($_FILES['choosefile']['name']);
               $targetFilePath = $target_dir . $fileName;
@@ -159,24 +164,52 @@
               $formType = $_POST['formType'];
 
               if ($formType === 'btnMedal') {
-
+            
                 move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath);
-
-                $sql = "INSERT INTO medalists(medal_img, medal_text) VALUES ('$fileName', '$textArea')";
+                $sql = "INSERT INTO medalists (medal_img, medal_text) VALUES ('$fileName', '$textArea')";
                 $query = mysqli_query($conn, $sql);
 
-            } else if($formType === "rewrite") {
-
-              if (move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath)) {
-                $sqlImage = "UPDATE medalists SET medal_img = '$fileName'";
-                $query = mysqli_query($conn, $sqlImage);
+              } elseif ($formType === "rewrite") {
+             
+                $recordId = $_POST['recordId']; 
+                if (move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath)) {
+                  $sqlImage = "UPDATE medalists SET medal_img = '$fileName' WHERE id = $recordId";
+                  $queryImage = mysqli_query($conn, $sqlImage);
+                } else {
+                  $sqlTextarea = "UPDATE medalists SET medal_text = '$textArea' WHERE id = $recordId";
+                  $queryTextarea = mysqli_query($conn, $sqlTextarea);
+                }
               }
-
-              $sqlTextarea = "UPDATE medalists SET medal_text = '$textArea' ";
-              $queryTextare = mysqli_query($conn, $sqlTextarea);
-
             }
+
+
+            $sqlEcho = "SELECT * FROM medalists";
+            $queryEcho = mysqli_query($conn, $sqlEcho);
+
+            while ($rowEcho = mysqli_fetch_assoc($queryEcho)) {
+              echo "<form method='POST' enctype='multipart/form-data' style='display: flex; align-items: center;'>
+              <div class='divDashboard'>
+
+                            <div class='picAndBTN'>
+                            <label><b>Изберете снимка: </b></label>
+                            <input style='margin-left: 5px;' type='file' name='choosefile'>
+
+                            <img class='viewDash' src='./medalistsImages/$rowEcho[medal_img]'>
+                           <input type='hidden' name='recordId' value='$rowEcho[ID]'>
+                            <button class='btnSubmitArticle' type='submit' name='formType' value='rewrite'>Запиши промени</button>
+
+                            </div>
+
+                            <div class='textMedal'>
+
+                            <label><b>Моля прикачете текст: </b></label>
+                            <textarea name='medalText' class='textareaMedal'>$rowEcho[medal_text]</textarea>
+
+                            </div>
+                            </div>
+                            </form>";
             }
+
 
 
             ?>

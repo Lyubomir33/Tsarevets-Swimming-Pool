@@ -4,22 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/whySwimm.css">
-  <title>Ползи от плуването</title>
+  <title>Зашо да плуваме?</title>
 </head>
 <body class="bodyWhySwimm">
 
 <?php include "./Dashboard/articleFiles/headerInclude.php"; ?>
 
+<img class="imgArticleKids" src="./images/articleKids.jpg" alt="">
 
-<div class="textWhySwimm">
+<h1 class="headerWhy">Ползи от плуването</h1>
 
-<h1>Ползи от плуването</h1>
-
-<img class="imgWhySwimm" src="./images/articleKids.jpg" alt="">
-
+<div class="texts">
 <b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
 
-<b>2. Плуването спомага за оформяне на спортна мускулеста фигура. То помага за развитието на цялата мускулатура.</b>  <br>
+<b>2. Плуването спомага за оформяне на спортна мускулеста фигура. То помага за развитието на цялата мускулатура.</b><br>
 
 <b>3.Плуването изгаря калории. Ако на ден се прекарват по 30-40 минути в басейна, то със сигурност бързо ще се достигне до желаното тегло.</b> <br>
 
@@ -38,9 +36,13 @@
 <b>10.При плувците има до 50% по-ниска смъртност.</b><br>
 
 <b>11.За много хора плуването е удоволствие.
+
 </div>
 
+
+
 <?php include "./footer.php"; ?>
+
   
 </body>
 </html>

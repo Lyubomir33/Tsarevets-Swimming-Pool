@@ -658,6 +658,7 @@ body {
   .imageFforBlogs {
     height: 346px;
     width: 559px;
+    box-shadow: 2px 0 10px black;
   }
 
   .fifthIMG {

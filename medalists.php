@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="medalBody" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -15,26 +15,31 @@
 
   <h1 class="headerMedals">Медалисти</h1>
 
-  <div class="">
+  <div >
 
     <div class="medalistsFlexDiv">
 
-      <div class="medalsts">
-sadaasdasdas
-      </div>
+      <?php 
 
-      <div class="medalsts">
-asdda
-      </div>
+      require "./databaseConnection/database.php";
 
-      <div class="medalsts">
-asdasdsadasdaasda
-      </div>
+      $sql = "SELECT * FROM medalists";
+      $query = mysqli_query($conn, $sql);
 
-       <div class="medalsts">
-adasdasdas
-      </div>
+      while($row = mysqli_fetch_assoc($query)) {
+      echo "
+      <div class = 'medalistsFlexDiv'>
+      <div class='medalsts'>
 
+      <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+      <p class='pMedal'>$row[medal_text]</p>
+
+      </div>
+      </div>";
+
+      }
+      
+      ?>
     </div>
   </div>
 
