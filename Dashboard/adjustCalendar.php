@@ -87,12 +87,13 @@
             </div>
            </a>
 
-           <!--
-
+           
+            <a href="./galleryDashboard.php">
             <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
-              <h3> Settings</h3>
-            </div> -->
+              <h3>Галерия</h3>
+            </div> 
+            </a>
 
             <a href="./logout.html">
               <div class="nav-option logout">

@@ -460,3 +460,11 @@ header {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+
+.stylesInput {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+}

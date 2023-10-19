@@ -54,6 +54,7 @@
   width: 80%;
   display: flex;
   justify-content: center;
+  margin-top: 35px;
 }
 
 .headerWhy {
@@ -74,6 +75,7 @@
     display: flex;
     justify-content: center;
     box-shadow: 2px 0 10px black;
+    margin-top: 35px;
  
   }
 

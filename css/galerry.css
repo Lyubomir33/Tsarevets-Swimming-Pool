@@ -14,9 +14,11 @@
 
 .imgGall {
   height: 200px;
-  margin-top: 20px;
-  display: block;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .toggleButton {
@@ -29,9 +31,48 @@
   margin-bottom: 20px;
   background-color: color;
   color: black;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
+  font-weight: 600;
 }
 
-.toggleButton:hover {
-  
+@media (min-width: 650px) {
+
+
+.divImg {
+    
+      height: 350px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: none;
+      border: 2px solid black;
+      margin-top: -21px;
+      transition: 0.9s;
+      overflow-x: auto;
+      transition:  width 2s;
+    
+
+
 }
+
+.imgGall {
+  height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex: 0 0 calc(25% - 10px);
+   
+}
+
+
+}
+
 

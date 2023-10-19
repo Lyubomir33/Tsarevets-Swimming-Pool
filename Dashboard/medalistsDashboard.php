@@ -82,12 +82,13 @@
               <h3>Медалисти</h3>
             </div>
 
-            <!-- 
 
-            <div class="nav-option option6">
+           <a href="./galleryDashboard.php">
+           <div class="nav-option option6">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
-              <h3> Settings</h3>
-            </div>  -->
+              <h3> Галерия</h3>
+            </div>  
+           </a>
 
             <a href="./logout.html">
               <div class="nav-option logout">
@@ -169,7 +170,7 @@
                 $sql = "INSERT INTO medalists (medal_img, medal_text) VALUES ('$fileName', '$textArea')";
                 $query = mysqli_query($conn, $sql);
 
-              } elseif ($formType === "rewrite") {
+              } else if ($formType === "rewrite") {
              
                 $recordId = $_POST['recordId']; 
                 if (move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath)) {
@@ -209,8 +210,6 @@
                             </div>
                             </form>";
             }
-
-
 
             ?>
 

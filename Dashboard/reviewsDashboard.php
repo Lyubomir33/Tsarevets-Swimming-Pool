@@ -68,25 +68,25 @@
             </div>
 
             <a href="./adjustCalendar.php">
-        <div class="nav-option option4">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
-              <h3> Календар</h3>
-            </div>
-        </a>
+              <div class="nav-option option4">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+                <h3> Календар</h3>
+              </div>
+            </a>
 
-        <a href="./medalistsDashboard.php">
-           <div class="nav-option option5">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Медалисти</h3>
-            </div>
-           </a>
+            <a href="./medalistsDashboard.php">
+              <div class="nav-option option5">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
+                <h3> Медалисти</h3>
+              </div>
+            </a>
 
-           <!--
-
-            <div class="nav-option option6">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
-              <h3> Settings</h3>
-            </div>  -->
+            <a href="./galleryDashboard.php">
+              <div class="nav-option option6">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
+                <h3>Галерия</h3>
+              </div>
+            </a>
 
             <a href="./logout.html">
               <div class="nav-option logout">
@@ -139,8 +139,8 @@
 
               ?>
 
-             
-              
+
+
 
 
 

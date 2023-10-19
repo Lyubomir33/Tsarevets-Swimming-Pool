@@ -1,13 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+  <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
+  <title>Табло за управление</title>
 </head>
+
 <body>
 
+  <body>
 
-  
-</body>
+    <!-- for header part -->
+    <header>
+
+      <div class="logosec">
+        <div class="logo">СКП ЦАРЕВЕЦ</div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png" class="icn menuicn" id="menuicn" alt="menu-icon">
+      </div>
+
+      <div class="searchbar">
+        <input type="text" placeholder="Search">
+        <div class="searchbtn">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-icon">
+        </div>
+      </div>
+
+      <div class="message">
+        <div class="circle"></div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
+        <div class="dp">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png" class="dpicn" alt="dp">
+        </div>
+      </div>
+
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <a href="./dashboard.php">
+              <div id="eventsOption" class="nav-option option1">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
+                <h3> Събития</h3>
+              </div>
+
+            </a>
+
+
+            <a href="/Dashboard/schedule.php">
+              <div class="nav-option option2">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img" alt="articles">
+                <h3> График</h3>
+              </div>
+
+            </a>
+
+            <a href="./news.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Новини</h3>
+              </div>
+            </a>
+
+            <a href="./reviewsDashboard.php">
+              <div class="nav-option option3">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png" class="nav-img" alt="report">
+                <h3> Отзиви</h3>
+              </div>
+            </a>
+
+            <a href="./adjustCalendar.php">
+              <div class="nav-option option4">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png" class="nav-img" alt="institution">
+                <h3> Календар</h3>
+              </div>
+            </a>
+
+            <a href="./medalistsDashboard.php">
+              <div class="nav-option option5">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
+                <h3> Медалисти</h3>
+              </div>
+            </a>
+
+
+
+            <div class="nav-option option6">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
+              <h3>Галерия</h3>
+            </div>
+
+            <a href="./logout.html">
+              <div class="nav-option logout">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
+                <h3>Изход</h3>
+              </div>
+            </a>
+
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+
+        <div class="searchbar2">
+          <input type="text" placeholder="Search">
+          <div class="searchbtn">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-button">
+          </div>
+        </div>
+
+
+        <div class="report-container">
+          <div class="report-header">
+            <h1 class="recent-Articles">Галерия</h1>
+          </div>
+
+          <form method="POST" enctype="multipart/form-data">
+            <label>Изберете година: </label>
+            <input name="year" class="stylesInput" type="text"><br>
+
+            <label>Прикачете сними тук: </label>
+            <input name="multiplepics[]" type="file" multiple><br><br>
+
+            <button value="submitData" name="formType" class="btnSubmitArticle">Създай</button>
+          </form>
+
+          <?php
+
+          require "../databaseConnection/database.php";
+
+
+          if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $formType = $_POST['formType'];
+            $year = $_POST['year'];
+        
+            if ($formType === 'submitData') {
+                $images = $_FILES['multiplepics'];
+                $target_dir = "../Dashboard/gallery/";
+        
+                // Create an array to store the uploaded image names
+                $imageNames = array();
+        
+                foreach ($images['name'] as $key => $name) {
+                    $tmpName = $images['tmp_name'][$key];
+        
+                    if ($images['error'][$key] === UPLOAD_ERR_OK) {
+                        $targetFilePath = $target_dir . $name;  
+        
+                        if (move_uploaded_file($tmpName, $targetFilePath)) {
+                            $imageNames[] = $name;
+                        } 
+                    }
+                }
+      
+                $imagesString = implode(', ', $imageNames);
+        
+
+                $sql = "INSERT INTO galerry (year_gallery, all_images) VALUES ('$year', '$imagesString')";
+                $query = mysqli_query($conn, $sql);
+            }
+        }
+          ?>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+      let menuicn = document.querySelector(".menuicn");
+      let nav = document.querySelector(".navcontainer");
+
+      menuicn.addEventListener("click", () => {
+        nav.classList.toggle("navclose");
+      })
+    </script>
+
+  </body>
+
 </html>
