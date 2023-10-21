@@ -42,11 +42,11 @@
           <ul class="navbar-nav ms-auto ">
 
             <li class="nav-item">
-              <a style="color: red;" class="nav-link mx-2 heartbeat" href="/4upperMenus/reviews.php">СЪБИТИЯ</a>
+              <a style="color: red;" class="nav-link mx-2 heartbeat" href="../../4upperMenus/events.php">СЪБИТИЯ</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="../../forTheClub.php">ЗА КЛУБА</a>
+              <a class="nav-link mx-2" href="../../4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
             <li class="nav-item">

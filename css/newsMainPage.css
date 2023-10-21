@@ -36,6 +36,7 @@
     align-content: space-between;
     justify-content: space-evenly;
     align-items: baseline;
+    text-align: center;
 }
 
 .formStyles {
@@ -171,7 +172,7 @@ u {
   .headerNews {
     margin-bottom: -20px;
     font-size: 30px;
-    width: 450px;
+    width: 500px;
     padding-left: 50px;
     margin-top: 15px;
     display: flex;
@@ -180,6 +181,7 @@ u {
     align-content: center;
     align-items: baseline;
     justify-content: center;
+    text-align: center;
   }
   
   .formStyles {
