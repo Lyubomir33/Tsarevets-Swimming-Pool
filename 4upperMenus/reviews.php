@@ -84,7 +84,7 @@
 
     </script>
 
-
+<?php include "./contactUs.php"; ?>
 
   <div class="cleintsReviews">
       МНЕНИЯ НА КЛИЕНТИ
@@ -155,7 +155,7 @@
 
 
     
-  <?php include "./contactUs.php"; ?>
+ 
 
 
 <?php include "../footer.php" ?>

@@ -125,9 +125,11 @@
 
                 <div class="picAndBTN">
                   <label><b>Изберете снимка: </b></label>
-                  <input style="margin-left: 5px;" type="file" name="choosefile">
+                  <input style="margin-left: 5px;" type="file" multiple name="choosefile">
 
-                  <img class="viewDash" src="./medalistsImages/Anna.jpg" alt="">
+                  <label><b>Име на медалиста:</b></label>
+                  <input name="nameMedalist" type="text">
+
 
                   <button class="btnSubmitArticle" type="submit" name="formType" value="btnMedal">Създай</button>
 
@@ -163,11 +165,13 @@
               $targetFilePath = $target_dir . $fileName;
               $textArea = $_POST['medalText'];
               $formType = $_POST['formType'];
+             
 
               if ($formType === 'btnMedal') {
             
+                $nameMedalist = $_POST['nameMedalist'];
                 move_uploaded_file($_FILES['choosefile']['tmp_name'], $targetFilePath);
-                $sql = "INSERT INTO medalists (medal_img, medal_text) VALUES ('$fileName', '$textArea')";
+                $sql = "INSERT INTO medalists (name, medal_img, medal_text) VALUES ('$nameMedalist','$fileName', '$textArea')";
                 $query = mysqli_query($conn, $sql);
 
               } else if ($formType === "rewrite") {
@@ -177,7 +181,8 @@
                   $sqlImage = "UPDATE medalists SET medal_img = '$fileName' WHERE id = $recordId";
                   $queryImage = mysqli_query($conn, $sqlImage);
                 } else {
-                  $sqlTextarea = "UPDATE medalists SET medal_text = '$textArea' WHERE id = $recordId";
+                  $nameMedalist = $_POST['nameMedalist'];
+                  $sqlTextarea = "UPDATE medalists SET medal_text = '$textArea', name = '$nameMedalist' WHERE id = $recordId";
                   $queryTextarea = mysqli_query($conn, $sqlTextarea);
                 }
               }
@@ -194,6 +199,10 @@
                             <div class='picAndBTN'>
                             <label><b>Изберете снимка: </b></label>
                             <input style='margin-left: 5px;' type='file' name='choosefile'>
+
+                            <label ><b>Име на медалиста: </b></label>
+                            <input class='nameStyles' value='$rowEcho[name]' name='nameMedalist' type='text'>
+
 
                             <img class='viewDash' src='./medalistsImages/$rowEcho[medal_img]'>
                            <input type='hidden' name='recordId' value='$rowEcho[ID]'>

@@ -1,3 +1,21 @@
+.medalistsHTML {
+  font-family: 'Mooli', sans-serif;
+}
+
+.divImgMedal {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  display: none;
+
+}
+
 .whiteBackground{ 
   border-radius: 10px;
   padding: 20px;
@@ -23,12 +41,12 @@
 
 .medalsts {
   border: 1px solid #000;
-  
   display: flex;
   flex-direction: column;
   margin: 20px;
-  height: 300px;
-  position: initial;
+  height: auto;
+  overflow-y: auto;
+  width: auto;
   
 }
 
@@ -83,11 +101,6 @@
     align-items: baseline;
 }
 
-.imgMain {
-  height: 207px;
-  width: 276px;
-  padding: 15px;
-}
 
 .medalsts {
   display: flex;
@@ -102,31 +115,112 @@
 .pMedal {
   padding: 15px;
   text-align: center;
+  height: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  color: white;
+  text-align: center;
+  border: 2px solid black;
+  /* margin-top: -30px; */
+  
+}
+
+.medalist {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  font-size: 22px;
+  border: 2px solid black;
+  margin: 15px auto;
+  
+}
+
+.imgMain {
+  height: 140px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.medalist p {
+  width: 287px;
+}
+
+.toggleButton {
+  background-color: white;
+   
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.toggleButtonMedal {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  /* margin-bottom: 20px; */
+  background-color: color;
+  color: black;
+  padding: 5px;
+  background-color: white;
+  font-weight: 600;
+  align-items: center;
+
+  border: 1px solid black;
+    box-shadow: 2px 0 5px;
+    
+}
+
+.nameStyles {
+  margin: 10px;
+    height: 29px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#myDiv {
+  height: 400px;
 }
 
 
 @media (min-width: 1000px) {
-  .medalsts {
-    
-    width: 120%;
 
-    display: flex;
-    flex-direction: row;
-  }
-  .pMedal {
-    font-size: 35px;
-    margin-top: 5px;
-   
-  }
+ .divImgMedal {
+  height: 350px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: none;
+  border: 2px solid black;
+  transition: 0.9s;
+  overflow-x: auto;
+  transition:  width 2s;
 
-  .imgMain  {
-    height: 291px;
-    width: 370px;
-    padding: 15px;
-  }
 
-  .medalistsFlexDiv  {
-    display: flex;
-   
-  }
+ }
+
+ .pMedal {
+  overflow: hidden;
+  border: none;
+ }
+
+
 }
+
+
+/* CSS FOR EXPERIMENT BUTTON */
+

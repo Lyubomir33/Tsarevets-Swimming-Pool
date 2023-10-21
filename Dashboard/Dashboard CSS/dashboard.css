@@ -468,3 +468,29 @@ header {
   border-radius: 5px;
   margin: 5px;
 }
+.galleryEcho {
+  margin: 10px;
+  border: 2px solid black;
+  height: 265px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.containerEcho{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputEcho {
+  color: white;
+  background: black;
+  font-size: 30px;
+  height: 50px;
+  width: 50%;
+  margin: 5px auto;
+  text-align: center;
+  padding: 10px;
+}

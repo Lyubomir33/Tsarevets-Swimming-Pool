@@ -8,11 +8,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/contactUs.css">
 	<link rel="stylesheet" href="/css/modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
-	<div id="flexContainer" class="container d-flex justify-content-center align-items-center">
+	<div id="flexContainer" class="container ">
 
 		<!-- // SVG
 					from: https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm 
@@ -20,23 +21,9 @@
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
 
-		<script>
-			const flexContainer = document.getElementById('flexContainer');
-			const formSize = document.getElementById('formContacts');
+		
 
-			function changeSize() {
-				if (window.innerWidth < 550) {
-					flexContainer.classList.remove('d-flex');
-					formSize.style.width = "100%";
-				}
-
-			}
-			changeSize();
-
-			window.addEventListener('resize', changeSize);
-		</script>
-
-		<svg class="svgMail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
+		<svg class="svgMail animate__animated animate__fadeInDown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
 			<g id="Image">
 				<g id="g14">
 					<g id="g16">
@@ -340,7 +327,7 @@
 		<form id="formContacts" class="ContactForm" method="POST">
 
 
-			<h1 class="title text-center mb-4">Споделете вашата обратна връзка с нас</h1>
+		<h1 id="headerForForm" class="title text-center mb-4 animate__animated animate__fadeIn">Споделете вашата обратна връзка с нас</h1>
 
 			<!-- Name -->
 			<div class="form-group position-relative">
@@ -355,7 +342,7 @@
 				<label for="formEmail" class="d-block">
 					<i class="icon" data-feather="mail"></i>
 				</label>
-				<input type="email" id="formEmail" name="email" class="form-control form-control-lg thick" placeholder="Вашият имейл:">
+				<input type="email" id="formEmail" name="email" class="form-control form-control-lg thick " placeholder="Вашият имейл:">
 			</div>
 
 			<!-- Message -->
@@ -392,7 +379,6 @@
 								$sqlSend = "INSERT INTO contactform (names, email, opinion) VALUES ('$names', '$email', '$textOpinion')";
 								$query = mysqli_query($conn, $sqlSend);
 								echo "<span class='success'>Информацията беше изпратена успешно!<br>Вашата обратна връзка ни помага да се подобряваме.<br><br>Благодарим!</span> ";
-
 							}
 						}
 					}
@@ -414,6 +400,42 @@
 
 
 
+	<script>
+			const flexContainer = document.getElementById('flexContainer');
+			const formSize = document.getElementById('formContacts');
+
+			function changeSize() {
+				if (window.innerWidth < 550) {
+					flexContainer.classList.remove('d-flex');
+					formSize.style.width = "100%";
+				}
+
+			}
+			changeSize();
+
+			window.addEventListener('resize', changeSize);
+
+			//RESIZE FOR THE EFFECTS PART//
+
+
+			const headerForm = document.getElementById('headerForForm');
+
+function resizeFunc() {
+  if (window.innerWidth < 450) {
+    headerForm.classList.add('animate__animated', 'animate__fadeIn');
+  } else {
+    headerForm.classList.remove('animate__animated', 'animate__fadeIn');
+  }
+}
+
+resizeFunc(); 
+window.addEventListener('resize', resizeFunc);
+
+			//RESIZE FOR THE EFFECTS PART//
+
+					
+
+		</script>
 </body>
 
 </html>

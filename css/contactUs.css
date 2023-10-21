@@ -1,5 +1,5 @@
 #flexContainer { 
-  margin-bottom: -200px;
+  margin-top: 80px;
 }
 
 svg {
@@ -148,6 +148,11 @@ svg {
 }
 
 
+.animate__animated.animate__fadeIn {
+  --animate-duration: 7s;
+}
+
+
 @media (max-width: 500px) {
 
   .svgMail {
@@ -167,11 +172,12 @@ svg {
 
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   #flexContainer {
 
     display: flex;
-    
-
+    align-items: center;
   }
+
+  
 }

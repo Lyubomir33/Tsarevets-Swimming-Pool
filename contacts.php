@@ -9,7 +9,10 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="contact-info">
 
+          <div class="flexImgLocation">
+            <img class="oldImg" src="./images/най-стара_снимка-removebg-preview.png" alt="">
           <h2 id="anchorID" class="contact-title">Локация и Контакти</h2>
+          </div>
 
           <ul class="contact-info">
               <li>

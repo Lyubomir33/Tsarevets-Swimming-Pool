@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-  <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <title>Календар</title>
 </head>
@@ -68,7 +68,7 @@
   </header>
 
   <div>
-    <h1 class="schedule">Календар на събитията 2024г.</h1>
+    <h1 class="schedule">Календар на събитията 2023г.</h1>
   </div>
 
   <?php
@@ -80,7 +80,7 @@
 
 
   while ($row = mysqli_fetch_assoc($query)) {
-    echo "<div class='calD'>";
+    echo "<div style='margin-bottom: 20px;' class='calD'>";
     echo "$row[calendar_info]";
     echo "</div>";
   }

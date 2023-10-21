@@ -130,6 +130,7 @@
             <button value="submitData" name="formType" class="btnSubmitArticle">Създай</button>
           </form>
 
+
           <?php
 
           require "../databaseConnection/database.php";
@@ -137,40 +138,97 @@
 
           if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $formType = $_POST['formType'];
-            $year = $_POST['year'];
-        
+           
+
             if ($formType === 'submitData') {
-                $images = $_FILES['multiplepics'];
-                $target_dir = "../Dashboard/gallery/";
-        
-                // Create an array to store the uploaded image names
-                $imageNames = array();
-        
-                foreach ($images['name'] as $key => $name) {
-                    $tmpName = $images['tmp_name'][$key];
-        
-                    if ($images['error'][$key] === UPLOAD_ERR_OK) {
-                        $targetFilePath = $target_dir . $name;  
-        
-                        if (move_uploaded_file($tmpName, $targetFilePath)) {
-                            $imageNames[] = $name;
-                        } 
-                    }
+              $year = $_POST['year'];
+              $images = $_FILES['multiplepics'];
+              $target_dir = "../Dashboard/gallery/";
+
+              $imageNames = array();
+
+              foreach ($images['name'] as $key => $name) {
+                $tmpName = $images['tmp_name'][$key];
+
+                if ($images['error'][$key] === UPLOAD_ERR_OK) {
+                  $targetFilePath = $target_dir . $name;
+
+                  if (move_uploaded_file($tmpName, $targetFilePath)) {
+                    $imageNames[] = $name;
+                  }
                 }
-      
-                $imagesString = implode(', ', $imageNames);
-        
+              }
 
-                $sql = "INSERT INTO galerry (year_gallery, all_images) VALUES ('$year', '$imagesString')";
-                $query = mysqli_query($conn, $sql);
+              $imagesString = implode(', ', $imageNames);
+
+
+              $sql = "INSERT INTO galerry (year_gallery, all_images) VALUES ('$year', '$imagesString')";
+              $query = mysqli_query($conn, $sql);
+            
+            } 
+            else if ($formType === "resendImgs") {
+              $imagesUpdate = $_FILES['echoMultPics'];
+              $target_dirUpdate = "../Dashboard/gallery/";
+
+              $imageNamesUpdate = array();
+
+              foreach ($imagesUpdate['name'] as $keyUpdate => $nameUpdate) {
+                $tmpNameUpdate = $imagesUpdate['tmp_name'][$keyUpdate];
+
+                if ($imagesUpdate['error'][$keyUpdate] === UPLOAD_ERR_OK) {
+                  $targetFilePathUpdate = $target_dirUpdate . $nameUpdate;
+
+                  if (move_uploaded_file($tmpNameUpdate, $targetFilePathUpdate)) {
+                    $imageNamesUpdate[] = $nameUpdate;
+                  }
+                }
+              }
+
+              $imagesStringUpdate = implode(', ', $imageNamesUpdate);
+
+              $ID = $_POST['idToGet'];
+
+              $sqlImgUpdate = "UPDATE galerry SET all_images='$imagesStringUpdate' WHERE ID = $ID";
+              
+              $queryUpdate = mysqli_query($conn, $sqlImgUpdate);
+
             }
-        }
-          ?>
+          }
 
+
+          $sqlGet = "SELECT * FROM galerry"; 
+          $queryGet= mysqli_query($conn, $sqlGet);
+
+          
+          while($row = mysqli_fetch_assoc($queryGet)) { 
+
+          echo "<div class='containerEcho'>
+
+          <div class='galleryEcho'>
+
+            <input class='inputEcho' disabled value='$row[year_gallery].' type='text'><br><br><br>
+
+            <form method='POST' enctype='multipart/form-data'>
+              <label>Избери снимки: </label><br>
+              <input name='echoMultPics[]' multiple type='file'><br>
+              <input type='hidden' name='idToGet' value='" . $row['ID'] . "'>
+              <button name='formType' value='resendImgs' class='btnSubmitArticle' type='submit'>Запази промени</button>
+            </form>
+
+
+          </div>
+
+
+        </div>";
+
+      }
+
+          ?>
 
         </div>
       </div>
     </div>
+
     </div>
     </div>
 

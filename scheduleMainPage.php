@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/headerNavbar.css">
   <link rel="stylesheet" href="./css/scheduleMainPage.css">
-  <script src="https://cdn.tiny.cloud/1/oy49mrh99x9qochiaeatx6s93oogkmooakygczsvo87c3905/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <title>График</title>
 </head>
 
@@ -38,17 +38,17 @@
     <div>
 
       <div>
-        <h1>Басейн "Радио"</h1>
+        <h1 class="headersScheduleMain">Басейн "Радио"</h1>
       <img class="imgSchedule" src="./images/pool3.jpg">
       </div> 
      
       <div>
-        <h1>Басейн "Емилиян Станев"</h1>
+        <h1  class="headersScheduleMain">Басейн "Емилиян Станев"</h1>
       <img class="imgSchedule" src="./images/pool2.jpg">
       </div>
     
       <div>
-        <h1>Басейн "Клуб 17"</h1>
+        <h1  class="headersScheduleMain">Басейн "Клуб 17"</h1>
       <img class="imgSchedule" src="./images/pool1.jpg">
       </div>
 
