@@ -10,7 +10,7 @@
           <div class="contact-info">
 
           <div class="flexImgLocation">
-            <img class="oldImg" src="./images/най-стара_снимка-removebg-preview.png" alt="">
+            <img class="oldImg" src="../images/най-стара_снимка-removebg-preview.png" alt="">
           <h2 id="anchorID" class="contact-title">Локация и Контакти</h2>
           </div>
 
@@ -89,7 +89,7 @@ function resizeIframe() {
     iframeLocation.style.display = "none";
     mapDiv.style.display = "flex";
     mapDiv.style.height = "120px";
-    backgroundSetup.style.height = "750px"; 
+    backgroundSetup.style.height = "800px"; 
 
   } else {
     iframeLocation.style.display = "block";

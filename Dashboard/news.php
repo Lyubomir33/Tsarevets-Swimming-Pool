@@ -145,7 +145,7 @@
 
             <div class="articleText">
               <h1>Съдържание</h1>
-              <textarea class="textareaMain" name="content" cols="120" rows="10" id="content"></textarea>
+              <textarea class="textareaMain" name="content" cols="50" rows="10" id="content"></textarea>
             </div>
 
           </form>
@@ -274,7 +274,7 @@
 
             echo "<div class=\"articleText\">";
             echo "<h1 class='header'>Статия</h1>";
-            echo "<textarea class='textareaMain' name=\"contentSet\" id=\"content\" cols=\"120\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
+            echo "<textarea class='textareaMain' name=\"contentSet\" id=\"content\" cols=\"50\" rows=\"10\">" . $rowGet['content'] . "</textarea>";
             echo "</div>";
 
             echo "</form>";

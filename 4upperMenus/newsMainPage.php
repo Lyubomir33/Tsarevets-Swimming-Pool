@@ -46,11 +46,11 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">ЗА КЛУБА</a>
+              <a class="nav-link mx-2" href="/4upperMenus/events.php">ЗА КЛУБА</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
+              <a class="nav-link mx-2" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
           
             <li class="nav-item">
@@ -90,7 +90,7 @@
         <div>
             <h1 class='headerNews'>{$row['title']}</h1>
             <div style='background: url(/Dashboard/{$row['image']}); 
-            background-repeat: no-repeat; background-position: center;' class='addNews'>
+            background-size: cover; background-repeat: no-repeat; background-position: center;' class='addNews'>
                 
            </div> </div></a>";
 

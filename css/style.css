@@ -558,7 +558,7 @@ body {
 .futureEvents {
   
     margin: 0 auto;
-    width: 400px;
+    width: 100%;
     height: 200px;
 }
 
@@ -628,6 +628,9 @@ body {
     width: 50%;
   }
 
+  .divBlog h3 {
+    width: 50%;
+  }
 
 }
 

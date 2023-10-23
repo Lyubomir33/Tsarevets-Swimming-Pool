@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body class="contactUsBody">
 
 	<div id="flexContainer" class="container ">
 
@@ -354,7 +354,7 @@
 			<!-- Submit btn -->
 			<div class="text-center">
 
-				<body class="modalBody">
+	
 
 					<?php
 
@@ -373,12 +373,12 @@
 							$textOpinion = $_POST['opinion'];
 
 							if (empty($names) || empty($email) || empty($textOpinion)) {
-								echo "<span class='error'>Всички полета са задължителни! <br> Моля попълнете ги и изпратете съобщението отново.</span> ";
+								echo "<script>alert('Всички полета са задължителни! Моля попълнете ги и опитайте отново.')</script> ";
 							} else {
 
 								$sqlSend = "INSERT INTO contactform (names, email, opinion) VALUES ('$names', '$email', '$textOpinion')";
 								$query = mysqli_query($conn, $sqlSend);
-								echo "<span class='success'>Информацията беше изпратена успешно!<br>Вашата обратна връзка ни помага да се подобряваме.<br><br>Благодарим!</span> ";
+								echo "<script>alert('Информацията беше изпратена успешно! Благодарим за обратната връзка.')</script>  ";
 							}
 						}
 					}
@@ -386,12 +386,10 @@
 					?>
 
 					<div class="section full-height">
-						<input class="btnSubmitForm" type="submit" name="submit" value="Изпрати съобщение" />
+<input class="btnSubmitForm" type="submit" name="submit" value="Изпрати съобщение" onclick="showWindow();" />
 					</div>
 
 
-
-				</body>
 
 			</div>
 		</form>
@@ -401,6 +399,10 @@
 
 
 	<script>
+
+			
+
+
 			const flexContainer = document.getElementById('flexContainer');
 			const formSize = document.getElementById('formContacts');
 

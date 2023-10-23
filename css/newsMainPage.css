@@ -7,6 +7,7 @@
 }
 
 .addNews {
+  background-size: cover;
   height: 300px;
   width: 300px;
   margin: 35px;
@@ -137,6 +138,7 @@ u {
   .addNews {
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height: 300px;
     width: 450px;
     margin-top: 50px;
@@ -157,6 +159,7 @@ u {
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height: 300px;
     width: 410px;
     margin: 50px;
@@ -193,8 +196,15 @@ u {
     border-radius: 8px;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-evenly;
     width: 160vh;
+    align-items: center;
   }
+
+
+
+
+
+
+  
 }

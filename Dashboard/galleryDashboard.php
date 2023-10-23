@@ -130,81 +130,78 @@
             <button value="submitData" name="formType" class="btnSubmitArticle">Създай</button>
           </form>
 
+          <div class='containerEcho'>
+            <?php
 
-          <?php
-
-          require "../databaseConnection/database.php";
+            require "../databaseConnection/database.php";
 
 
-          if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $formType = $_POST['formType'];
-           
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+              $formType = $_POST['formType'];
 
-            if ($formType === 'submitData') {
-              $year = $_POST['year'];
-              $images = $_FILES['multiplepics'];
-              $target_dir = "../Dashboard/gallery/";
 
-              $imageNames = array();
+              if ($formType === 'submitData') {
+                $year = $_POST['year'];
+                $images = $_FILES['multiplepics'];
+                $target_dir = "../Dashboard/gallery/";
 
-              foreach ($images['name'] as $key => $name) {
-                $tmpName = $images['tmp_name'][$key];
+                $imageNames = array();
 
-                if ($images['error'][$key] === UPLOAD_ERR_OK) {
-                  $targetFilePath = $target_dir . $name;
+                foreach ($images['name'] as $key => $name) {
+                  $tmpName = $images['tmp_name'][$key];
 
-                  if (move_uploaded_file($tmpName, $targetFilePath)) {
-                    $imageNames[] = $name;
+                  if ($images['error'][$key] === UPLOAD_ERR_OK) {
+                    $targetFilePath = $target_dir . $name;
+
+                    if (move_uploaded_file($tmpName, $targetFilePath)) {
+                      $imageNames[] = $name;
+                    }
                   }
                 }
-              }
 
-              $imagesString = implode(', ', $imageNames);
+                $imagesString = implode(', ', $imageNames);
 
 
-              $sql = "INSERT INTO galerry (year_gallery, all_images) VALUES ('$year', '$imagesString')";
-              $query = mysqli_query($conn, $sql);
-            
-            } 
-            else if ($formType === "resendImgs") {
-              $imagesUpdate = $_FILES['echoMultPics'];
-              $target_dirUpdate = "../Dashboard/gallery/";
+                $sql = "INSERT INTO galerry (year_gallery, all_images) VALUES ('$year', '$imagesString')";
+                $query = mysqli_query($conn, $sql);
+              } else if ($formType === "resendImgs") {
+                $imagesUpdate = $_FILES['echoMultPics'];
+                $target_dirUpdate = "../Dashboard/gallery/";
 
-              $imageNamesUpdate = array();
+                $imageNamesUpdate = array();
 
-              foreach ($imagesUpdate['name'] as $keyUpdate => $nameUpdate) {
-                $tmpNameUpdate = $imagesUpdate['tmp_name'][$keyUpdate];
+                foreach ($imagesUpdate['name'] as $keyUpdate => $nameUpdate) {
+                  $tmpNameUpdate = $imagesUpdate['tmp_name'][$keyUpdate];
 
-                if ($imagesUpdate['error'][$keyUpdate] === UPLOAD_ERR_OK) {
-                  $targetFilePathUpdate = $target_dirUpdate . $nameUpdate;
+                  if ($imagesUpdate['error'][$keyUpdate] === UPLOAD_ERR_OK) {
+                    $targetFilePathUpdate = $target_dirUpdate . $nameUpdate;
 
-                  if (move_uploaded_file($tmpNameUpdate, $targetFilePathUpdate)) {
-                    $imageNamesUpdate[] = $nameUpdate;
+                    if (move_uploaded_file($tmpNameUpdate, $targetFilePathUpdate)) {
+                      $imageNamesUpdate[] = $nameUpdate;
+                    }
                   }
                 }
+
+                $imagesStringUpdate = implode(', ', $imageNamesUpdate);
+
+                $ID = $_POST['idToGet'];
+
+                $sqlImgUpdate = "UPDATE galerry SET all_images='$imagesStringUpdate' WHERE ID = $ID";
+
+                $queryUpdate = mysqli_query($conn, $sqlImgUpdate);
               }
-
-              $imagesStringUpdate = implode(', ', $imageNamesUpdate);
-
-              $ID = $_POST['idToGet'];
-
-              $sqlImgUpdate = "UPDATE galerry SET all_images='$imagesStringUpdate' WHERE ID = $ID";
-              
-              $queryUpdate = mysqli_query($conn, $sqlImgUpdate);
-
             }
-          }
 
 
-          $sqlGet = "SELECT * FROM galerry"; 
-          $queryGet= mysqli_query($conn, $sqlGet);
+            $sqlGet = "SELECT * FROM galerry";
+            $queryGet = mysqli_query($conn, $sqlGet);
 
-          
-          while($row = mysqli_fetch_assoc($queryGet)) { 
 
-          echo "<div class='containerEcho'>
+            while ($row = mysqli_fetch_assoc($queryGet)) {
 
-          <div class='galleryEcho'>
+              echo " <div class='galleryEcho'>
+
+     
 
             <input class='inputEcho' disabled value='$row[year_gallery].' type='text'><br><br><br>
 
@@ -215,16 +212,13 @@
               <button name='formType' value='resendImgs' class='btnSubmitArticle' type='submit'>Запази промени</button>
             </form>
 
+       
+          </div>";
+            }
+
+            ?>
 
           </div>
-
-
-        </div>";
-
-      }
-
-          ?>
-
         </div>
       </div>
     </div>

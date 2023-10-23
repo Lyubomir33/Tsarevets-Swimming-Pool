@@ -153,6 +153,18 @@ svg {
 }
 
 
+
+.modalWindow{
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 2px 0 7px black;
+  position: fixed;
+  top: 40px;
+  display: none;
+}
+
+
 @media (max-width: 500px) {
 
   .svgMail {
@@ -181,3 +193,4 @@ svg {
 
   
 }
+

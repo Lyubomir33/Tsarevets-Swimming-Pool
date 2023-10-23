@@ -111,7 +111,7 @@ ul.contact-info li {
 }
 
 .twoImages {
-  width: 300px;
+  width: auto;
   display: flex;
 }
 
