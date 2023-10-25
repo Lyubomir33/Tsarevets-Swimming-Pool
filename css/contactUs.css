@@ -164,6 +164,14 @@ svg {
   display: none;
 }
 
+#exampleModal {
+  display: none;
+}
+
+.modal-dialog{
+  margin-top: 200px;
+}
+
 
 @media (max-width: 500px) {
 

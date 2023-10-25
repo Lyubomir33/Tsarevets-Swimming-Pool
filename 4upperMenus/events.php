@@ -21,16 +21,18 @@
 
   while ($row = mysqli_fetch_assoc($query)){
 
-    echo "<h1 class='headEvents'>Предстоящи събития</h1>
+    echo "<h1 class='headEvents'>Резултати</h1>
 
-    <div class='imgForEvents'>
-    <img  src='./imgFiles/$row[img_events]'>
-    </div>
+   
     
     <div class='pInEvents'>$row[events_textarea]</div>";
 
     
   }
+
+   // <div class='imgForEvents'>
+    // <img  src='./imgFiles/$row[img_events]'>
+    // </div>
 
 
 ?>

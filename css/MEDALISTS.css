@@ -143,7 +143,7 @@
   height: 140px;
   width: 200px;
   padding: 10px;
-  border-radius: 100px;
+  
 }
 
 .medalist p {
@@ -193,9 +193,28 @@
 }
 
 
+
+  
+ 
+
+
+
+
 @media (min-width: 1000px) {
 
- .divImgMedal {
+  .makeFlex {
+    display: flex;
+  }
+
+  .toggleButtonMedal {
+    width: 300px;
+    height: 200px;
+    
+  }
+
+  
+
+ /* .divImgMedal {
   height: 350px;
   padding: 20px;
   display: flex;
@@ -209,14 +228,12 @@
   transition: 0.9s;
   overflow-x: auto;
   transition:  width 2s;
-
-
  }
 
  .pMedal {
   overflow: hidden;
   border: none;
- }
+ } */
 
 
 }

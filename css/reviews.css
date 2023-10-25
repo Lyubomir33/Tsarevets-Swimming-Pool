@@ -84,6 +84,15 @@
   border-color: #fff;
 }
 
+#news, #forClub, #reviews, #oneReviews{
+  color: white;
+}
+
+#news:hover, #forClub:hover, #reviews:hover {
+  color: #00C9FF;
+}
+
+
 
 /* #forClub:hover, #news:hover, #reviews:hover, #contacts:hover {
 

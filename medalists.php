@@ -17,12 +17,12 @@
   <h1 class="headerMedals">Медалисти</h1>
 
 
-  
 
-      <?php 
+      <div class='makeFlex'>
+  <?php
 
-    
-   require "./databaseConnection/database.php";
+
+  require "./databaseConnection/database.php";
 
 
   $sql = "SELECT * FROM medalists";
@@ -30,44 +30,61 @@
 
   while ($row = mysqli_fetch_assoc($query)) {
     echo "<div id='containG' class='containerGallery'>
+    <div>
+        <div >
+            <button class='toggleButtonMedal'>$row[name]
+                <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+            </button>
+        </div>
+        <div id='myDiv' class='divImgMedal animate__animated animate__fadeIn'>
+            <p class='pMedal'>$row[medal_text]</p>
+        </div>
+    </div>
+</div>";
 
-              <div ><button class='toggleButtonMedal'>$row[name]
-
-              <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
-             
-              </button>
-              
-              <div>
-
-              <div id='myDiv' class='divImgMedal animate__animated animate__fadeIn'>
-              
-              <p class='pMedal'>$row[medal_text]</p>
-              </div>
-
-              </div>";
-
-    
+   
   }
 
+
+
+
   ?>
-      
-      <div style="margin-top: 20px;"></div>
+  </div>
+
+  <div style="margin-top: 20px;"></div>
 
   <?php require "./footer.php"; ?>
 
 </body>
 
 <script>
+  // const rand = document.querySelectorAll('.containerGallery');
+
+  // function resizeMedal() {
+
+  //   if (window.innerWidth > 450) {
+  //     rand.forEach(element => {
+  //       element.style.display = "none";
+  //     });
 
 
-  //  const hiddenDiv = document.getElementById('hiddenDiv');
+
+  //   } else {
+  //     rand.forEach(element => {
+  //       element.style.display = "flex";
+  //     });
+  //   }
+  // }
+
+  // window.addEventListener('resize', resizeMedal);
 
 
-    document.querySelectorAll('.toggleButtonMedal').forEach((button, index) => {
-      button.addEventListener('click', () => {
-        const divImgModal = document.querySelectorAll('.divImgMedal')[index];
 
-        if(window.innerWidth < 450) {
+  document.querySelectorAll('.toggleButtonMedal').forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const divImgModal = document.querySelectorAll('.divImgMedal')[index];
+
+      if (window.innerWidth < 450) {
         if (divImgModal.style.display === 'block') {
           divImgModal.style.display = 'none';
           // hiddenDiv.style.display = "block";
@@ -75,7 +92,7 @@
         } else {
           // hiddenDiv.style.display = "none";
           divImgModal.style.display = 'block';
-        }   
+        }
       } else if (window.innerWidth > 650) {
         if (divImgModal.style.display === 'flex') {
           divImgModal.style.display = 'none';
@@ -85,14 +102,11 @@
           divImgModal.style.display = 'flex';
           // hiddenDiv.style.display = "block";
 
-        }   
+        }
       }
-      
-      });
+
     });
-
-
-  
+  });
 </script>
 
 </html>

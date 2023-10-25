@@ -180,6 +180,9 @@
     margin-top: 20px;
     font-weight: 700px;
     font-size: 18px;
+    color:#fff;
+    text-align: center;
+    cursor: pointer;
 }
 
 .btnSubmitForm:hover {

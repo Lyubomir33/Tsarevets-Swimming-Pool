@@ -324,7 +324,7 @@
   -------------------------------------------------------------
   ------------------------------------------------------------>
 
-		<form id="formContacts" class="ContactForm" method="POST">
+		<div id="formContacts" class="ContactForm" >
 
 
 		<h1 id="headerForForm" class="title text-center mb-4 animate__animated animate__fadeIn">Споделете вашата обратна връзка с нас</h1>
@@ -360,49 +360,90 @@
 
 
 
-					require "../databaseConnection/database.php";
-
-
-
-					if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-						if (isset($_POST['submit'])) {
-
-							$names = $_POST['names'];
-							$email = $_POST['email'];
-							$textOpinion = $_POST['opinion'];
-
-							if (empty($names) || empty($email) || empty($textOpinion)) {
-								echo "<script>alert('Всички полета са задължителни! Моля попълнете ги и опитайте отново.')</script> ";
-							} else {
-
-								$sqlSend = "INSERT INTO contactform (names, email, opinion) VALUES ('$names', '$email', '$textOpinion')";
-								$query = mysqli_query($conn, $sqlSend);
-								echo "<script>alert('Информацията беше изпратена успешно! Благодарим за обратната връзка.')</script>  ";
-							}
-						}
-					}
-
 					?>
 
 					<div class="section full-height">
-<input class="btnSubmitForm" type="submit" name="submit" value="Изпрати съобщение" onclick="showWindow();" />
+<button class="btnSubmitForm">Изпрати съобщение</button>
+<!-- type="submit" onclick="showWindow()"; -->
 					</div>
 
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+			</button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal()" id="closeModal" type="button" class="btn btn-primary close-modal">Затвори</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 			</div>
-		</form>
+					</div>
+
 
 	</div>
 
+	<script src="./js/jquery-3.7.1.min.js"></script>
 
 
 	<script>
 
+			$(document).ready(function(){
 			
+				$('.close-modal').on('click',function(){
+					$('#exampleModal').css('opacity',0);
+				});
+				$('.btnSubmitForm').on('click',function(){
+						let formData = {
+                    email: $('#formEmail').val(),
+										names: $('#formName').val(),
+										opinion: $('#formMessage').val(),
+               
+                };
+		
+							$.ajax({
+                    url: "./functions/send_contact_form.php", // Replace with your API endpoint
+                    type: "POST",
+                    dataType: "json",
+										data: formData,
+                    success: function(data) {
+                        if(data.result === 'success'){
+											
+														// $('#exampleModal').show();
+														$('#exampleModal').css('display', 'flex');
+														$('.modal-body').text("Информацията беше изпратена успешно! Благодарим за обратната връзка!")
+														$('#exampleModal').css('opacity',1);
+
+												}else{
+													$('#exampleModal').css('display', 'flex');
+													$('.modal-body').text("Моля, попълнете всички полета!");
+													$('#exampleModal').css('opacity',1);
+												}
+                    },
+										error(DATA){
+											console.log(DATA.responseText);
+										}
+                    
+                });
+				});
 
 
+			});
+
+
+			function closeModal() {
+    let modal = document.getElementById('exampleModal');
+    modal.style.display = 'none';
+}
+		
+			
 			const flexContainer = document.getElementById('flexContainer');
 			const formSize = document.getElementById('formContacts');
 
@@ -438,6 +479,11 @@ window.addEventListener('resize', resizeFunc);
 					
 
 		</script>
+
+
+
+<script src="./js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

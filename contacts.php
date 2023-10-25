@@ -11,7 +11,7 @@
 
           <div class="flexImgLocation">
             <img class="oldImg" src="../images/най-стара_снимка-removebg-preview.png" alt="">
-          <h2 id="anchorID" class="contact-title">Локация и Контакти</h2>
+          <h2 id="anchorID" class="contact-title">Контакти</h2>
           </div>
 
           <ul class="contact-info">

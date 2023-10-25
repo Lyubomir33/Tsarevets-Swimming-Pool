@@ -1,24 +1,28 @@
+.body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .textWhySwimm {
   width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
 }
 
-.texts{
+.texts {
   text-shadow: 2px 2px 3px black;
-    color: white;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: flex-start;
-    align-items: flex-start;
-    padding: 15px;
-    
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+
 }
 
 .textWhySwimm h1 {
@@ -37,7 +41,7 @@
 }
 
 .bodyWhySwimm {
-   /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
+  /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
   background-repeat: no-repeat;
   background-size: cover;   */
   /* height: 100vh; 
@@ -48,15 +52,13 @@
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed;
   height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  
-}
-
-.whySwimmHTML {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
+
+.whySwimmHTML {}
 
 .imgArticleKids {
   height: 200px;
@@ -69,11 +71,11 @@
 
 .headerWhy {
   margin-top: 20px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 3px black;
-    color: white;
-    text-align: center;
-    font-size: 35px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 3px black;
+  color: white;
+  text-align: center;
+  font-size: 35px;
 }
 
 @media (min-width: 1000px) {
@@ -86,10 +88,10 @@
     justify-content: center;
     box-shadow: 2px 0 10px black;
     margin-top: 35px;
- 
+
   }
 
-  .texts  {
+  .texts {
     font-size: 22px;
     display: flex;
     text-align: justify;
@@ -100,13 +102,11 @@
 
   .headerWhy {
     margin-top: 20px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 3px black;
-      color: white;
-      text-align: center;
-      font-size: 55px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    text-align: center;
+    font-size: 55px;
   }
 
 }
-
-

@@ -43,23 +43,24 @@
           <ul id="menusTop" class="navbar-nav ms-auto ">
 
           <li class="nav-item">
-              <a style="color: red;" class="nav-link mx-2 heartbeat" href="/4upperMenus/events.php">СЪБИТИЯ</a>
+              <a class="nav-link mx-2 btnStyle" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
-            </li>
             
             <li class="nav-item">
-              <a class="nav-link mx-2" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+              <a class="nav-link mx-2 btnStyle" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
 
-
+          <li class="nav-item">
+              <a id="" class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
             </li>
+
+          
+            
+            <li class="nav-item">
+              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -332,8 +333,6 @@ if (localStorage.getItem('hideEvents') === 'true') {
   <script src="https://kit.fontawesome.com/0e55d70a76.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 
