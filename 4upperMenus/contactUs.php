@@ -13,6 +13,8 @@
 
 <body class="contactUsBody">
 
+
+
 	<div id="flexContainer" class="container ">
 
 		<!-- // SVG
@@ -21,7 +23,7 @@
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
 
-		
+
 
 		<svg class="svgMail animate__animated animate__fadeInDown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
 			<g id="Image">
@@ -324,10 +326,10 @@
   -------------------------------------------------------------
   ------------------------------------------------------------>
 
-		<div id="formContacts" class="ContactForm" >
+		<div id="formContacts" class="ContactForm">
 
 
-		<h1 id="headerForForm" class="title text-center mb-4 animate__animated animate__fadeIn">Споделете вашата обратна връзка с нас</h1>
+			<h1 id="headerForForm" class="title text-center mb-4 animate__animated animate__fadeIn">Споделете вашата обратна връзка с нас</h1>
 
 			<!-- Name -->
 			<div class="form-group position-relative">
@@ -354,135 +356,119 @@
 			<!-- Submit btn -->
 			<div class="text-center">
 
-	
-
-					<?php
 
 
+				<?php
 
-					?>
 
-					<div class="section full-height">
-<button class="btnSubmitForm">Изпрати съобщение</button>
-<!-- type="submit" onclick="showWindow()"; -->
-					</div>
 
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-			</button>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button onclick="closeModal()" id="closeModal" type="button" class="btn btn-primary close-modal">Затвори</button>
-      </div>
-    </div>
-  </div>
-</div>
+				?>
+
+				<div class="section full-height">
+					<button class="btnSubmitForm">Изпрати съобщение</button>
+					<!-- type="submit" onclick="showWindow()"; -->
+				</div>
+
 
 
 			</div>
-					</div>
+		</div>
 
 
 	</div>
+
+	
 
 	<script src="./js/jquery-3.7.1.min.js"></script>
 
 
 	<script>
+		$(document).ready(function() {
 
-			$(document).ready(function(){
-			
-				$('.close-modal').on('click',function(){
-					$('#exampleModal').css('opacity',0);
+			$('.close-modal').on('click', function() {
+				$('#exampleModal').css('opacity', 0);
+			});
+			$('.btnSubmitForm').on('click', function() {
+				let formData = {
+					email: $('#formEmail').val(),
+					names: $('#formName').val(),
+					opinion: $('#formMessage').val(),
+
+				};
+
+				$.ajax({
+					url: "./functions/send_contact_form.php", 
+					type: "POST",
+					dataType: "json",
+					data: formData,
+					success: function(data) {
+						if (data.result === 'success') {
+
+							// $('#exampleModal').show();
+							$('#exampleModal').css('display', 'block');
+							$('.modal-body').text("Информацията беше изпратена успешно! Благодарим за обратната връзка!")
+							$('#exampleModal').css('opacity', 1);
+
+						} else {
+							$('#exampleModal').css('display', 'block');
+							$('.modal-body').text("Моля, попълнете всички полета!");
+							$('#exampleModal').css('opacity', 1);
+						}
+					},
+					error(DATA) {
+						console.log(DATA.responseText);
+					}
+
 				});
-				$('.btnSubmitForm').on('click',function(){
-						let formData = {
-                    email: $('#formEmail').val(),
-										names: $('#formName').val(),
-										opinion: $('#formMessage').val(),
-               
-                };
-		
-							$.ajax({
-                    url: "./functions/send_contact_form.php", // Replace with your API endpoint
-                    type: "POST",
-                    dataType: "json",
-										data: formData,
-                    success: function(data) {
-                        if(data.result === 'success'){
-											
-														// $('#exampleModal').show();
-														$('#exampleModal').css('display', 'flex');
-														$('.modal-body').text("Информацията беше изпратена успешно! Благодарим за обратната връзка!")
-														$('#exampleModal').css('opacity',1);
-
-												}else{
-													$('#exampleModal').css('display', 'flex');
-													$('.modal-body').text("Моля, попълнете всички полета!");
-													$('#exampleModal').css('opacity',1);
-												}
-                    },
-										error(DATA){
-											console.log(DATA.responseText);
-										}
-                    
-                });
-				});
-
-
 			});
 
 
-			function closeModal() {
-    let modal = document.getElementById('exampleModal');
-    modal.style.display = 'none';
-}
-		
-			
-			const flexContainer = document.getElementById('flexContainer');
-			const formSize = document.getElementById('formContacts');
+		});
 
-			function changeSize() {
-				if (window.innerWidth < 550) {
-					flexContainer.classList.remove('d-flex');
-					formSize.style.width = "100%";
-				}
 
+		function closeModal() {
+			let modal = document.getElementById('exampleModal');
+			modal.style.display = 'none';
+		}
+
+
+		const flexContainer = document.getElementById('flexContainer');
+		const formSize = document.getElementById('formContacts');
+
+		function changeSize() {
+			if (window.innerWidth < 550) {
+				flexContainer.classList.remove('d-flex');
+				formSize.style.width = "100%";
 			}
-			changeSize();
 
-			window.addEventListener('resize', changeSize);
+		}
+		changeSize();
 
-			//RESIZE FOR THE EFFECTS PART//
+		window.addEventListener('resize', changeSize);
 
-
-			const headerForm = document.getElementById('headerForForm');
-
-function resizeFunc() {
-  if (window.innerWidth < 450) {
-    headerForm.classList.add('animate__animated', 'animate__fadeIn');
-  } else {
-    headerForm.classList.remove('animate__animated', 'animate__fadeIn');
-  }
-}
-
-resizeFunc(); 
-window.addEventListener('resize', resizeFunc);
-
-			//RESIZE FOR THE EFFECTS PART//
-
-					
-
-		</script>
+		//RESIZE FOR THE EFFECTS PART//
 
 
+		const headerForm = document.getElementById('headerForForm');
 
-<script src="./js/bootstrap.min.js"></script>
+		function resizeFunc() {
+			if (window.innerWidth < 450) {
+				headerForm.classList.add('animate__animated', 'animate__fadeIn');
+			} else {
+				headerForm.classList.remove('animate__animated', 'animate__fadeIn');
+			}
+		}
+
+		resizeFunc();
+		window.addEventListener('resize', resizeFunc);
+
+		//RESIZE FOR THE EFFECTS PART//
+	</script>
+
+
+
+
+	<script src="./js/bootstrap.min.js"></script>
 
 </body>
 

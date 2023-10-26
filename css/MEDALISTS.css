@@ -204,6 +204,7 @@
 
   .makeFlex {
     display: flex;
+    justify-content: center;
   }
 
   .toggleButtonMedal {

@@ -5,7 +5,7 @@
 
 #neubar {
   
-  background: rgb(235, 235, 235);
+  background: rgb(245, 245, 245);
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
@@ -20,6 +20,9 @@
 
 #menusTop { 
   margin-top: 10px;
+ 
+    display: flex;
+    align-items: center;
 }
 
 #neubar .nav-item {
@@ -31,15 +34,28 @@
   letter-spacing: 0.5px;
   text-decoration: none;
   border-radius: initial;
+ 
 }
 
 .nav-link.mx-2:hover {
   color: #00C9FF;
 }
 
-#one:hover {
+
+#oneBtn, #twoBtn, #threeBtn, #fourBtn {
   color: white;
 }
+
+@media (max-width: 415px) {
+  #oneBtn, #twoBtn, #threeBtn, #fourBtn {
+    color: black;
+  }
+}
+
+#oneBtn:hover, #twoBtn:hover, #threeBtn:hover, #fourBtn:hover {
+  color: #00C9FF;
+}
+
 
 #neubar .dropdown-menu {
   background: #545454
@@ -223,7 +239,6 @@ a.navbar-brand {
   margin: 2px;
 
 }
-
 
 
 

@@ -28,10 +28,10 @@
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0898 579 010</p>
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0878 687 555</p>
           <p class="text-white-50"><i class="fa fa-envelope-o mr-3 "></i>&nbsp skmp_carevec@abv.bg</p>
-          <div class="">  <!--'row mt-5' in case I need this class-->
+          <div>  <!--'row mt-5' in case I need this class-->
             <div class="col copyright">
-              <p class=""><small class="text-white-50">© 2023. Всички права запазени.</small></p>
-              <p class=""><small class="text-white-50">Направено с много <i class="fa-solid fa-heart fa-beat" style="color: #ff0000;"></i>&nbsp във Велико Търново.</small></p>
+              <p ><small class="text-white-50">© 2023. Всички права запазени.</small></p>
+              <p ><small class="text-white-50">Направено с много <i class="fa-solid fa-heart fa-beat" style="color: #ff0000;"></i>&nbsp във Велико Търново.</small></p>
             </div>
           </div>
         </div>

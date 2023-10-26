@@ -645,6 +645,10 @@ body {
     color: white;
 }
 
+.nav-link.mx-2{
+  color: white;
+}
+
 
 
 @keyframes move-right-side {
@@ -738,7 +742,7 @@ body {
   }
 
   .oldImage {
-    height: 80px;
+    height: 70px;
     margin-right: 8px;
   }
 

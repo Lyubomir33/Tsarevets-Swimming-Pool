@@ -42,17 +42,17 @@
           <ul class="navbar-nav ms-auto ">
 
           <li class="nav-item">
-              <a id="one" class="nav-link mx-2 heartbeat btnStyle" href="/4upperMenus/events.php">СЪБИТИЯ</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">ЗА КЛУБА</a>
+              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
-          
+
+            <li class="nav-item">
+              <a id="one"  class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>
