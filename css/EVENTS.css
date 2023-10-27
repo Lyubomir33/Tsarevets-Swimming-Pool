@@ -18,3 +18,15 @@
   text-align: center;
 
 }
+
+table {
+  box-shadow: 2px 0 10px black;
+  margin-bottom: 20px;
+  margin: 20px;
+}
+
+@media (min-width: 500px)  {
+  table  {
+    margin: 20px;
+  }
+}

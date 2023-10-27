@@ -134,6 +134,10 @@ u {
   padding: 15px; */
 /* } */
 
+#menusTop {
+  
+}
+
 @media (min-width: 1000px) {
   .addNews {
     background-repeat: no-repeat;

@@ -41,22 +41,22 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul id="menusTop" class="navbar-nav ms-auto ">
+          <ul id="Menus" class="navbar-nav ms-auto ">
 
-            <li class="nav-item">
-              <a id="oneBtn" class="nav-link mx-2 btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
+            <li id="first-item" class="nav-item">
+              <a id="oneBtn" class="btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
-            <li class="nav-item">
-              <a id="twoBtn" class="nav-link mx-2 btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
+            <li id="second-item" class="nav-item">
+              <a id="twoBtn" class="btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
 
-            <li class="nav-item">
-              <a id="threeBtn" class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+            <li id="third-item" class="nav-item">
+              <a id="threeBtn" class="btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
             </li>
 
-            <li class="nav-item">
-              <a id="fourBtn" class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            <li id="fourth-item" class="nav-item">
+              <a id="fourBtn" class="btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>
 
             </li>

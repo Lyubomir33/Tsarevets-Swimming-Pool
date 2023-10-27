@@ -39,7 +39,7 @@
         </button>
 
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto ">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
 
           <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>

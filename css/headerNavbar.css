@@ -18,13 +18,6 @@
   color: #454545;
 }
 
-#menusTop { 
-  margin-top: 10px;
- 
-    display: flex;
-    align-items: center;
-}
-
 #neubar .nav-item {
   
 }
@@ -41,20 +34,6 @@
   color: #00C9FF;
 }
 
-
-#oneBtn, #twoBtn, #threeBtn, #fourBtn {
-  color: white;
-}
-
-@media (max-width: 415px) {
-  #oneBtn, #twoBtn, #threeBtn, #fourBtn {
-    color: black;
-  }
-}
-
-#oneBtn:hover, #twoBtn:hover, #threeBtn:hover, #fourBtn:hover {
-  color: #00C9FF;
-}
 
 
 #neubar .dropdown-menu {
@@ -82,6 +61,7 @@ a.navbar-brand {
   font-size: 18px;
   border-radius: 15px;
   width: 94px;
+  
    
 }
 
@@ -249,6 +229,14 @@ a.navbar-brand {
     border-radius: initial;
   }
 
+  .nav-link.mx-2.btnStyle {
+    color: white;
+  }
+
+  .nav-link.mx-2.btnStyle:hover {
+    color: #00C9FF;
+
+  }
  
 }
 

@@ -49,7 +49,7 @@
     
       <div>
         <h1  class="headersScheduleMain">Басейн "Клуб 17"</h1>
-      <img class="imgSchedule" src="./images/pool1.jpg">
+     
       </div>
 
       <div>

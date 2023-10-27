@@ -25,7 +25,7 @@
 
    
     
-    <div class='pInEvents'>$row[events_textarea]</div>";
+    <div class='pInEvents animate__animated animate__fadeInUp'>$row[events_textarea]</div>";
 
     
   }

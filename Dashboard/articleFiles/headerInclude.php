@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../../css/headerNavbar.css">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/reviews.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
 
 
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto ">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
 
           <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="../../4upperMenus/forTheClub.php">ЗА КЛУБА</a>

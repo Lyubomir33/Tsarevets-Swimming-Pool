@@ -178,6 +178,7 @@ svg {
   .svgMail {
     width: 100%;
     margin-right: 0;
+    margin-top: -100px;
   }
 
   #flexContainer {

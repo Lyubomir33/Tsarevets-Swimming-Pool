@@ -15,13 +15,29 @@
   text-shadow: 2px 2px 3px black;
   color: white;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-content: flex-start;
   align-items: flex-start;
   padding: 15px;
+  box-shadow: 2px 0 10px black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 2.5s;
+
+  --animate-delay: 5s;
+
+}
+
+.animate__animated.animate__rollIn {
+
+  --animate-duration: 1.5s;
+
 
 }
 
@@ -96,7 +112,7 @@
     display: flex;
     text-align: justify;
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
     margin-bottom: -250px;
   }
 

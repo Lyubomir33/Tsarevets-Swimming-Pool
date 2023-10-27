@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/whySwimm.css">
-  <title>Зашо да плуваме?</title>
+  <title>Защо да плуваме?</title>
 </head>
 <body class="bodyWhySwimm">
 
@@ -14,7 +14,7 @@
 
 <h1 class="headerWhy">Ползи от плуването</h1>
 
-<div class="texts">
+<div class="texts animate__animated animate__fadeInLeft">
 <b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
 
 <b>2. Плуването спомага за оформяне на спортна мускулеста фигура. То помага за развитието на цялата мускулатура.</b><br>

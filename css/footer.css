@@ -30,25 +30,10 @@
 .swimmer{
   height: 91px;
   margin-bottom: 70px;
-  animation: swim 6s infinite linear;
-  position: relative;
-}
-
-@keyframes swim {
-  0% {
-    transform: translateX(30px) rotate(-5deg);
-  }
-  25% {
-    transform: translateX(50px) rotate(20deg);
-  }
-  50% {
-    transform: translateX(150px) rotate(10deg);
-  }
-  75% {
-    transform: translateX(50px) rotate(-35deg);
-  }
   
 }
+
+
 
 
 @media (min-width: 600px) {

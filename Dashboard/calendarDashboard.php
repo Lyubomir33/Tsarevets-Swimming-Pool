@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/headerNavbar.css">
   <link rel="stylesheet" href="../css/calendar.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reviews.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
