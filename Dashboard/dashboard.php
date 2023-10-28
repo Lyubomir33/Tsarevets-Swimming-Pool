@@ -46,7 +46,7 @@
           <div class="nav-upper-options">
             <div id="eventsOption" class="nav-option option1">
               <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png" class="nav-img" alt="dashboard">
-              <h3> Събития</h3>
+              <h3> Резултати</h3>
             </div>
 
             <a href="/Dashboard/schedule.php">
@@ -78,27 +78,21 @@
               </div>
             </a>
 
-           <a href="./medalistsDashboard.php">
-           <div class="nav-option option5">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
-              <h3> Медалисти</h3>
-            </div>
-           </a>
-
-         
-          <a href="./galleryDashboard.php">
-          <div class="nav-option option6">
-              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
-              <h3> Галерия</h3>
-            </div> 
-          </a>
-          
-            <a href="./logout.html">
-              <div class="nav-option logout">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
-                <h3>Изход</h3>
+            <a href="./medalistsDashboard.php">
+              <div class="nav-option option5">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img" alt="blog">
+                <h3> Медалисти</h3>
               </div>
             </a>
+
+
+            <a href="./galleryDashboard.php">
+              <div class="nav-option option6">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png" class="nav-img" alt="settings">
+                <h3> Галерия</h3>
+              </div>
+            </a>
+
 
           </div>
         </nav>
@@ -115,7 +109,7 @@
 
         <div class="report-container">
           <div class="report-header">
-            <h1 class="recent-Articles">Предстоящи Събития</h1>
+            <h1 class="recent-Articles">Резултати</h1>
             <div>
               <!-- <button id="btn-trigger-remove" class="view" onclick="hideEvents()">Премахни събитието</button>
               <button id="btn-trigger-add" class="view" onclick="addEvent()">Добави събитието</button> -->
@@ -124,6 +118,16 @@
 
           <div>
 
+            <form method="POST">
+              <label for="create_firstName">Първо ме</label>
+              <input name="create_firstName" id="create_firstName" type="text"><br>
+
+              <label for="create_secondName">Фамилия</label>
+              <input name="create_secondName" type="text">
+
+              <button type='submit' name='formType' value='createEvents' class='button-save-changes'>Създай</button>
+
+            </form>
 
             <?php
 
@@ -135,13 +139,18 @@
 
             while ($row = mysqli_fetch_assoc($qeuryGet)) {
 
-              echo " 
-              <form method='POST' enctype='multipart/form-data'>
-                <label class='fileEvents' for='imageDashboard'>Избери снимка: </label>
-                <input class='fileEvents' name='imageFile' type='file'>
+              echo "<form class='formResults' method='POST' enctype='multipart/form-data'>
+              <div class='names'>
+              <label class='labelNames' for='first_name'>Първо име: </label>
+                <input require name='first_name' id='first_name' type='text' value='$row[first_name]'>
+                <label class='labelNames' for='second_name'>Фамилия:</label>
+                <input name='second_name' id='second_name' type='text' value='$row[second_name]'>
+                </div>
                 <textarea name='eventsTextArea' id='eventsTextArea'>$row[events_textarea]</textarea>
                 <button type='submit' name='formType' value='saveEvents' class='button-save-changes'>Запази промените</button>
-              </form>";
+                <input type='hidden' name='updateID' value='" . $row['ID'] . "'>
+                </form>
+              <hr class='hrLine'>";
             }
 
             ?>
@@ -155,6 +164,7 @@
     </div>
 
 
+
     <?php
 
     require "../databaseConnection/database.php";
@@ -164,21 +174,26 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-      $target_dir = "../4upperMenus/imgFiles/";
-      $fileName = basename($_FILES['imageFile']['name']);
-      $targetFilePath = $target_dir . $fileName;
+
       $formType = $_POST['formType'];
-      $textArea = $_POST['eventsTextArea'];
-
-      if ($formType === "saveEvents") {
-
-        if (move_uploaded_file($_FILES['imageFile']['tmp_name'], $targetFilePath)) {
-          $sqlImage = "UPDATE events SET img_events = '$fileName'";
-          $query = mysqli_query($conn, $sqlImage);
-        }
 
 
-        $sqlTextarea = "UPDATE events SET events_textarea = '$textArea' ";
+
+      if ($formType === "createEvents") {
+
+        $create_firstName = $_POST['create_firstName'];
+        $create_secondName = $_POST['create_secondName'];
+
+        $sqlInsert = "INSERT INTO events (first_name, second_name, events_textarea) VALUES ('$create_firstName', '$create_secondName', '')";
+        $queryInsert = mysqli_query($conn, $sqlInsert);
+      } else if ($formType === "saveEvents") {
+
+        $textArea = $_POST['eventsTextArea'];
+        $ID = $_POST['updateID'];
+        $first_name = $_POST['first_name'];
+        $second_name = $_POST['second_name'];
+
+        $sqlTextarea = "UPDATE events SET events_textarea = '$textArea', first_name = '$first_name', second_name='$second_name' WHERE ID='$ID' ";
         $queryTextare = mysqli_query($conn, $sqlTextarea);
       }
     }

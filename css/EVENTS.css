@@ -25,6 +25,13 @@ table {
   margin: 20px;
 }
 
+.first_last_names{
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+
 @media (min-width: 500px)  {
   table  {
     margin: 20px;

@@ -93,13 +93,6 @@
           </a>
            
 
-            <a href="./logout.html">
-              <div class="nav-option logout">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img" alt="logout">
-                <h3>Изход</h3>
-              </div>
-
-            </a>
           </div>
         </nav>
       </div>

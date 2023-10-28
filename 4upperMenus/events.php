@@ -11,6 +11,7 @@
 
 <?php include "../Dashboard/articleFiles/headerInclude.php"; ?>
 
+<h1 class='headEvents'>Резултати</h1>
 
 <?php 
 
@@ -21,18 +22,13 @@
 
   while ($row = mysqli_fetch_assoc($query)){
 
-    echo "<h1 class='headEvents'>Резултати</h1>
-
-   
-    
-    <div class='pInEvents animate__animated animate__fadeInUp'>$row[events_textarea]</div>";
+    echo "<p class='first_last_names'>$row[first_name] $row[second_name]</p>
+    <div class='pInEvents animate__animated animate__fadeInBottom'>$row[events_textarea]</div>";
 
     
   }
 
-   // <div class='imgForEvents'>
-    // <img  src='./imgFiles/$row[img_events]'>
-    // </div>
+ 
 
 
 ?>
