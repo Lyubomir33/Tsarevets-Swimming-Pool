@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
   <link rel="stylesheet" href="/css/headerNavbar.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/reviews.css">
@@ -27,10 +27,10 @@
 
   <header class="header">
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
-    <div class="container">
-    <div style="display: flex;">
-        
-        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
+      <div class="container">
+        <div style="display: flex;">
+
+          <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul id="menusTop" class="navbar-nav ms-auto ">
 
-          <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
@@ -50,7 +50,7 @@
             </li>
 
             <li class="nav-item">
-              <a id="one"  class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+              <a id="one" class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
             </li>
 
             <li class="nav-item">
@@ -69,34 +69,43 @@
 
     <div class="news">
 
-      <!-- <a href="/Dashboard/петър-петров.php">
-      <div style="background: url(/Dashboard/dashboardImages/ПетърСтойчев.jpg);" class="addNews">
-        <h1 class="headerNews">Header</h1>
-      </div>
-      </a> -->
-
+   
       <?php
 
 
 
       require "../databaseConnection/database.php";
 
-    
+
 
       $sql = "SELECT * FROM blog_main_page";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
-        echo " <a style='text-decoration: none;' href='/Dashboard/articleFiles/{$row['link']}'>
-        <div>
-            <h1 class='headerNews'>{$row['title']}</h1>
-            <div style='background: url(/Dashboard/{$row['image']}); 
-            background-size: cover; background-repeat: no-repeat; background-position: center;' class='addNews'>
-                
-           </div> </div></a>";
+       
+        echo "<a style='text-decoration: none;' href='/Dashboard/articleFiles/{$row['link']}'>
+        <div class='boxBlog'>
+            <div id='resizeNews' class='addNews' style='background: url(/Dashboard/{$row['image']}); 
+            background-size: cover; background-repeat: no-repeat; 
+            background-position: center;
+            margin-bottom: 5%;'></div>
+           <h1 class='headerNews'>{$row['title']}</h1>
 
-    }
+           </a>
 
-    
+           <hr class='hrLine'>
+           
+           <div class='btns'>
+              <Button onclick='Toggle1(this)' class='btnh1' id='$row[ID]'><i class='fas fa-heart'></i></Button>
+            </div>
+          
+           </div>";
+
+           //<i class='fas fa-heart'></i> THIS IS THE FONT AWESOME HEART THAT NEEDS TO BE PUT BETWEEN THE BUTTON
+          
+      }
+
+
+      
 
 
       ?>
@@ -104,16 +113,18 @@
     </div>
 
 
-
   </main>
 
   <span class="backgroundColor"><?php include "../footer.php"; ?></span>
- 
 
+
+  
 
 
   <script>
-    const menu = document.getElementById('togglerID');
+
+
+ const menu = document.getElementById('togglerID');
     const xMenu = document.getElementById('xToggler');
 
     function changeMenuIcon() {
@@ -125,8 +136,36 @@
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
-
     
+document.addEventListener('DOMContentLoaded', function() {
+  const btns = document.getElementsByClassName('btnh1');
+
+  for (const btn of btns) {
+    
+    const uniqueId = btn.id;
+
+    const isLiked = localStorage.getItem(uniqueId);
+
+    if (isLiked === "liked") {
+      btn.style.color = "red";
+    } else {
+      btn.style.color = "grey";
+    }
+
+    btn.addEventListener('click', function () {
+
+      if (this.style.color === "red") {
+        this.style.color = "grey";
+
+        localStorage.setItem(uniqueId, "unliked");
+      } else {
+        this.style.color = "red";
+
+        localStorage.setItem(uniqueId, "liked");
+      }
+    });
+  }
+});
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

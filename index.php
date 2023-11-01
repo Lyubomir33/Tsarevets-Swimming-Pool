@@ -30,8 +30,8 @@
     <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
       <div class="container">
         <div style="display: flex;">
-        
-        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
+
+          <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,26 +42,26 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul id="menusTop" class="navbar-nav ms-auto ">
 
-          <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
-            
+
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="./4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
 
-          <li class="nav-item">
+            <li class="nav-item">
               <a id="" class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
             </li>
 
-          
-            
+
+
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
             </li>
 
-            
+
 
 
             </li>
@@ -74,17 +74,17 @@
   <!-- <a id="events" class="futureEvents" href="www.google.com" target="_blank">
     <div>
       Content here -->
-    <!-- </div>
-  </a> --> 
+  <!-- </div>
+  </a> -->
 
   <script>
-   const eventsElement = document.getElementById('events');
+    const eventsElement = document.getElementById('events');
 
-if (localStorage.getItem('hideEvents') === 'true') {
-  eventsElement.style.display = 'none';
-} else {
-  eventsElement.style.display = 'block'; 
-}
+    if (localStorage.getItem('hideEvents') === 'true') {
+      eventsElement.style.display = 'none';
+    } else {
+      eventsElement.style.display = 'block';
+    }
   </script>
 
 
@@ -197,17 +197,18 @@ if (localStorage.getItem('hideEvents') === 'true') {
       <p class="courses">обучение по плуване за:</p>
 
       <div id="firstTwoOfffers">
+
         <div id="allThreeOffers">
 
-          <div class="firstOffer">
+          <div class="firstOffer offers">
 
 
-            <img class="sixYearsOld" src="/images/test5years.png">
+            <img class="sixYearsOld offersImage" src="/images/test5years.png">
             <u>
-              <p class="kidsAge">Деца на възраст 5+ г.</p>
+              <p class="kidsAge offersImage">Деца на възраст 5+ г.</p>
             </u>
             <div class="beneffits">
-              <ul>
+              <ul class="ulReveal">
                 <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Обучение по плуване с иновативни подходи</li>
                 <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Чист и топъл басейн</li>
                 <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Екип от опитни професионалисти</li>
@@ -216,14 +217,14 @@ if (localStorage.getItem('hideEvents') === 'true') {
             </div>
           </div>
 
-          <div class="secondOffer">
+          <div class="secondOffer offers">
 
-            <img class="tenYearsOld" src="/images/test10teenagers.png">
+            <img class="tenYearsOld offersImage" src="/images/test10teenagers.png">
             <u>
-              <p class="kidsAge">Деца на възраст 10+ г.</p>
+              <p class="kidsAge offersImage">Деца на възраст 10+ г.</p>
             </u>
             <div class="beneffits10yearsOld">
-              <ul>
+              <ul class="ulReveal">
                 <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Усъвършенстване в плувния спорт</li>
                 <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Участие в спортни състезания</li>
                 <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Достигане на високо спортно майсторство</li>
@@ -235,12 +236,12 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
         <div class="thirdOffer">
 
-          <img class="sixYearsOld" src="/images/testAdults.png">
+          <img class="sixYearsOld offersImage" src="/images/testAdults.png">
           <u>
-            <p class="kidsAge">Обучение за възрастни</p>
+            <p class="kidsAge offersImage">Обучение за възрастни</p>
           </u>
           <div class="beneffits">
-            <ul>
+            <ul class="ulReveal">
               <li><i class="fa-solid fa-star" style="color: #fcc900;"></i> Изграждане на правилна техника от нулата</li>
               <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Индивидуален подход спрямо нуждите (съобразен с работния график на клиента)</li>
               <li class="liMargin"><i class="fa-solid fa-star" style="color: #fcc900;"></i> Подходящо за абсолютно начинаещи</li>
@@ -251,14 +252,14 @@ if (localStorage.getItem('hideEvents') === 'true') {
       </div>
     </div>
 
-  
+
 
     <?php include "./contacts.php"; ?>
 
-  
+
     </div>
 
-    
+
 
 
   </main>
@@ -268,6 +269,9 @@ if (localStorage.getItem('hideEvents') === 'true') {
 
 
   <script>
+
+
+
     //CODE TO RESIZE 2 ICONS INTO 3 
 
     const boxOne = document.getElementById('first')
@@ -330,6 +334,63 @@ if (localStorage.getItem('hideEvents') === 'true') {
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
+
+
+
+    // CODE FOR SCROLL DOWN EFFECT//
+
+    let offers = document.getElementsByClassName('offersImage');
+
+    function scrollOffers() {
+
+      let windowHeight = window.innerHeight;
+
+      for (let i = 0; i < offers.length; i++) {
+        let reveal = offers[i].getBoundingClientRect().top;
+          let revealPoint = 150;
+
+        if (reveal < windowHeight - revealPoint) {
+          
+          offers[i].classList.add('active');
+        } else {
+          offers[i].classList.remove('active');
+        }
+
+
+      }
+
+    }
+
+    scrollOffers();
+
+    window.addEventListener('scroll', scrollOffers);
+
+    let ul = document.getElementsByClassName('ulReveal'); 
+
+    function scrollUlText () {
+
+      let heigh = window.innerHeight;
+
+      for(let j = 0; j < ul.length; j++) {
+
+        let revealUl = ul[j].getBoundingClientRect().top;
+        let revPoint = 160;
+
+        if(revealUl < heigh - revPoint) {
+          ul[j].classList.add('active');
+        } else {
+          ul[j].classList.remove('active');
+
+        }
+
+      }
+
+    } scrollUlText ();
+
+    window.addEventListener('scroll', scrollUlText);
+
+
+    //CODE FOR SCROLL DOWN EFFECT//
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

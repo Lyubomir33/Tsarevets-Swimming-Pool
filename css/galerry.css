@@ -32,10 +32,43 @@
   background-color: color;
   color: black;
   padding: 5px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   background-color: white;
   font-weight: 600;
+  border: 1px solid black;
+}
+
+.toggleButton {
+  padding: 15px;
+  font-size: 32px;
+  box-shadow: 7px 6px black;
+}
+
+.toggleButton:hover {
+  /* color: white;
+  background-color: black; */
+  transition: 0.5s;
+}
+
+.toggleButton:not(:hover) {
+  transition: 0.5s;
+}
+
+.toggleButton:active,
+.active {
+  top: 2px;
+  left: 1px;
+	box-shadow: none;
+}
+
+
+
+
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-collapse {
+    margin-left: 50px;
+    display: flex!important;
+    flex-basis: auto;
+}
 }
 
 @media (min-width: 650px) {
@@ -43,21 +76,22 @@
 
 .divImg {
     
-      height: 350px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-direction: row;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      display: none;
-      border: 2px solid black;
-      margin-top: -21px;
-      transition: 0.9s;
-      overflow-x: auto;
-      transition:  width 2s;
-    
+  height: 500px;
+  padding: 20px;
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: none;
+  border: 2px solid black;
+  margin-top: -21px;
+  transition: 0.9s;
+  overflow-x: auto;
+  transition: width 2s;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 
 
 }
@@ -71,6 +105,37 @@
     flex: 0 0 calc(25% - 10px);
    
 }
+
+.flexGal {
+  display: grid;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr)); /* Adjust the width as needed */
+}
+
+.toggleButton {
+  padding: 15px;
+  font-size: 32px;
+  box-shadow: 7px 6px black;
+}
+
+.toggleButton:hover {
+  /* color: white;
+  background-color: black; */
+  transition: 0.5s;
+}
+
+.toggleButton:not(:hover) {
+  transition: 0.5s;
+}
+
+.toggleButton:active,
+.active {
+  top: 2px;
+  left: 1px;
+	box-shadow: none;
+}
+
 
 
 }

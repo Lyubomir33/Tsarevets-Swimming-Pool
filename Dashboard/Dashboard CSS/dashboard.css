@@ -518,7 +518,7 @@ header {
   text-align: center;
 }
 
-#first_name, #second_name {
+#full_name {
   font-size: 25px;
   padding: 5px;
   border-radius: 5px;

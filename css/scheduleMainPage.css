@@ -17,6 +17,14 @@
   text-align: center;
 }
 
+.pools {
+  border-radius: 60px;
+  box-shadow: 3px 0 4px black;
+  padding: 15px;
+}
+
+
+
 @media (min-width: 600px) {
   .twoDivs {
     display: flex;

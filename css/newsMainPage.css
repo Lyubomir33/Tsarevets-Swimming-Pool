@@ -1,39 +1,39 @@
 .news {
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+ 
 }
 
 .addNews {
   background-size: cover;
-  height: 300px;
-  width: 300px;
-  margin: 35px;
-  gap: 30px;
+  height: 225px;
+  width: 100%;
+
   display: flex;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
- box-shadow: 2px 0 10px black;
- border-radius: 8px;
+
+ 
 }
 
 .header u {
   text-decoration: none;
 }
 
+.hrLine {
+  color: black;
+    text-align: center;
+    width: 311px;
+    margin: 0 auto;
+}
+
 .headerNews {
-  margin-bottom: -20px;
-    font-size: 30px;
+
+  font-size: 24px;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 15px;
     display: flex;
-    color: white;
-    text-shadow: 2px 2px 3px black;
+    color: black;
     align-content: space-between;
     justify-content: space-evenly;
     align-items: baseline;
@@ -103,7 +103,7 @@
 }
 
 .newsMainPageBody {
-  background-color: rgb(0, 55, 255, 0.7);
+  /* background-color: rgb(0, 55, 255, 0.7); */
 
 
 
@@ -134,62 +134,101 @@ u {
   padding: 15px; */
 /* } */
 
-#menusTop {
-  
+.boxBlog {
+  height: 398px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  margin: 15px auto;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+
 }
 
-@media (min-width: 1000px) {
-  .addNews {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    width: 450px;
-    margin-top: 50px;
-    gap: 30px;
-    margin-bottom: 50px;
-  }
+.btnh1 {
+  background: transparent;
+  border: none;
+  font-size: 34px;
+  outline: none;
+  color: grey;
+  margin: 5px;
+
+}
+
+.btns {
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+}
+
+@media (min-width: 650px) {
 
   .news {
   
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    flex: 0 0 calc(25.33%  - 10px);
+
+  
   }
+
+  .headerNews {
+    font-size: 30px;
+   width: 100%;
+   display: flex;
+   color: black;
+   align-content: space-between;
+   justify-content: space-evenly;
+   align-items: baseline;
+   text-align: center;
+}
+
+
+  
+
+  .boxBlog {
+    height: 398px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    margin: 15px auto;
+    width: 400px;
+    
+    
+  }
+
   
   .addNews {
-    display: flex;
-    justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 410px;
-    margin: 50px;
-   
+    height: 260px;
+    width: 100%;
    
   }
+
   
   
   .header u {
     text-decoration: none;
   }
   
-  .headerNews {
-    margin-bottom: -20px;
-    font-size: 30px;
-    width: 500px;
-    padding-left: 50px;
-    margin-top: 15px;
-    display: flex;
-    color: white;
-    text-shadow: 2px 2px 3px black;
-    align-content: center;
-    align-items: baseline;
-    justify-content: center;
-    text-align: center;
+
+
+
+
+
+
+
   }
+  
+
+
+
+
+
+  
   
   .formStyles {
     display: flex;
@@ -211,4 +250,3 @@ u {
 
 
   
-}

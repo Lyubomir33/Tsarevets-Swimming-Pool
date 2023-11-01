@@ -123,10 +123,10 @@ ul.contact-info li {
     margin-right: 15px;
 }
 
-.flexImgLocation{
+ .flexImgLocation{
   display: flex;
-
-}
+ 
+} 
 
 
 
@@ -199,9 +199,6 @@ ul.contact-info li {
 }
 
 
-
-/*                               */
-
 .swimmingClass {
  
   animation: flicker 1s infinite;
@@ -225,3 +222,51 @@ ul.contact-info li {
   }
   
 }
+
+
+
+ 
+  
+  
+  /* #logoAndHeader.animate__animated.animate__bounceInLeft { 
+    display: flex;
+    opacity: 1; 
+    animation-duration: 1.5s;
+   
+} */
+
+ 
+  @media (max-width: 450px){ 
+    
+  #firstNumber {
+    opacity: 0;
+  }
+  
+  #secondNumber { 
+    opacity: 0;
+  }
+
+  #thirdNumber {
+    opacity: 0;
+  }
+
+  #fourthNumber {
+    opacity: 0;
+  }
+
+  #alignText { 
+    text-align: center;
+    opacity: 0;
+  }
+
+  .animate__animated.animate__fadeInUp { 
+    animation-duration: 2s;
+  }
+
+  #twoImg {
+    display: flex;
+
+  }
+
+  }
+ 

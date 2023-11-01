@@ -13,6 +13,16 @@
 
 <h1 class='headEvents'>Резултати</h1>
 
+<div class="input-box">
+      <i class="uil uil-search"></i>
+      <input type="text" id='search_input' placeholder="Потърсете спортист" />
+      <button class="button search-person">Търси</button>
+    </div>
+
+
+
+
+<div class='returned_data'>
 <?php 
 
   require "../databaseConnection/database.php";
@@ -22,7 +32,7 @@
 
   while ($row = mysqli_fetch_assoc($query)){
 
-    echo "<p class='first_last_names'>$row[first_name] $row[second_name]</p>
+    echo "<p class='first_last_names'>$row[full_name]</p>
     <div class='pInEvents animate__animated animate__fadeInBottom'>$row[events_textarea]</div>";
 
     
@@ -33,7 +43,7 @@
 
 ?>
 
-
+</div>
 
 
 
@@ -41,6 +51,41 @@
 
 
 <?php include "../footer.php"; ?>
+
+
+
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.search-person').on('click',function(){
+        let search_term = $('#search_input').val();
+        let formData = {
+					search_term: search_term,
+          
+
+				};
+
+				$.ajax({
+					url: "./functions/get_person_results.php", 
+					type: "POST",
+					dataType: "json",
+					data: formData,
+					success: function(data) {
+            $('.returned_data').empty();
+            for(let z=0; z<data.length; z++){
+              $('.returned_data').append("<p class='first_last_names'>"+data[z]['full_name']+"</p><div class='pInEvents animate__animated animate__fadeInBottom'>"+data[z]['events_textarea']+"</div>");
+            }
+           
+						console.log(data);
+					},
+					error(DATA) {
+						console.log(DATA.responseText);
+					}
+
+				});
+    });
+  });
+</script>
   
 </body>
 </html>

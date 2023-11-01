@@ -1,3 +1,15 @@
+<?php 
+// session_start();
+
+// if (!isset($_SESSION['email_login'])) {
+
+//    header('Location: ../logRegister/register-login-form.php ');
+//    exit();
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,7 +112,6 @@
       <div class="main">
 
         <div class="searchbar2">
-          <input type="text" name="" id="" placeholder="Search">
           <div class="searchbtn">
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-button">
           </div>
@@ -119,11 +130,8 @@
           <div>
 
             <form method="POST">
-              <label for="create_firstName">Първо ме</label>
-              <input name="create_firstName" id="create_firstName" type="text"><br>
-
-              <label for="create_secondName">Фамилия</label>
-              <input name="create_secondName" type="text">
+              <label for="create_fullName">Първо ме</label>
+              <input name="create_fullName" id="create_fullName" type="text"><br>
 
               <button type='submit' name='formType' value='createEvents' class='button-save-changes'>Създай</button>
 
@@ -141,10 +149,8 @@
 
               echo "<form class='formResults' method='POST' enctype='multipart/form-data'>
               <div class='names'>
-              <label class='labelNames' for='first_name'>Първо име: </label>
-                <input require name='first_name' id='first_name' type='text' value='$row[first_name]'>
-                <label class='labelNames' for='second_name'>Фамилия:</label>
-                <input name='second_name' id='second_name' type='text' value='$row[second_name]'>
+              <label class='labelNames' for='full_name'>Първо име: </label>
+                <input require name='full_name' id='full_name' type='text' value='$row[full_name]'>
                 </div>
                 <textarea name='eventsTextArea' id='eventsTextArea'>$row[events_textarea]</textarea>
                 <button type='submit' name='formType' value='saveEvents' class='button-save-changes'>Запази промените</button>
@@ -181,19 +187,19 @@
 
       if ($formType === "createEvents") {
 
-        $create_firstName = $_POST['create_firstName'];
-        $create_secondName = $_POST['create_secondName'];
+        $create_fullName = $_POST['create_fullName'];
+       
 
-        $sqlInsert = "INSERT INTO events (first_name, second_name, events_textarea) VALUES ('$create_firstName', '$create_secondName', '')";
+        $sqlInsert = "INSERT INTO events (full_name, events_textarea) VALUES ('$create_fullName', '')";
         $queryInsert = mysqli_query($conn, $sqlInsert);
       } else if ($formType === "saveEvents") {
 
         $textArea = $_POST['eventsTextArea'];
         $ID = $_POST['updateID'];
-        $first_name = $_POST['first_name'];
-        $second_name = $_POST['second_name'];
+        $full_name = $_POST['full_name'];
 
-        $sqlTextarea = "UPDATE events SET events_textarea = '$textArea', first_name = '$first_name', second_name='$second_name' WHERE ID='$ID' ";
+
+        $sqlTextarea = "UPDATE events SET events_textarea = '$textArea', full_name = '$full_name' WHERE ID='$ID' ";
         $queryTextare = mysqli_query($conn, $sqlTextarea);
       }
     }
