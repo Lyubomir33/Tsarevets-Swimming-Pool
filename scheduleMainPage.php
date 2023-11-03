@@ -45,6 +45,7 @@
       <div>
         <h1  class="headersScheduleMain">Басейн "Емилиян Станев"</h1>
       <img class="imgSchedule" src="./images/pool2.jpg">
+      <img class="imgSchedule" src="./images/Биляна.jpg">
       </div>
     
       <div>

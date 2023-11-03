@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
   <link rel="stylesheet" href="/css/newsMainPage.css"> <!-- HERE ARE LOCATED THE STYLES FOR THIS PAGE -->
+  <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
   <title>Табло за управление</title>
 </head>
 
@@ -118,18 +120,32 @@
               <h1>Създаване на визия</h1><br>
 
               <label class="labelNews" for="title">Заглавие: </label><br>
-              <input type="text" name="title" id="title"><br>
+              <input require type="text" name="title" id="title"><br>
+
+              <label class="labelNews" for="subTitle">Подзаглавие</label>
+              <input require type="text" name="subTitle" id="subTitle">
 
               <label class="labelNews" for="title">Заглавие в статията: </label>
-              <input type="text" name="titleBlog" id="titleBlog"><br>
+              <input require type="text" name="titleBlog" id="titleBlog"><br>
+
+              <label class="labelNews">Брой на хората посетили статията:</label>
+              <input require id="numberOfViews" name="numberOfViews" type="text">
+
+             
+
+              <label for="article_date">Дата в статията:</label>
+              <input require id="article_date" name="article_date" type="text">
 
               <label class="labelNews" for="image">Снимка: </label>
-              <input type="file" name="image" id="image"><br>
+              <input require type="file" name="image" id="image"><br>
 
               <label class="labelNews" for="link">Линк: </label>
-              <input placeholder="Пр: име-на-статия.php" type="text" name="link" id="link"><br><u>
-                <p class="textMandatory">ЗАДЪЛЖИТЕЛНО СЕ СЛАГА ФОРМАТ .php</p>
+              <input placeholder="Линк към статията" type="text" name="link" id="link"><br><u>
               </u>
+
+              <script>
+
+              </script>
 
               <button id="save" class="btnSubmitArticle" type="submit">Създай статия</button>
               <input type='hidden' name='formType' value='createNew'>
@@ -155,10 +171,14 @@
             if ($formType === "createNew") {
               $title = $_POST['title'];
               $link = $_POST['link'];
+              if (!preg_match('/\.php$/', $link)) {
+                $link .= '.php'; 
+            }
               $content = $_POST['content'];
               $titleBlog = $_POST['titleBlog'];
-
-
+              $numbOfViews = $_POST['numberOfViews'];
+              $article_date = $_POST['article_date'];
+              $subtitle = $_POST['subTitle'];
 
 
               $target_dir = "dashboardImages/";
@@ -166,7 +186,7 @@
 
               move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-              $sqlForm = "INSERT INTO blog_main_page (title, image, link, content, title_in_blog) VALUES ('$title', '$target_file', '$link', ' $content', '$titleBlog')";
+              $sqlForm = "INSERT INTO blog_main_page (title, image, link, content, partial_content,title_in_blog, number_views,article_date) VALUES ('$title', '$target_file', '$link', ' $content', ' $subtitle', '$titleBlog', '$numbOfViews', ' $article_date')";
               $queryForm = mysqli_query($conn, $sqlForm);
 
               $directory = "./articleFiles/";
@@ -183,7 +203,10 @@
               
                   $content .= "<!DOCTYPE html>";
                   $content .= "<html lang=\"en\">";
-                  $content .= "<head></head>";
+                  $content .= "<head>";
+                  $content .= "<script src='https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js' referrerpolicy='origin'></script>";
+                  $content .= "    <link rel='stylesheet' href='../Dashboard CSS/articlesResponsive.css'>";
+                  $content .= "</head>";
                   $content .= "<body>";
                   $content .= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ';
               
@@ -194,7 +217,7 @@
               
                   $content .= "<div class='divBlog'>
                                 <h3><?php echo \$row['title_in_blog']; ?></h3>
-                                <img class='imageFforBlogs' src='../<?php echo \$row['image']; ?>'>
+                               
                                 <p><?php echo \$row['content']; ?></p>
                             </div>
                             <?php
@@ -213,25 +236,30 @@
               
               echo 'Файловете бяха създадени успешно.';
               
-            } elseif ($formType === "makeChanges") {
+            } else if ($formType === "makeChanges") {
               $titleSet = $_POST['titleSet'];
               $linkSet = $_POST['linkSet'];
               $contentSet = $_POST['contentSet'];
               $idToUpdate = $_POST['updateID'];
               $titleBlogSet = $_POST['titleBlog'];
-
+              $numbOfViews = $_POST['numberOfViews'];
+              $article_date = $_POST['article_date'];
+              $subtitleSet = $_POST['subTitleSet'];
 
               $target_dirNewIMG = "dashboardImages/";
               $target_fileNewIMG = $target_dirNewIMG . basename($_FILES["imageChange"]["name"]);
 
-              move_uploaded_file($_FILES["imageChange"]["tmp_name"], $target_fileNewIMG);
-
-
-              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet', title_in_blog='$titleBlogSet' WHERE ID = $idToUpdate";
-              $querySet = mysqli_query($conn, $sqlSet);
+             if( move_uploaded_file($_FILES["imageChange"]["tmp_name"], $target_fileNewIMG)) {
 
               $sqlImgUpdate = "UPDATE blog_main_page SET image='$target_fileNewIMG' WHERE ID = $idToUpdate";
               $queryImg = mysqli_query($conn,$sqlImgUpdate);
+             }
+
+
+              $sqlSet = "UPDATE blog_main_page SET title='$titleSet', link='$linkSet', content='$contentSet', partial_content='$subtitleSet', title_in_blog='$titleBlogSet', number_views='$numbOfViews', article_date = '$article_date' WHERE ID = $idToUpdate";
+              $querySet = mysqli_query($conn, $sqlSet);
+
+             
             }
           }
 
@@ -245,12 +273,24 @@
             echo "<form class='formStyles' method='POST' enctype='multipart/form-data'>";
             echo "<div>";
             echo "<h1>Информация</h1>";
+
             echo "<input type='hidden' name='updateID' value='" . $rowGet['ID'] . "'>";
             echo "<label class=\"labelNews\" for=\"title\">Заглавие: </label>";
             echo "<input value=\"" . $rowGet['title'] . "\" type=\"text\" name=\"titleSet\" id=\"title\"><br>";
 
+            echo "<label class=\"labelNews\" for=\"subTitleSet\">Подзаглавие: </label>";
+            echo "<input value=\"" . $rowGet['partial_content'] . "\" type=\"text\" name=\"subTitleSet\" id=\"subTitleSet\"><br>";
+
             echo "<label class=\"labelNews\" for=\"title\">Заглавие в статията: </label>";
             echo "<input value=\"" . $rowGet['title_in_blog'] . "\" type=\"text\" name=\"titleBlog\" id=\"titleBlog\"><br>";
+
+            echo "<label class='labelNews'>Брой на хората посетили статията:</label>
+                  <input value=\"".$rowGet['number_views'] . "\"id='numberOfViews' name='numberOfViews' type='text'><br>";
+
+            echo "<label for='article_date'>Дата в статията:</label>
+                 <input value=\"".$rowGet['article_date'] . "\" id='article_date' name='article_date' type='text'><br>";      
+
+           
 
             echo "<label class='labelNews' for='image'>Снимка: </label>";
             echo "<input type='file' name='imageChange' id='imageChange'><br>";
@@ -286,6 +326,13 @@
     </div>
 
     <script>
+
+tinymce.init({
+    selector: '#content',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
+
       let menuicn = document.querySelector(".menuicn");
       let nav = document.querySelector(".navcontainer");
 

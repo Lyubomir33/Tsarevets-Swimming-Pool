@@ -131,29 +131,31 @@
       
         
 
-      } else {
+      // } else {
      
-        firstNumber.style.opacity = "0";
-        firstNumber.classList.remove('animate__animated', 'animate__bounceInRight');
+      //   firstNumber.style.opacity = "0";
+      //   firstNumber.classList.remove('animate__animated', 'animate__bounceInRight');
 
-        secondNumber.style.opacity = "0";
-        secondNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
+      //   secondNumber.style.opacity = "0";
+      //   secondNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
 
-        thirdNumber.style.opacity = '0';
-        thirdNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
+      //   thirdNumber.style.opacity = '0';
+      //   thirdNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
 
-        fourthNumber.style.opacity = '0';
-        fourthNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
+      //   fourthNumber.style.opacity = '0';
+      //   fourthNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
 
-        alignText.style.opacity = "0";
-        alignText.classList.remove('animate__animated', 'animate__fadeInDownBig')
+      //   alignText.style.opacity = "0";
+      //   alignText.classList.remove('animate__animated', 'animate__fadeInDownBig')
 
-        logoSwim.style.opacity = "0";
-        logoSwim.classList.remove('animate__animated', 'animate__fadeIn')
+      //   logoSwim.style.opacity = "0";
+      //   logoSwim.classList.remove('animate__animated', 'animate__fadeIn')
 
-      }
+      // }
 
     } 
+
+  }
 
 
     window.addEventListener('scroll', addAnimationOnScroll);

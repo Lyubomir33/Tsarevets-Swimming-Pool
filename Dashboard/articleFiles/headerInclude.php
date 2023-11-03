@@ -29,7 +29,7 @@
     <div class="container">
         <div style="display: flex;">
         
-        <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
+        <a class="logo" class="navbar-brand" href="/index.php"><img id="logoInArticles" class="oldImage" src="../../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

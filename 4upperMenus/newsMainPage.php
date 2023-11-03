@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -19,7 +19,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
-  <title>Начална страница</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
+  <title>Новини</title>
 </head>
 
 <body class="newsMainPageBody">
@@ -73,39 +76,49 @@
       <?php
 
 
-
       require "../databaseConnection/database.php";
 
 
 
-      $sql = "SELECT * FROM blog_main_page";
+      $sql = "SELECT * FROM `blog_main_page` ORDER BY ID DESC";
       $query = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($query)) {
-       
-        echo "<a style='text-decoration: none;' href='/Dashboard/articleFiles/{$row['link']}'>
-        <div class='boxBlog'>
-            <div id='resizeNews' class='addNews' style='background: url(/Dashboard/{$row['image']}); 
-            background-size: cover; background-repeat: no-repeat; 
-            background-position: center;
-            margin-bottom: 5%;'></div>
-           <h1 class='headerNews'>{$row['title']}</h1>
+        $uniqueId = $row['ID'];
+        $content = mb_substr($row['partial_content'], 0, 85);
 
-           </a>
-
-           <hr class='hrLine'>
-           
-           <div class='btns'>
-              <Button onclick='Toggle1(this)' class='btnh1' id='$row[ID]'><i class='fas fa-heart'></i></Button>
-            </div>
-          
-           </div>";
-
-           //<i class='fas fa-heart'></i> THIS IS THE FONT AWESOME HEART THAT NEEDS TO BE PUT BETWEEN THE BUTTON
-          
-      }
-
-
+        echo "<a style='text-decoration: none; color: black' href='/Dashboard/articleFiles/{$row['link']}'>
+    <div class='boxBlog'>
+        <div id='resizeNews' class='addNews' style='background: url(/Dashboard/{$row['image']}); 
+        background-size: cover; background-repeat: no-repeat; 
+        background-position: center;
+        margin-bottom: 5%;'></div>
+       <h1 class='headerNews'>{$row['title']}</h1>
+       <hr class='hrLine'>
       
+       <p class='style-Substring'>$content" . '...' . "</p>";
+
+
+        echo "
+   <div class='btns'>
+   <Button onclick='Toggle1(this)' class='btnh1' id='$uniqueId'></Button>
+  </div>
+  <hr class='hrLine'>
+
+  <div class='flexDate'>
+  <div class='change'>
+  <i class='fa-solid fa-eye' style='color: #3dc6ff' ></i>
+  <p class='numberViews'>$row[number_views]</p>
+  </div>
+
+  <div>
+  <p>$row[article_date]</p>
+  </div>
+  
+  </div>
+
+   </div>
+    </a>";
+      }
 
 
       ?>
@@ -136,36 +149,8 @@
       xMenu.style.display = "none";
       menu.style.display = "block";
     }
-    
-document.addEventListener('DOMContentLoaded', function() {
-  const btns = document.getElementsByClassName('btnh1');
+   
 
-  for (const btn of btns) {
-    
-    const uniqueId = btn.id;
-
-    const isLiked = localStorage.getItem(uniqueId);
-
-    if (isLiked === "liked") {
-      btn.style.color = "red";
-    } else {
-      btn.style.color = "grey";
-    }
-
-    btn.addEventListener('click', function () {
-
-      if (this.style.color === "red") {
-        this.style.color = "grey";
-
-        localStorage.setItem(uniqueId, "unliked");
-      } else {
-        this.style.color = "red";
-
-        localStorage.setItem(uniqueId, "liked");
-      }
-    });
-  }
-});
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

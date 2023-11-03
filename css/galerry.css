@@ -40,7 +40,7 @@
 .toggleButton {
   padding: 15px;
   font-size: 32px;
-  box-shadow: 7px 6px black;
+  box-shadow: 2px 2px black;
 }
 
 .toggleButton:hover {
@@ -60,6 +60,12 @@
 	box-shadow: none;
 }
 
+#tog {
+  background-image: url(/images/poyas.jpg);
+  background-position: center;
+  color: white;
+  text-shadow: 2px 0 5px black;
+}
 
 
 
