@@ -120,27 +120,27 @@
               <h1>Създаване на визия</h1><br>
 
               <label class="labelNews" for="title">Заглавие: </label><br>
-              <input require type="text" name="title" id="title"><br>
+              <input required type="text" name="title" id="title"><br>
 
               <label class="labelNews" for="subTitle">Подзаглавие</label>
-              <input require type="text" name="subTitle" id="subTitle">
+              <input required type="text" name="subTitle" id="subTitle">
 
               <label class="labelNews" for="title">Заглавие в статията: </label>
-              <input require type="text" name="titleBlog" id="titleBlog"><br>
+              <input required type="text" name="titleBlog" id="titleBlog"><br>
 
               <label class="labelNews">Брой на хората посетили статията:</label>
-              <input require id="numberOfViews" name="numberOfViews" type="text">
+              <input required id="numberOfViews" name="numberOfViews" type="text">
 
              
 
               <label for="article_date">Дата в статията:</label>
-              <input require id="article_date" name="article_date" type="text">
+              <input required id="article_date" name="article_date" type="text">
 
               <label class="labelNews" for="image">Снимка: </label>
-              <input require type="file" name="image" id="image"><br>
+              <input required type="file" name="image" id="image"><br>
 
               <label class="labelNews" for="link">Линк: </label>
-              <input placeholder="Линк към статията" type="text" name="link" id="link"><br><u>
+              <input required placeholder="Линк към статията" type="text" name="link" id="link"><br><u>
               </u>
 
               <script>
@@ -148,7 +148,7 @@
               </script>
 
               <button id="save" class="btnSubmitArticle" type="submit">Създай статия</button>
-              <input type='hidden' name='formType' value='createNew'>
+              <input required type='hidden' name='formType' value='createNew'>
 
             </div>
 
@@ -205,7 +205,7 @@
                   $content .= "<html lang=\"en\">";
                   $content .= "<head>";
                   $content .= "<script src='https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js' referrerpolicy='origin'></script>";
-                  $content .= "    <link rel='stylesheet' href='../Dashboard CSS/articlesResponsive.css'>";
+                  $content .= "<link rel='stylesheet' href='../Dashboard CSS/articlesResponsive.css'>";
                   $content .= "</head>";
                   $content .= "<body>";
                   $content .= '<?php require "./headerInclude.php"; require "../../databaseConnection/database.php"; ';
@@ -266,7 +266,7 @@
 
           //////////////////////////////////////////////////////////////////////////////
 
-          $sqlGet = "SELECT * FROM blog_main_page";
+          $sqlGet = "SELECT * FROM blog_main_page ORDER BY ID DESC";
           $queryGet = mysqli_query($conn, $sqlGet);
 
           while ($rowGet = mysqli_fetch_assoc($queryGet)) {

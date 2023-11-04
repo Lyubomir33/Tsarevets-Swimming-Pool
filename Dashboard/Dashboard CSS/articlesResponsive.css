@@ -2,12 +2,8 @@
 
 @media (min-width: 650px) {
 
-  #logoInArticles {
-    height: 70px;
-    width: 74px;
-  }
 
-  img {
+  .divBlog img {
     width: 600px;
   }
 

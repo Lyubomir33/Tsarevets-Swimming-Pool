@@ -61,11 +61,24 @@
 }
 
 #tog {
-  background-image: url(/images/poyas.jpg);
-  background-position: center;
   color: white;
+  background-image: url(/images/poyas22.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   text-shadow: 2px 0 5px black;
+  height: 73px;
 }
+
+#tog.paused {
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm1tM3NjbmRtYXN4a2g2dHQ4M3p4aTdieHc3a2lpZXhhZ3A2cTdvZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0CRB5dYBKwlkDC48/giphy.gif);
+    color: white;
+    text-shadow: 2px 0 5px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 
 
 

@@ -18,29 +18,7 @@
   <?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
   <div class="flexGal">
 
-    <!-- 
-  <div id="galContainer" class="containerGallery">
-    <div>
-    <button id="toggle" class="toggleButton"> 2023г.</button>
-
-    <div class="divImg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-      <img class="imgGall" src="./images/pluvec.jpg">
-    </div>
-
-    </div>
-  </div> -->
-
+ 
 
 
 
@@ -80,6 +58,25 @@
 
 
   <script>
+
+const buttons = document.querySelectorAll('.toggleButton');
+let isPaused = false;
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    if (isPaused) {
+      button.classList.remove('paused');
+    } else {
+      button.classList.add('paused');
+    }
+    isPaused = !isPaused;
+  });
+});
+
+
+
+
+
     function toggleElement() {
       const divImg = document.querySelector('.divImg');
       divImg.classList.toggle('show');

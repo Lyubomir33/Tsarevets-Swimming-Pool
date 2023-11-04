@@ -98,8 +98,7 @@
        <p class='style-Substring'>$content" . '...' . "</p>";
 
 
-        echo "
-   <div class='btns'>
+        echo "<div class='btns'>
    <Button onclick='Toggle1(this)' class='btnh1' id='$uniqueId'></Button>
   </div>
   <hr class='hrLine'>
