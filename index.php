@@ -38,7 +38,7 @@
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span id="togglerID" onclick="changeMenuIcon()" class="navbar-toggler-icon"></span>
-          <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: #000000;"></i>
+          <i id="xToggler" onclick="changeXIcon()" class="fa-solid fa-x" style="color: white;"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
