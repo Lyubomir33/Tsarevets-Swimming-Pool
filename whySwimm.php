@@ -18,7 +18,7 @@
   <h1 class="headerWhy">Ползи от плуването</h1>
 
   <div >
-    <span class="texts animate__animated animate__fadeInLeft"><b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
+    <span style="margin-bottom: 100px" class="texts animate__animated animate__fadeInLeft "><b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
 
     <b>2. Плуването спомага за оформяне на спортна мускулеста фигура. То помага за развитието на цялата мускулатура.</b><br>
 

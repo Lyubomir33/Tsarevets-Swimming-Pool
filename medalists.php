@@ -51,7 +51,7 @@
   ?>
   </div>
 
-  <div style="margin-top: 20px;"></div>
+  <div style="margin-top: 20px; margin-bottom: 100px;"></div>
 
   <?php require "./footer.php"; ?>
 

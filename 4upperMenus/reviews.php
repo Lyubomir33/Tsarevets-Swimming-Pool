@@ -4,59 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
-  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
-  <link rel="stylesheet" href="../css/reviews.css">
-  <link rel="stylesheet" href="../css/headerNavbar.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/contactUs.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href=".././css/contactUs.css"> -->
+  <link rel="stylesheet" href=".././css/headerNavbar.css">
+  <link rel="stylesheet" href=".././css/style.css">
+  <link rel="stylesheet" href=".././css/reviews.css">
 
   <title>Мнения</title>
 </head>
 
-<body id="bodyReviews">
+<body>
 
 
   <header class="header">
 
-  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" id="neubar">
+      <div class="container" id="containerReviews">
         <div style="display: flex;">
           <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="../images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
 
         </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" id="menuReviews" onclick="m()"></span>
           <i class="fa-solid fa-x" id="xReviews" onclick="x()" style="color: #000000; border: none;"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul id="Menus" class="navbar-nav ms-auto ">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
 
-            <li id="first-item" class="nav-item">
-              <a id="oneBtn" class="btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
+            <li class="nav-item">
+              <a id="firstLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/forTheClub.php">ЗА КЛУБА</a>
             </li>
 
-            <li id="second-item" class="nav-item">
-              <a id="twoBtn" class="btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
+            <li class="nav-item">
+              <a id="secondLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/team.php">ЕКИП</a>
             </li>
 
-            <li id="third-item" class="nav-item">
-              <a id="threeBtn" class="btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+            <li class="nav-item">
+              <a id="thirdLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
 
-            <li id="fourth-item" class="nav-item">
-              <a id="fourBtn" class="btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            <li class="nav-item">
+              <a id="fourthLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+            </li>
+
+            <li class="nav-item">
+              <a id="fifthLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            </li>
+
+            <li class="nav-item">
+              <a id="sixthLink" class="nav-link mx-2 btnStyle" href="/4upperMenus/partners.php">ПАРТНЬОРИ</a>
             </li>
 
             </li>

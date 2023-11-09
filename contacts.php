@@ -74,6 +74,9 @@
             <img class="logoMess heartbeat" src="/images/mess-removebg-preview.png">
             <img class="swimmingClass" src="/images/swimmingPNGFormat-removebg-preview.png">
           </div>
+          <div class="frameFit">
+            <iframe id="frameTelephoneDesign"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9976632541934!2d25.6005263!3d43.062516699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9267ef2908953%3A0xf479f4e02c57e384!2sul.%20%22Byala%20Bona%22%2010%2C%205000%20g.k.%20Cholakovtsi%2C%20Veliko%20Tarnovo!5e0!3m2!1sen!2sbg!4v1696226521080!5m2!1sen!2sbg" style="border:0; "></iframe>
+          </div>
         </div>
 
       </div>
@@ -92,7 +95,7 @@
     let fourthNumber = document.getElementById('fourthNumber');
     let alignText = document.getElementById('alignText');
 
-    
+
 
     function addAnimationOnScroll() {
       let scrollOffset = window.innerHeight - 100;
@@ -104,85 +107,82 @@
         setTimeout(function() {
           firstNumber.style.opacity = "1";
           firstNumber.classList.add('animate__animated', 'animate__bounceInRight');
-        }, 1000);
+        }, 200);
 
         setTimeout(function() {
           secondNumber.style.opacity = "1";
           secondNumber.classList.add('animate__animated', 'animate__bounceInLeft');
-        }, 1400)
+        }, 400)
 
         setTimeout(function() {
           thirdNumber.style.opacity = "1";
           thirdNumber.classList.add('animate__animated', 'animate__bounceInRight');
 
-        }, 1880);
+        }, 600);
 
         setTimeout(function() {
           fourthNumber.style.opacity = "1";
           fourthNumber.classList.add('animate__animated', 'animate__bounceInLeft');
-        }, 2100);
+        }, 800);
 
 
         setTimeout(function() {
           alignText.style.opacity = "1";
-        alignText.classList.add('animate__animated', 'animate__fadeInUp')
-        }, 2400);
+          alignText.classList.add('animate__animated', 'animate__fadeInUp')
+        }, 1000);
 
-      
-        
 
-      // } else {
-     
-      //   firstNumber.style.opacity = "0";
-      //   firstNumber.classList.remove('animate__animated', 'animate__bounceInRight');
 
-      //   secondNumber.style.opacity = "0";
-      //   secondNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
 
-      //   thirdNumber.style.opacity = '0';
-      //   thirdNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
 
-      //   fourthNumber.style.opacity = '0';
-      //   fourthNumber.classList.remove('animate__animated', 'animate__bounceInLeft');
+      }
 
-      //   alignText.style.opacity = "0";
-      //   alignText.classList.remove('animate__animated', 'animate__fadeInDownBig')
-
-      //   logoSwim.style.opacity = "0";
-      //   logoSwim.classList.remove('animate__animated', 'animate__fadeIn')
-
-      // }
-
-    } 
-
-  }
+    }
 
 
     window.addEventListener('scroll', addAnimationOnScroll);
 
 
-  } 
+  }
 
 
 
   const iframeLocation = document.getElementById('iframeLocation');
   const mapDiv = document.getElementById('mapDiv');
   const backgroundSetup = document.getElementById('backgroundSetup');
-
+  const frameTelephoneDesign = document.getElementById('frameTelephoneDesign');
+  const frameFit = document.querySelector('.frameFit');
+  
   function resizeIframe() {
-    if (window.innerWidth < 1000) {
-      iframeLocation.style.display = "none";
-      mapDiv.style.display = "flex";
-      mapDiv.style.height = "120px";
-      backgroundSetup.style.height = "800px";
 
-    } else {
+    if (window.innerWidth < 768) {
+      iframeLocation.style.display = "none";
+      frameTelephoneDesign.style.display = "flex";
+      mapDiv.style.display = "flex";
+      mapDiv.style.height = "240px";
+      mapDiv.style.flexDirection = "column";
+      mapDiv.style.alignItems = "center";
+      backgroundSetup.style.height = "950px";
+
+    } else if(window.innerWidth > 768 && window.innerWidth < 850) {
       iframeLocation.style.display = "block";
       mapDiv.style.display = "grid";
       mapDiv.style.height = "460px";
+      backgroundSetup.style.height = "1150px";
+      frameTelephoneDesign.style.display = "none";
+    } 
+    else if(window.innerWidth > 851 && window.innerWidth < 990) {
+    backgroundSetup.style.height = "1150px";
+    frameFit.style.display = "none";
+    } 
+    else if (window.innerWidth > 991) {
       backgroundSetup.style.height = "600px";
+      frameFit.style.display = "none";
+
     }
   }
+    
+  
 
 
   window.addEventListener("resize", resizeIframe);

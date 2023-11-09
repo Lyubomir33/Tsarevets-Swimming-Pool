@@ -606,10 +606,24 @@ body {
 /* CSS FOR THE NEW BLOG ARTICLES */
 
 #menusTop { 
-  margin-top: 10px;
-
     display: flex;
     align-items: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 992px) {
+  #menusTop {
+    margin-top: 10px;
+    display: grid;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+
+@media (min-width: 768px){ 
+  #menusTop {
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  }
 }
 
 
@@ -648,7 +662,38 @@ body {
 
 }
 
-@media (min-width: 1250px) {
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+ 
+  .nav-link.mx-2 {
+    border-radius: initial;
+    width: 101px;
+    font-size: 14px;
+  }
+
+  
+}
+
+
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+ 
+  .nav-link.mx-2 {
+    border-radius: initial;
+    width: 108px;
+    font-size: 15px;
+  }
+
+  
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .nav-link.mx-2 {
+    width: 130px;
+  }
+
   .divBlog p {
     height: 100%;
     line-height: 2.5;
@@ -762,7 +807,7 @@ body {
 
 }
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   #firstTwoOfffers {
     display: flex;
     flex-direction: row;
@@ -771,7 +816,7 @@ body {
   }
 
   .offer {
-    height: 1150px;
+    height: 1350px;
   }
 
   .textSwimming {
@@ -790,7 +835,7 @@ body {
 
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1055px) {
   #allThreeOffers {
     display: flex;
     flex-direction: row;
@@ -825,14 +870,7 @@ body {
   
 }
 
-@media (min-width: 576px) {
-.navbar-expand-sm .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto;
-    margin-left: 10%;
-}
 
-}
 
 /* SCROLL DOWN EFFECT FOR PHONE */
 
@@ -860,3 +898,4 @@ body {
   
 }
 /* SCROLL DOWN EFFECT FOR PHONE */
+

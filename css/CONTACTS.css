@@ -14,9 +14,10 @@
 .locationFrame {
   display: none;
   margin-top: 121px;
-  margin-top: 88px;
-  width: 660px;
+  
+  width: 480px;
   margin-bottom: 27px;
+ 
   
 }
 
@@ -46,7 +47,6 @@
 }
 
 .map {
-  display: none;
   background-color: #212529;
   height: 459px;
   width: 300px;
@@ -128,10 +128,22 @@ ul.contact-info li {
  
 } 
 
+.frameFit {
+  display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
 
 
 
 @media only screen and (max-width: 767px) {
+
+  .thirdOffer { 
+    width: 100%;
+  }
+
   .contact-form {
     padding: 30px;
   }
@@ -144,11 +156,20 @@ ul.contact-info li {
 }
 
 @media (min-width: 768px) {
+
+   /* .row {
+    justify-content: center;
+  } */
+/* 
+  .row>* {
+    width: auto;
+  } */ 
+
   .locationFrame {
-  
+  display: block;
   margin-top: 85px;
-  height: 354px;
-  width: 573px;
+  height: 350px;
+  width: 400px;
   margin-bottom: 27px;
   
 } 
@@ -167,7 +188,7 @@ ul.contact-info li {
 } 
 
 .background {
-  margin-bottom: -400px;
+  /* margin-bottom: -400px; */
 }
 
 .logoMess {
@@ -179,7 +200,8 @@ ul.contact-info li {
 }
 
 .swimmingClass {
-  height: 125px;
+  /* height: 125px; */
+  height: 90px;
   margin-top: 25px;
   margin-left: -61px;
 }
@@ -269,4 +291,52 @@ ul.contact-info li {
   }
 
   }
+
+  @media (min-width: 992px) {
+    
+    .background {
+      height: 600px;
+    }
+
+    .locationFrame {
+      display: block;
+      margin-top: 85px;
+      height: 350px;
+      width: 470px;
+      margin-bottom: 27px;
+      
+    } 
+
+    .twoImages {
+      width: 560px;
+    }
+
+    .swimmingClass {
+      height: 90px;
+      margin-top: 25px;
+      margin-left: -61px;
+    }
+
+
+  }
  
+  @media (min-width: 1100px) {
+    .locationFrame {
+      display: block;
+      margin-top: 85px;
+      height: 350px;
+      width: 550px;
+      margin-bottom: 27px;
+      
+    } 
+
+    .twoImages {
+      width: auto;
+    }
+
+    .swimmingClass {
+      height: 125px;
+      margin-top: 25px;
+      margin-left: -61px;
+    }
+  }

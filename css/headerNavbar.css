@@ -11,27 +11,32 @@
     width: 100%;
     position: relative; /* Ensure the z-index property works */
     z-index: 1; 
+    
   
+}
+
+#navbarNavDropdown { 
+  margin-left: 20px;
 }
 
 #neubar .dropdown-menu a:hover {
   color: #454545;
 }
 
-#neubar .nav-item {
-  
-}
+
+
 
 .nav-link.mx-2{
   width: 199px;
   letter-spacing: 0.5px;
   text-decoration: none;
   border-radius: initial;
+  color: black;
  
 }
 
 .nav-link.mx-2:hover {
-  color: #00C9FF;
+  /* color: black; */
 }
 
 
@@ -59,10 +64,10 @@ a.navbar-brand {
 
 .nav-link.mx-2 {
   font-size: 18px;
-  border-radius: 15px;
-  width: 94px;
-  
-   
+  margin: 10px;
+  /* border-radius: 15px; */
+  width: 140px;
+  color: white;
 }
 
 
@@ -230,14 +235,27 @@ a.navbar-brand {
   }
 
   .nav-link.mx-2.btnStyle {
-    color: white;
+    text-align: center;
+    /* color: white; */
   }
 
+  .nav-link.mx-2.btnStyle:hover {
+    /* color: #00C9FF; */
+
+  }
+ 
+}
+
+@media (min-width: 500px) {
+  
+  .nav-link.mx-2.btnStyle {
+    text-align: center;
+    color: white;
+  }
   .nav-link.mx-2.btnStyle:hover {
     color: #00C9FF;
 
   }
- 
 }
 
 @media (min-width: 1100px) {
@@ -255,10 +273,7 @@ a.navbar-brand {
     width: 220px;
   }
 
-  .nav-link.mx-2 {
-    width: 120px;
-  }
-
+ 
   
 
   @keyframes heartbeat {
