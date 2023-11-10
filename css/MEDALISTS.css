@@ -1,254 +1,436 @@
-.medalistsHTML {
-  font-family: 'Mooli', sans-serif;
-}
 
-.divImgMedal {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
-  margin: 0 auto;
-  overflow-y: auto;
-  margin-bottom: 20px;
-  transition: 0.5s;
-  display: none;
 
-}
+@media (max-width: 500px) {
 
-.whiteBackground{ 
-  border-radius: 10px;
-  padding: 20px;
-  margin: 40px;
-  height: 100vh;
-  position: relative;
-  background-color: white; 
-  width: 95%; 
-  overflow: auto;
-}
 
-.medalistsFlexDiv {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.headerMedals{
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 2px black;
-  margin-top: 25px;
-}
-
-.medalsts {
-  border: 1px solid #000;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  height: auto;
-  overflow-y: auto;
-  width: auto;
   
-}
-
-
-
-.medalBody{ 
-/*  
-  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
-  /* background-color: rgb(0, 55, 255, 0.7); */
-
-
-}
-
-/* CSS FOR THE DASHBOARD PART  */
-
-.divDashboard {
-  width: 100%;
-  margin: 10px auto;
-  border: 2px solid black;
-  padding: 20px;
-  box-shadow: 2px 2px 3px black;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-}
-
-.viewDash {
-  height: 100px;
-}
-
-.textMedal {
-  display: flex;
-  align-items: center;
-  margin-left: 30px;
-}
-
-.textareaMedal {
- font-size: 15px;
-    padding: 6px;
-    margin-left: 5px;
-    border: 2px solid black;
-    border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
-    width: 50vh;
-    height: 120px;
-
-}
-
-.picAndBTN {
-  display: flex;
-    flex-direction: column;/* justify-content: space-evenly; */
-    align-items: baseline;
-}
-
-
-.medalsts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  box-shadow: 0 0 10px black;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.pMedal {
-  padding: 15px;
-  text-align: center;
-  height: 20px;
-  overflow-y: scroll;
-  height: 400px;
-  color: black;
-  text-align: center;
-  border: 2px solid black;
-  /* margin-top: -30px; */
-  
-}
-
-.medalist {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 15px;
-  font-size: 22px;
-  border: 2px solid black;
-  margin: 15px auto;
-  
-}
-
-.imgMain {
-  height: 140px;
-  width: 200px;
-  padding: 10px;
-  
-}
-
-.medalist p {
-  width: 287px;
-}
-
-.toggleButton {
-  background-color: white;
-   
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-.toggleButtonMedal {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  /* margin-bottom: 20px; */
-  background-color: color;
-  color: black;
-  padding: 5px;
-  background-color: white;
-  font-weight: 600;
-  align-items: center;
-
-  border: 1px solid black;
-
-    
-}
-
-.nameStyles {
-  margin: 10px;
-    height: 29px;
-    padding: 15px;
-    font-size: 15px;
-}
-
-#myDiv {
-  height: 400px;
-}
-
-
-.toggleButtonMedal:hover{ 
-  transition: 0.5s;
-    box-shadow: 3px 0 10px black;
-}
-
-.toggleButtonMedal:not(:hover) {
-  transition: 0.5s;
-}
-  
- 
-.animate__animated.animate__fadeIn {
-  animation-duration: 2s; 
-
-}
-
-
-
-@media (min-width: 1000px) {
-
-  .makeFlex {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust the width as needed */
-    justify-content: center;
-
+  .medalistsHTML {
+    font-family: 'Mooli', sans-serif;
   }
-
-  .toggleButtonMedal {
+  
+  .divImgMedal {
     width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+   
+  
+  }
+  
+  .whiteBackground{ 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    height: 100vh;
+    position: relative;
+    background-color: white; 
+    width: 95%; 
+    overflow: auto;
+  }
+  
+  .medalistsFlexDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .headerMedals{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin-top: 25px;
+  }
+  
+  .medalsts {
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: auto;
+    overflow-y: auto;
+    width: auto;
+    
+  }
+  
+  
+  
+  .medalBody{ 
+   
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  
+  }
+  
+  /* CSS FOR THE DASHBOARD PART  */
+  
+  .divDashboard {
+    width: 100%;
+    margin: 10px auto;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .viewDash {
+    height: 100px;
+  }
+  
+  .textMedal {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  
+  .textareaMedal {
+   font-size: 15px;
+      padding: 6px;
+      margin-left: 5px;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 2px 2px 3px black;
+      width: 50vh;
+      height: 120px;
+  
+  }
+  
+  .picAndBTN {
+    display: flex;
+      flex-direction: column;/* justify-content: space-evenly; */
+      align-items: baseline;
+  }
+  
+  
+  .medalsts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px black;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .pMedal {
+    padding: 15px;
+    text-align: center;
+    height: 20px;
+    overflow-y: scroll;
+    height: 400px;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    /* margin-top: -30px; */
+    
+  }
+  
+  .medalist {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    font-size: 22px;
+    border: 2px solid black;
+    margin: 15px auto;
+    
+  }
+  
+  .imgMain {
+    height: 230px;
+      width: 100%;
+      object-fit: cover;
+    
+  }
+  
+  .medalist p {
+    width: 287px;
+  }
+  
+  .toggleButton {
+    background-color: white;
+      width: 300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  
+  .toggleButtonMedal {
+    width: 90%;
     text-align: center;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 30px;
-    /* margin-bottom: 20px; */
-    background-color: color;
     color: black;
-    padding: 5px;
     background-color: white;
     font-weight: 600;
     align-items: center;
     border: 1px solid black;
-    height: 200px;
+    flex-direction: column;
+  
+      
   }
-
-  .pMedal {
-    font-size: 25px;
-  }
-
-  .imgMain {
-    height: 173px;
-    width: 209px;
-    padding: 10px;
-    transform: scale(1.2);
+  
+  .nameStyles {
     margin: 10px;
+      height: 29px;
+      padding: 15px;
+      font-size: 15px;
   }
+  
+  #myDiv {
+    height: 400px;
+  }
+  
+   
+   
+  .animate__animated.animate__fadeIn {
+    animation-duration: 2s; 
+  
+  }
+
+  .textInMedalists {
+    margin-top: 10px;
+    font-size: 23px;
+  }
+
+}
+
+@media (min-width: 500px) {
+
+  .makeFlex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
+    justify-content: center;
+    
+
+  }
+
+
+  .medalistsHTML {
+    font-family: 'Mooli', sans-serif;
+  }
+  
+  .divImgMedal {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+   
+  
+  }
+  
+  .whiteBackground{ 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    height: 100vh;
+    position: relative;
+    background-color: white; 
+    width: 95%; 
+    overflow: auto;
+  }
+  
+  .medalistsFlexDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .headerMedals{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin-top: 25px;
+  }
+  
+  .medalsts {
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: auto;
+    overflow-y: auto;
+    width: auto;
+    
+  }
+  
+  
+  
+  .medalBody{ 
+   
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+    background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+  }
+  
+  /* CSS FOR THE DASHBOARD PART  */
+  
+  .divDashboard {
+    width: 100%;
+    margin: 10px auto;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .viewDash {
+    height: 100px;
+  }
+  
+  .textMedal {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  
+  .textareaMedal {
+   font-size: 15px;
+      padding: 6px;
+      margin-left: 5px;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 2px 2px 3px black;
+      width: 50vh;
+      height: 120px;
+  
+  }
+  
+  .picAndBTN {
+    display: flex;
+      flex-direction: column;/* justify-content: space-evenly; */
+      align-items: baseline;
+  }
+  
+  
+  .medalsts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px black;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .pMedal {
+    padding: 15px;
+    text-align: center;
+    height: 20px;
+    overflow-y: scroll;
+    height: 400px;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    /* margin-top: -30px; */
+    
+  }
+  
+  .medalist {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    font-size: 22px;
+    border: 2px solid black;
+    margin: 15px auto;
+    
+  }
+  
+  .imgMain {
+    height: 400px;
+      width: 100%;
+      object-fit: cover;
+    
+  }
+  
+  .medalist p {
+    width: 287px;
+  }
+  
+  .toggleButton {
+    background-color: white;
+      width: 300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  
+  .toggleButtonMedal {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    align-items: center;
+    border: 1px solid black;
+    flex-direction: column;
+  
+      
+  }
+  
+  .nameStyles {
+    margin: 10px;
+      height: 29px;
+      padding: 15px;
+      font-size: 15px;
+  }
+  
+  #myDiv {
+    height: 400px;
+  }
+  
+   
+   
+  .animate__animated.animate__fadeIn {
+    animation-duration: 2s; 
+  
+  }
+
+  .textInMedalists {
+    margin-top: 10px;
+    font-size: 23px;
+  }
+
 
  
 

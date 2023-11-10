@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/whySwimm.css">
- 
+  <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
+
   <title>Защо да плуваме?</title>
 </head>
 
@@ -13,12 +14,12 @@
 
   <?php include "./Dashboard/articleFiles/headerInclude.php"; ?>
 
-  <img class="imgArticleKids" src="./images/articleKids.jpg" alt="">
+  <img id="imageDisplay" class="imgArticleKids" src="./images/articleKids.jpg">
 
   <h1 class="headerWhy">Ползи от плуването</h1>
 
-  <div >
-    <span style="margin-bottom: 100px" class="texts animate__animated animate__fadeInLeft "><b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
+  <div class="textWithImages" >
+    <span style="margin-bottom: 100px; background: #9898989e;" class="texts animate__animated animate__fadeInLeft "><b>1. Плуването развива белите дробове и подобрява работата на дихателната система.</b> <br>
 
     <b>2. Плуването спомага за оформяне на спортна мускулеста фигура. То помага за развитието на цялата мускулатура.</b><br>
 
@@ -39,6 +40,9 @@
     <b>10.При плувците има до 50% по-ниска смъртност.</b><br>
 
     <b>11.За много хора плуването е удоволствие.</span>
+
+    <img id="imageTelephone" class="imgArticleKids" src="./images/articleKids.jpg">
+
 
   </div>
 

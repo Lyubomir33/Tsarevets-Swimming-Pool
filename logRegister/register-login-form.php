@@ -30,7 +30,7 @@
 					<input type="password" name="passLog" placeholder="Парола" required="">
 					<button>Вход</button>
 				</form>
-        <a class="forgotPassword" href="">Забравена парола?</a>
+       
 			</div>
 	</div>
 
@@ -38,8 +38,6 @@
 <script>
 
 	const timeOutMessage = document.getElementById('message');
-
-
 
 	setTimeout(timeOutMessage, 10000);
 

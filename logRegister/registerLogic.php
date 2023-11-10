@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passLogin = $_POST['passLog'];
     $passLoginHash = hash('sha256', $passLogin);
 
-    $sqlLog = 'SELECT email, pass FROM admins LIMIT 1';
+    $sqlLog = 'SELECT email, pass FROM admins';
     $queryLog = mysqli_query($conn, $sqlLog);
 
     if ($queryLog->num_rows > 0) {

@@ -14,7 +14,7 @@
 }
 
 .texts {
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 1px 1px 3px black;
   color: white;
   margin: 0 auto;
   width: 90%;
@@ -24,9 +24,9 @@
   align-content: flex-start;
   align-items: flex-start;
   padding: 15px;
-  box-shadow: 2px 0 10px black;
+  box-shadow: 2px 0 10px #0000008f;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-family: 'Edu TAS Beginner', cursive;
 
   
@@ -70,7 +70,7 @@
   /* background-color: #185b78;  */
   /* background-color: rgb(0, 55, 255, 0.7); */
   min-height: 100vh;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
   background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed;
   height: 100%;
   margin: 0;
@@ -84,12 +84,14 @@
 
 
 .imgArticleKids {
-  height: 200px;
+  height: 335px;
   margin: 0 auto;
   width: 80%;
   display: flex;
   justify-content: center;
   margin-top: 35px;
+  object-fit: cover;
+  margin-bottom: 60px;
 }
 
 .headerWhy {
@@ -101,7 +103,50 @@
   font-size: 35px;
 }
 
-@media (min-width: 1000px) {
+.flexWhySwimm {
+  display: flex;
+}
+
+@media (max-width: 450px) {
+  .imgArticleKids {
+    height: 275px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 51px;
+    border: 1px solid black;
+    border-color: white;;
+  }
+}
+
+@media (max-width: 575px) {
+
+  #imageTelephone {
+    display: none;
+  }
+
+  .flexWhySwimm {
+    display: block;
+  }
+}
+
+@media (min-width: 575px) {
+  #imageDisplay {
+    display: none;
+  }
+}
+
+@media (min-width: 850px ) {
+
+
+  .textWithImages {
+    display: flex;
+  }
 
   .imgArticleKids {
     height: 440px;
@@ -110,17 +155,21 @@
     display: flex;
     justify-content: center;
     box-shadow: 2px 0 10px black;
-    margin-top: 35px;
-
+    object-fit: cover;
+    width: 390px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
+
 
   .texts {
     font-size: 22px;
     display: flex;
     text-align: justify;
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
     margin-bottom: -250px;
+    margin-left: 15px;
   }
 
   .headerWhy {
@@ -132,4 +181,11 @@
     font-size: 55px;
   }
 
+}
+
+@media (min-width: 1050px) {
+  .imgArticleKids {
+    max-width: 650px;
+    width: auto;
+  }
 }

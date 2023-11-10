@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/MEDALISTS.css">
+  <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
 
   <title>Медалисти</title>
 </head>
@@ -31,16 +32,17 @@
   while ($row = mysqli_fetch_assoc($query)) {
     echo "<div id='containG' class='containerGallery'>
     <div>
-        <div >
-            <button class='toggleButtonMedal'>$row[name]
+        <div>
+            <button class='toggleButtonMedal'>
                 <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+                <p class='textInMedalists'>$row[name]</p>
+                <p class= > $row[medal_text] </p>
             </button>
         </div>
-        <div id='myDiv' class='divImgMedal animate__animated animate__fadeIn'>
-            <p class='pMedal'>$row[medal_text]</p>
-        </div>
+       
     </div>
 </div>";
+
 
    
   }
@@ -58,55 +60,13 @@
 </body>
 
 <script>
-  // const rand = document.querySelectorAll('.containerGallery');
 
-  // function resizeMedal() {
+let divDisplay = document.getElementById('containG');
 
-  //   if (window.innerWidth > 450) {
-  //     rand.forEach(element => {
-  //       element.style.display = "none";
-  //     });
+function resizeDiv () {
 
+}
 
-
-  //   } else {
-  //     rand.forEach(element => {
-  //       element.style.display = "flex";
-  //     });
-  //   }
-  // }
-
-  // window.addEventListener('resize', resizeMedal);
-
-
-
-  document.querySelectorAll('.toggleButtonMedal').forEach((button, index) => {
-    button.addEventListener('click', () => {
-      const divImgModal = document.querySelectorAll('.divImgMedal')[index];
-
-      if (window.innerWidth < 450) {
-        if (divImgModal.style.display === 'block') {
-          divImgModal.style.display = 'none';
-          // hiddenDiv.style.display = "block";
-
-        } else {
-          // hiddenDiv.style.display = "none";
-          divImgModal.style.display = 'block';
-        }
-      } else if (window.innerWidth > 650) {
-        if (divImgModal.style.display === 'flex') {
-          divImgModal.style.display = 'none';
-          // hiddenDiv.style.display = "block";
-
-        } else {
-          divImgModal.style.display = 'flex';
-          // hiddenDiv.style.display = "block";
-
-        }
-      }
-
-    });
-  });
 </script>
 
 </html>

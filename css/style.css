@@ -732,11 +732,11 @@ body {
 
   .tenYearsOld {
     height: 180px;
-    margin: 0 auto;
+    /* margin: 0 auto;
     display: flex;
     margin-top: 30px;
     margin-left: 250px;
-    margin-right: 250px;
+    margin-right: 250px; */
   }
 }
 
@@ -848,8 +848,8 @@ body {
   }
 
   .secondOffer {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 125px;
+    margin-left: 125px;
   }
 
   .offer {
