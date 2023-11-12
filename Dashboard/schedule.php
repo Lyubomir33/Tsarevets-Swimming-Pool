@@ -1,3 +1,27 @@
+<?php 
+
+
+session_start();
+
+// Check if the user is not logged in
+if (!isset($_SESSION['emailLog'])) {
+    header('Location: ../logRegister/register-login-form.php');
+    exit();
+}
+
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 2400)) {
+    session_unset();
+    session_destroy();
+    header('Location: ../logRegister/register-login-form.php');
+    exit();
+}
+
+$_SESSION['last_activity'] = time();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,29 +38,7 @@
   <body>
 
     <!-- for header part -->
-    <header>
-
-      <div class="logosec">
-        <div class="logo">СКП ЦАРЕВЕЦ</div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png" class="icn menuicn" id="menuicn" alt="menu-icon">
-      </div>
-
-      <div class="searchbar">
-        <input type="text" placeholder="Search">
-        <div class="searchbtn">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-icon">
-        </div>
-      </div>
-
-      <div class="message">
-        <div class="circle"></div>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
-        <div class="dp">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png" class="dpicn" alt="dp">
-        </div>
-      </div>
-
-    </header>
+    <?php include './dashboard_header.php'; ?>
 
     <div class="main-container">
       <div class="navcontainer">

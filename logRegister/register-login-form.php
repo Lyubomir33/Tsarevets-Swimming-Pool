@@ -1,10 +1,28 @@
+<?php 
+
+session_start();
+
+if(isset($_SESSION['emailLog'])) {
+    
+        $loggedInEmail = $_SESSION['emailLog'];
+
+    header('Location: ./dashboard.php');
+
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/login-register-form.css">
-  <title>Document</title>
+	<link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
+
+<title>Вход</title>
 </head>
 <body>
 <div class="main">  	

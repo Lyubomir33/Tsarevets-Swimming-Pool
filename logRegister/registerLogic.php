@@ -1,5 +1,7 @@
 <?php
 
+
+
 require "../databaseConnection/database.php";
 
 
@@ -36,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passLogin = $_POST['passLog'];
     $passLoginHash = hash('sha256', $passLogin);
 
-    $sqlLog = 'SELECT email, pass FROM admins';
+    $sqlLog = 'SELECT email, pass, account_type FROM admins';
     $queryLog = mysqli_query($conn, $sqlLog);
 
     if ($queryLog->num_rows > 0) {
@@ -47,7 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           
         } else if ($row['email'] == $emailLogin && $row['pass'] == $passLoginHash) {
           $foundMatch = true;
+          
           if ($foundMatch) {
+              session_start();
+            $_SESSION['emailLog'] = $emailLogin;
+            $_SESSION['account_type'] = $row['account_type'];
+   
             header("Location: ../Dashboard/dashboard.php");
           }
           break;
@@ -60,3 +67,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
   }
 }
+
+?>

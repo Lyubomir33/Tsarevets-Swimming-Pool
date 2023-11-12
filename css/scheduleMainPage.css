@@ -39,6 +39,10 @@
 
 @media (min-width: 800px) {
 
+  .headersScheduleMain { 
+    margin-top: 50px;
+  }
+
   .twoDivs {
     display: flex;
     justify-content: space-around; 
