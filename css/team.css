@@ -147,6 +147,22 @@
   .section-head-text {
     text-align: center;
   }
+
+  .img-wrapper {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .text-blk.name {
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .text-blk.position {
+    opacity: 0;
+    transition: 1s;
+  }
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
@@ -372,6 +388,21 @@ body {
 
   .team-img  {
     height: 245px;
+  }
+
+  .img-wrapper {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .text-blk.name {
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .text-blk.position {
+    opacity: 0;
+    transition: 1s;
   }
 
 }

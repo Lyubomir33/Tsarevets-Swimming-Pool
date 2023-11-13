@@ -51,7 +51,7 @@ a.navbar-brand {
 
 .logo {
   padding-left: 8px;
-  width: 260px;
+  width: 280px;
   height: 81px;
   margin: -20px;
 }
@@ -71,7 +71,7 @@ a.navbar-brand {
 }
 
 
-#togglerID, #menuReviews {
+#togglerID, #menuReviews, #menu {
   width: 2em;
 
 }

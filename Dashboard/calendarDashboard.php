@@ -27,7 +27,7 @@
 
 
 <header class="header">
-    <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+    <nav class="navbar navbar-expand-lg navbar-light" id="neubar">
       <div class="container">
         <div style="display: flex;">
         
@@ -47,6 +47,10 @@
             </li>
 
             <li class="nav-item">
+              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/team.php">ЕКИП</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/newsMainPage.php">НОВИНИ</a>
             </li>
 
@@ -56,6 +60,10 @@
 
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ОТЗИВИ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/reviews.php">ПАРТНЬОРИ</a>
             </li>
 
 

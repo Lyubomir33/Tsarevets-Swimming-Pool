@@ -498,11 +498,12 @@ header {
 
 .formResults{
   height: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 2px solid black;
-  padding: 10px;
-  padding-top: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-top: 14px;
+    box-shadow: 0 1px 9px;
+    border-radius: 6px;
 }
 
 .hrLine{
@@ -530,4 +531,18 @@ header {
   font-size: 25px;
   margin-left: 15px;
 
+}
+
+.create-user {
+  box-shadow: 0 1px 8px black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 212px;
+}
+
+#create_fullName {
+  padding: 4px;
+    border: 1px solid black;
+    border-radius: 8px;
 }

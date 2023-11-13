@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .divImg {
   width: 80%;
     display: flex;
@@ -10,6 +12,10 @@
     transition: 0.5s;
     display: none;
 
+}
+
+.header-year{
+  font-family: 'Lobster', sans-serif;
 }
 
 .imgGall {
@@ -26,13 +32,13 @@
 }
 
 .toggleButton {
-  width: 80%;
+  width: 25%;
   text-align: center;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: -5px;
+  margin-bottom: 60px;
   background-color: color;
   color: black;
   padding: 5px;
@@ -44,7 +50,6 @@
 .toggleButton {
   padding: 15px;
   font-size: 32px;
-  box-shadow: 2px 2px black;
 }
 
 .toggleButton:hover {
@@ -66,11 +71,12 @@
 
 #tog {
   color: white;
-  background-image: url(/images/poyas22.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-shadow: 2px 0 5px black;
-  height: 73px;
+    height: 199px;
+    width: 90%;
+    /* object-fit: cover; */
+    background-position: center;
+    background-size: cover;
+
 }
 
 #tog.paused {
@@ -82,19 +88,74 @@
 }
 
 
+.img-vector {
+  width: 100%;
+  height: 199px;
+  object-fit: cover;
+
+}
+
+.overlay-text {
+  text-shadow: 1px 1px 2px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .header-year {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    font-size: 25px;
+    color: black;
+    box-shadow: 0 1px 5px;
+    border-radius: 30px;
+    width: 225px;
+    margin: 20px auto;
+    padding: 6px;
+  }
+}
+
+
+@media (min-width: 450px) {
+
+  .flexGal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the width as needed */
+  }
+
+  #tog {
+    height: 285px;
+  }
+
+  .header-year {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    font-size: 25px;
+    color: black;
+  }
+
+
+}
 
 
 
+@media (min-width: 600px) {
 
-@media (min-width: 576px){
-.navbar-expand-sm .navbar-collapse {
+  .navbar-expand-sm .navbar-collapse {
     margin-left: 50px;
     display: flex!important;
     flex-basis: auto;
 }
-}
-
-@media (min-width: 650px) {
 
 
 .divImg {
@@ -131,21 +192,17 @@
 
 .flexGal {
   display: grid;
-  justify-content: center;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr)); /* Adjust the width as needed */
-  margin-bottom: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust the width as needed */
 }
 
-.toggleButton {
-  padding: 15px;
-  font-size: 32px;
-  box-shadow: 7px 6px black;
+
+.img-vector { 
+  height: 400px;
 }
+
 
 .toggleButton:hover {
-  /* color: white;
-  background-color: black; */
+
   transition: 0.5s;
 }
 
@@ -162,6 +219,34 @@
 
 
 
+}
+
+@media (min-width: 768px) { 
+  #tog { 
+    height: 430px;
+  }
+
+  .header-year {
+    font-size: 32px;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  .flexGal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
+  }
+
+ 
+}
+
+@media (min-width: 1600px) {
+  .flexGal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Adjust the width as needed */
+  }
 }
 
 

@@ -18,37 +18,47 @@
   <?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
   <div class="flexGal">
 
- 
+
 
 
 
     <?php require "./databaseConnection/database.php";
 
+  $arrayFiles = ["first-period.php", "second-period.php", "third-period.php", "fourth-period.php"];
+
+  $i = 0;
 
     $sql = "SELECT * FROM galerry";
     $query = mysqli_query($conn, $sql);
 
     while ($row = mysqli_fetch_assoc($query)) {
-      echo "<div id='containG' class='containerGallery'>
-   
-              <button id='tog' class='toggleButton'>$row[year_gallery]</button>
+
+    
+
+      echo "<a style='text-decoration: none; ' href='./galleryFiles/$arrayFiles[$i]'>
+
+            <div id='containG' class='containerGallery'>
+                <p class='header-year'>$row[year_gallery]</p>
+              <div style='background: url(/images/$row[main_image]); background-size: cover;' id='tog' class='toggleButton'></div>
+              
               <div>
 
-              <div id='myDiv' class='divImg animate__animated animate__fadeIn'>";
-
-      $imageNames = explode(', ', $row['all_images']);
-
-      foreach ($imageNames as $imageName) {
-        echo "<img class='imgGall' src='./Dashboard/gallery/$imageName'>";
-      }
-
-      echo "<input type='hidden' name='valueHidden' value='$row[ID]'>
+              <div id='myDiv' class='divImg animate__animated animate__fadeIn'>
+              <input type='hidden' name='valueHidden' value='$row[ID]'>
             </div>
             </div>
-          </div>";
-    }
+          </div>
+          </a>";
 
+          $i++;
+          
+        }
+
+     
+    
+   
     ?>
+
 
   </div>
 
@@ -56,83 +66,11 @@
 
 
 
-
   <script>
 
-const buttons = document.querySelectorAll('.toggleButton');
-let isPaused = false;
-
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
-    if (isPaused) {
-      button.classList.remove('paused');
-    } else {
-      button.classList.add('paused');
-    }
-    isPaused = !isPaused;
-  });
-});
 
 
 
-
-
-    function toggleElement() {
-      const divImg = document.querySelector('.divImg');
-      divImg.classList.toggle('show');
-    }
-
-    const toggle = document.getElementById("galContainer");
-    const containG = document.getElementById('containG');
-
-
-    document.querySelectorAll('.toggleButton').forEach((button, index) => {
-  button.addEventListener('click', () => {
-  
-    document.querySelectorAll('.divImg').forEach((div, i) => {
-      if (i !== index) {
-        div.style.display = 'none';
-      }
-    });
-
-    
-    button.classList.toggle('active');
-    const divImg = document.querySelectorAll('.divImg')[index];
-
-    if (window.innerWidth < 450) {
-      if (divImg.style.display === 'grid') {
-        divImg.style.display = 'none';
-      } else {
-        divImg.style.display = 'grid';
-      }
-    } else if (window.innerWidth > 650) {
-      if (divImg.style.display === 'grid') {
-        divImg.style.display = 'none';
-      } else {
-        divImg.style.display = 'grid';
-      }
-    }
-  });
-});
-
-    const imageGallery = document.getElementById("imageGallery");
-
-    function setGalleryHeight() {
-      const images = imageGallery.querySelectorAll(".imgGall");
-
-      let totalHeight = 0;
-      images.forEach((image) => {
-        totalHeight += image.clientHeight;
-      });
-
-      imageGallery.style.height = totalHeight + "px";
-    }
-
-
-    setGalleryHeight();
-
-
-    
 
 
   </script>

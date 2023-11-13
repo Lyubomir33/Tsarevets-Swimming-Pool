@@ -97,9 +97,9 @@
 
           <div>
 
-            <form method="POST">
-              <label for="create_fullName">Първо ме</label>
-              <input name="create_fullName" id="create_fullName" type="text"><br>
+            <form class="create-user" method="POST">
+              <label  for="create_fullName">Първо ме</label>
+              <input required name="create_fullName" id="create_fullName" type="text"><br>
 
               <button type='submit' name='formType' value='createEvents' class='button-save-changes'>Създай</button>
 

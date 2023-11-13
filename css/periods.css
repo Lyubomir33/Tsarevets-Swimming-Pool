@@ -1,0 +1,107 @@
+.periods-flex-images {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  justify-items: center;
+
+}
+
+.periods-images {
+  width: 90%;
+  height: 210px;
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+.period-header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (min-width: 450px){ 
+  .periods-images {
+   
+    height: 246px;
+    width: 390px;
+    object-fit: cover;
+    margin-top: 15px;
+  } 
+
+  .periods-flex-images {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+  
+  }
+  
+}
+
+@media (min-width: 1000px){ 
+
+  .periods-images {
+    width: 475px;
+    height: 246px;
+    object-fit: cover;
+    margin-top: 15px;
+  } 
+
+}
+
+
+@media (min-width: 1130px){ 
+
+  .periods-images {
+    width: 520px;
+    height: 246px;
+    object-fit: cover;
+    margin-top: 30px;
+  } 
+
+}
+
+@media (min-width: 1230px){ 
+
+  .periods-images {
+    width: 600px;
+    height: 246px;
+    object-fit: cover;
+    margin-top: 15px;
+  } 
+
+  .periods-flex-images {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-items: center;
+  
+  }
+
+}
+
+@media (min-width: 1380px){ 
+
+  .periods-images {
+    width: 430px;
+    height: 246px;
+    object-fit: cover;
+    margin-top: 15px;
+  } 
+
+}
+
+@media (min-width: 1500px){ 
+
+  .periods-images {
+    width: 450px;
+    height: 246px;
+    object-fit: cover;
+    margin-top: 15px;
+  } 
+
+}
+
+
+
+
+
