@@ -31,13 +31,25 @@
   $query = mysqli_query($conn, $sql);
 
   while ($row = mysqli_fetch_assoc($query)) {
-    echo "<div id='containG' class='containerGallery'>
+    echo "<div id='containG' >
     <div>
         <div>
             <div class='toggleButtonMedal'>
                 <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
                 <p class='textInMedalists'>$row[name]</p>
-                <p id='theMedaltext'>$row[medal_text]</p>
+                <div id='theMedaltext'>$row[medal_text]</div>
+            </div>
+        </div>
+       
+    </div>
+</div>";
+
+echo "<div class='containerGallery'>
+    <div>
+        <div>
+            <div class='toggleButtonMedal'>
+                <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+                <div id='theMedaltext'><span class='namingDisplay'>$row[name]</span> $row[medal_text]</div>
             </div>
         </div>
        

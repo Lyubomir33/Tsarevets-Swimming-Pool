@@ -18,50 +18,77 @@
 
     <div class="scheduleText">
 
-    <?php 
+      <?php
 
-    require "./databaseConnection/database.php";
-
-
-    $sql = "SELECT * FROM schedule_table"; 
-    $query = mysqli_query($conn, $sql);
-
-    while($row = mysqli_fetch_assoc($query)) {
-      echo  $row['schedule'];
-    }
+      require "./databaseConnection/database.php";
 
 
-    ?>
- 
+      $sql = "SELECT * FROM schedule_table";
+      $query = mysqli_query($conn, $sql);
+
+      while ($row = mysqli_fetch_assoc($query)) {
+        echo  $row['schedule'];
+      }
+
+
+      ?>
+
     </div>
 
     <div>
 
       <div>
         <h1 class="headersScheduleMain">Басейн "Радио"</h1>
-      <img class="imgSchedule" src="./images/pool3.jpg">
-      </div> 
-     
-      <div>
-        <h1  class="headersScheduleMain">Басейн "Емилиян Станев"</h1>
-      <img class="imgSchedule" src="./images/pool2.jpg">
-      <img class="imgSchedule" src="./images/Биляна.jpg">
-      </div>
-    
-      <div>
-        <h1  class="headersScheduleMain">Басейн "Клуб 17"</h1>
-     
+        <img class="imgSchedule" src="./images/pool3.jpg">
+        <p class="p-for-pools">
+          <b>Адрес:</b> бул. Никола Габровкси 60, 5005 ж.к. Колю Фичето, Велико Търново<br>
+          <b> Вид: </b>спортен правоъгълен<br>
+          <b>Подходящ:</b> за обучение на деца (6 – 18годишни) и възрастни (18+годишни)<br>
+          <b>Rазмери:</b> 25м. на 12.5м.<br>
+          <b>Дълбочина:</b> 1,40м. - 1,90м.<br>
+          <b>Коридори:</b> 5<br>
+          <b>Температура:</b> 27-28<br>
+        </p>
       </div>
 
       <div>
-        
-      <img class="imgSchedule" src="./images/club17.jpg">
-      <img class="imgSchedule" src="./images/kidos.jpg">
-      <img class="imgSchedule" src="./images/more kidos.jpg">
+        <h1 class="headersScheduleMain">Басейн "Емилиян Станев"</h1>
+        <img class="imgSchedule" src="./images/pool2.jpg">
+        <img class="imgSchedule" src="./images/Биляна.jpg">
+        <p class="p-for-pools">
+          <b>Адрес:</b> ул. Мария Габровска , 5005 ж.к. Колю Фичето<br>
+          <b>Вид:</b> Спортен правоъгълен<br>
+          <b>Подходящ:</b> За обучение на деца (6 – 18годишни) и възрастни (18+години)<br>
+          <b>Размери: </b> 20м. на 10м.<br>
+          <b>Дълбочина: </b> 1,40м. - 2,0м.<br>
+          <b>Коридори:</b> 4<br>
+          <b>Температура:</b> 27-28<br>
+        </p>
+      </div>
+
+      <div>
+        <h1 class="headersScheduleMain">Басейн "Клуб 17"</h1>
+
+      </div>
+
+      <div>
+
+        <img class="imgSchedule" src="./images/club17.jpg">
+        <!-- <img class="imgSchedule" src="./images/kidos.jpg"> -->
+        <p class="p-for-pools"> 
+          <b>Адрес:</b> ул.Козлодуй 29, 5000 Индустриална зона, Велико Търново<br>
+          <b>Вид:</b> специализиран с неправилна форма за спа<br>
+          <b>Подходящ:</b> за обучение на деца (4-8годишни)<br>
+          <b>Размери:</b> 10м. на 4м.<br>
+          <b>Дълбочина:</b> 1,10м. на 2,0м.<br>
+          <b>Коридори:</b> Без<br>
+          <b>Температура:</b> 30-34<br>
+
+        </p>
       </div>
 
 
-      
+
 
     </div>
 

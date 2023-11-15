@@ -30,7 +30,9 @@
       <div class="container">
         <div style="display: flex;">
 
-          <a class="logo" class="navbar-brand" href="/index.php"><img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png">СКП ЦАРЕВЕЦ</a>
+          <a class="logo" class="navbar-brand" href="/index.php">
+            <img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png"><span class="tsarevets-name">СКП ЦАРЕВЕЦ</span>
+          </a>
 
         </div>
         <button id="navBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -339,7 +341,7 @@
 
     // CODE FOR SCROLL DOWN EFFECT//
 
-    if (window.innerWidth < 478) {
+ 
 
       let offers = document.getElementsByClassName('offersImage');
 
@@ -354,8 +356,11 @@
         if (reveal < windowHeight - revealPoint) {
           
           offers[i].classList.add('active');
+
         } else {
+
           offers[i].classList.remove('active');
+
         }
 
 
@@ -391,7 +396,7 @@
 
     window.addEventListener('scroll', scrollUlText);
 
-    } else if (window.innerWidth >= 478) {
+    if (window.innerWidth >= 478) {
 
       let largeScreenOffers = document.getElementsByClassName('biggerScreen');
 

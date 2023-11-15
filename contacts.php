@@ -91,7 +91,7 @@
 </section>
 
 <script>
-  if (window.innerWidth < 450) {
+  if (window.innerWidth < 500) {
 
     let firstNumber = document.getElementById('firstNumber');
     let secondNumber = document.getElementById('secondNumber');
@@ -147,7 +147,7 @@
     window.addEventListener('scroll', addAnimationOnScroll);
 
 
-  } else if (window.innerWidth > 450) {
+  } else if (window.innerWidth > 500) {
 
     window.addEventListener('scroll', function() {
       let alignItems = document.getElementById('itemTransform');

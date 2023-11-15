@@ -1,7 +1,11 @@
 
+@media (max-width: 500px){ 
+  .containerGallery {
+    display: none;
+  }
+}
 
-@media (max-width: 500px) {
-
+@media (max-width: 650px) {
 
   
   .medalistsHTML {
@@ -151,9 +155,10 @@
   }
   
   .imgMain {
-    height: 230px;
-      width: 100%;
-      object-fit: cover;
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    padding: 10px;
     
   }
   
@@ -182,7 +187,8 @@
     background-color: white;
     font-weight: 600;
     align-items: center;
-    border: 1px solid black;
+    box-shadow: 1px 0 5px #00000059;
+    border-radius: 10px;
     flex-direction: column;
   
       
@@ -215,12 +221,30 @@
 
 @media (min-width: 500px) {
 
-  .makeFlex {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
-    justify-content: center;
-    
+  .namingDisplay {
+    margin-top: 8px;
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
 
+  #theMedaltext p  {
+    font-size: 15px;
+    margin-top: -30px;
+  }
+
+  #containG  {
+    display: none;
+  }
+
+  .makeFlex {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
+    justify-content: center;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
+   
+  
   }
 
 
@@ -371,9 +395,9 @@
   }
   
   .imgMain {
-    height: 476px;
-    margin-right: 284px;
+    height: 405px;
     object-fit: cover;
+    width: 350px;
     
   }
   
@@ -392,21 +416,24 @@
   
   
   .toggleButtonMedal {
-    width: 90%;
+    height: 520px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    width: 70%;
     text-align: center;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 30px;
     color: black;
     background-color: white;
     font-weight: 600;
-    align-items: center;
-    border: 1px solid black;
+    align-items: flex-start;
     flex-direction: row;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.182);
   
-      
   }
+  
   
   .nameStyles {
     margin: 10px;
@@ -437,8 +464,22 @@
 
 }
 
+.toggleButtonMedal:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+ }
+
+ .toggleButtonMedal:not(:hover) {
+  transition: 0.5s;
+ }
+
 
 #theMedaltext {
   display: flex;
-  flex-direction: row;
+    flex-direction: column;
+}
+
+#theMedaltext p {
+  margin: 10px;
+  font-weight: 100;
 }

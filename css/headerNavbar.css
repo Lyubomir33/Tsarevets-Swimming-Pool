@@ -226,7 +226,34 @@ a.navbar-brand {
 }
 
 
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .nav-link.mx-2  {
+    width: 155px;
+  }
 
+  #neubar {
+    background: rgb(245, 245, 245);
+    padding-top: 30px;
+    padding-bottom: 25px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+
+@media (min-width: 500px) {
+  
+  .nav-link.mx-2.btnStyle {
+    text-align: center;
+    color: white;
+  }
+  .nav-link.mx-2.btnStyle:hover {
+    color: #00C9FF;
+
+  }
+}
 
 @media (min-width: 650px) {
   .nav-link.mx-2 {
@@ -244,18 +271,6 @@ a.navbar-brand {
 
   }
  
-}
-
-@media (min-width: 500px) {
-  
-  .nav-link.mx-2.btnStyle {
-    text-align: center;
-    color: white;
-  }
-  .nav-link.mx-2.btnStyle:hover {
-    color: #00C9FF;
-
-  }
 }
 
 @media (min-width: 1100px) {

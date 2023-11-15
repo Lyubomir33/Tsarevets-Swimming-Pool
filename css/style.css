@@ -620,6 +620,17 @@ body {
   }
 }
 
+@media(min-width: 400px) {
+  .oldImage {
+    height: 50px;
+  }
+
+
+  #menusTop {
+    margin-top: 20px;
+  }
+}
+
 @media (min-width: 768px){ 
   #menusTop {
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));

@@ -54,16 +54,33 @@
   align-items: end;
   justify-content: center;
   align-content: space-around;
-  
 }
 
 
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  
 
+  .map { 
+    margin: 0 auto;
+  }
 
+  .twoImages {
+    margin-top: 60px;
+  }
 
+  #frameTelephoneDesign {
+    width: 316px;
+    height: 180px;
+  }
+}
 
-.contact-info {
-  padding: 0 30px 0px 0;
+@media screen and (min-width: 300px) and (max-width: 500px){ 
+  .flexImgLocation {
+    display: flex;
+    justify-content: center;
+  }
+
+  
 }
 
 
@@ -125,7 +142,7 @@ ul.contact-info li {
 
  .flexImgLocation{
   display: flex;
- 
+  
 } 
 
 .frameFit {
@@ -155,7 +172,7 @@ ul.contact-info li {
 
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
   #itemTransform {
     opacity: 0;
     transform: translateX(-70%);
@@ -178,6 +195,11 @@ ul.contact-info li {
   .row>* {
     width: auto;
   } */ 
+
+  .contact-info {
+    padding: 0 30px 0px 0;
+  }
+  
 
   .locationFrame {
   display: block;
