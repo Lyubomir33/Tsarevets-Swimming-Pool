@@ -16,47 +16,115 @@
 <div class="cont-partners">
 <h2 class="mb-sm">Нашите<strong> Партньори</strong></h2>
 <strong>
-<div class="row">
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/solar-communications-200.png" />
-</div>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/cbf-200.png" />
-</div>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/gxs-200.png" />
-</div>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/jpr-200.png" />
-</div>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/talk-internet-200.png" />
-</div>
-</div>
-<div class="col-sm-6 col-md-4 col-lg-3">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/Portals/0/img/opera3_logo.png" />
-</div>
-</div>
 
-<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="strong-flex">
+<div class="info-partners-text">
+<p class="beginning-text">Клуб Царевец иска да благодари на нашите партньори за подкрепата през вкички тези години.<br><br>
+Вие помогнахте на клуба да създаде огромна история и да постигне слените високи резултати:<br><br></p>
+
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Успешно обучени над 1000 деца от 2004г. до ден днешен!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Над 500 картотекирани състезатели представящи клуба и града си!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Множество медалисти от клубни, национални и международни форуми!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Успешно организиране и провеждане на множество градски, държавни и международни първенства по плуване, модерен петобой и биатъл!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Спечелени над 1000 индивидуални медала и над 100 купи за отборно класиране!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Подобрени над 50 национални рекорда в отделни възрастови групи!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>12 национални състезатели по плуване и модерен петобой!<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Завоювани над 50 медала от балкански, европейски и световни първенства<br><br></p>
+<p class="records-text"><i class="fa-solid fa-trophy" style="color: #fcc900;"></i>Наградени 6 състезателя в класацията за спортист на годината на община Велико Търново<br></p>
+
+  
+</div>
+  
+<div class="row">
+
+
+
+<div class="col-md-8 col-md-8 col-lg-5">
 <div class="square-holder">
 <img alt="" src="" />
 </div>
 </div>
-<div class="col-sm-6 col-md-4 col-lg-3">
+
+<div class="col-md-8 col-md-8 col-lg-5">
 <div class="square-holder">
-<img alt="" src="../images/престиж.jpg" />
+<img alt="" src="" />
 </div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<a href="https://karmela.eu/">
+<div class="square-holder">
+<img src="/images/Карнела.jpg" />
+</div>
+</a>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<a href="">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</a>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img alt="" src="" />
+</div>
+</div>
+
+<div class="col-md-8 col-md-8 col-lg-5">
+<div class="square-holder">
+<img id="rainbow" src="/images/комплекс-дъга.jpg"/>
+</div>
+</div>
+<div class="col-md-8 col-md-8 col-lg-5">
+
+<a href="https://pomagalo.org/">
+<div class="square-holder">
+<img src="/images/помагало.png" />
+</div>
+</a>
+</div>
+
+<!-- Севда трейд -->
+<div class="col-md-8 col-md-8 col-lg-5">
+<a href="https://svedatrade.com/">
+<div class="square-holder">
+<img src="/images/сведа-трейд.jpg" />
+</div>
+</a>
+</div>
+
+
+
+
+
+
 </div>
 </div>
 </strong>

@@ -882,7 +882,7 @@ body {
 /* SCROLL DOWN EFFECT FOR PHONE */
 
 
-@media (max-width: 478px){ 
+
   .offersImage {
     opacity: 0;
     transition: opacity 2.5s ease;
@@ -903,6 +903,9 @@ body {
 
 
   
-}
+
 /* SCROLL DOWN EFFECT FOR PHONE */
+
+
+
 

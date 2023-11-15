@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/MEDALISTS.css">
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
+  <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
   <title>Медалисти</title>
 </head>
@@ -33,11 +34,11 @@
     echo "<div id='containG' class='containerGallery'>
     <div>
         <div>
-            <button class='toggleButtonMedal'>
+            <div class='toggleButtonMedal'>
                 <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
                 <p class='textInMedalists'>$row[name]</p>
-                <p class= > $row[medal_text] </p>
-            </button>
+                <p id='theMedaltext'>$row[medal_text]</p>
+            </div>
         </div>
        
     </div>
@@ -53,6 +54,8 @@
   ?>
   </div>
 
+  <p></p>
+
   <div style="margin-top: 20px; margin-bottom: 100px;"></div>
 
   <?php require "./footer.php"; ?>
@@ -61,12 +64,9 @@
 
 <script>
 
-let divDisplay = document.getElementById('containG');
 
-function resizeDiv () {
-
-}
-
+  
+    </script>
 </script>
 
 </html>

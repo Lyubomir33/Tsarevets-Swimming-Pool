@@ -68,6 +68,21 @@
 
   <script>
 
+    let containG = document.querySelectorAll('.containerGallery');
+    
+    let numb = 0;
+    
+    for(let i = 0; i < containG.length; i++){
+
+      numb += 150;
+
+  setTimeout (function () {
+
+      containG[i].classList.add('animate__animated', 'animate__fadeIn');
+
+  }, 200 + numb);
+
+}
 
 
 

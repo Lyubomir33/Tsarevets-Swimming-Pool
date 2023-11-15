@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
 .square-holder {
   width: 90%;
@@ -10,8 +11,24 @@
   justify-content: center;
   margin-bottom: 20px;
   background-color: #f1f1f1;
-  min-height: 200px;
+  height: 200px;
   margin: 20px auto;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+
+}
+
+.records-text {
+  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fa-solid.fa-trophy {
+  color: #fcc900;
+  font-size: 20px;
+  margin-right: 6px;
+  
 }
 
 .square-holder img {
@@ -26,4 +43,89 @@
 
 .mb-sm {
   text-align: center;
+    margin-top: 30px;
+}
+
+.info-partners-text {
+  padding-left: 37px;
+  padding-top: 21px;
+  padding-right: 26px;
+  text-align: justify;
+  line-height: 1.5;
+  font-weight: 100;
+  
+ 
+}
+
+.beginning-text {
+ font-size: 23px;
+    line-height: 1.8;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+.row {
+  justify-content: center;
+}
+
+
+
+@media (max-width: 500px) {
+  .square-holder img {
+    filter: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .strong-flex {
+    display: flex;
+  }
+
+  .beginning-text {
+    width: 277px;
+  }
+
+  .records-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 277px;
+  }
+}
+
+@media (min-width: 900px) {
+  .beginning-text {
+    width: 400px;
+    font-size: 25px;
+  }
+
+  .records-text {
+  
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .beginning-text {
+    width: 500px;
+  }
+
+  .records-text {
+    width: 500px;
+  }
+}
+
+
+@media (min-width: 1600px){ 
+  #rainbow {
+    height: 180px;
+  }
+
+  .beginning-text {
+    width: 630px;
+  }
+
+  .records-text {
+    width: 630px;
+  }
 }

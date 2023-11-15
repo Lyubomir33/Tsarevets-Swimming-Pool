@@ -12,6 +12,7 @@
 
 <body class="bodyWhySwimm">
 
+
   <?php include "./Dashboard/articleFiles/headerInclude.php"; ?>
 
   <img id="imageDisplay" class="imgArticleKids" src="./images/articleKids.jpg">
@@ -44,8 +45,12 @@
     <img id="imageTelephone" class="imgArticleKids" src="./images/articleKids.jpg">
 
 
+
+
+
   </div>
 
+  
 
 
   <?php include "./footer.php"; ?>

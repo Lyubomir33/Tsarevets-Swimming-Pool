@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Dashboard CSS/dashboard.css">
   <link rel="stylesheet" href="../css/MEDALISTS.css">
+  <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
   <title>Табло за управление</title>
 </head>
 
@@ -96,13 +98,13 @@
 
                 <div class="picAndBTN">
                   <label><b>Изберете снимка: </b></label>
-                  <input style="margin-left: 5px;" type="file" multiple name="choosefile">
+                  <input required style="margin-left: 5px;" type="file" multiple name="choosefile">
 
                   <label><b>Име на медалиста:</b></label>
-                  <input name="nameMedalist" type="text">
+                  <input required name="nameMedalist" type="text">
 
 
-                  <button class="btnSubmitArticle" type="submit" name="formType" value="btnMedal">Създай</button>
+                  <button class="btnSubmitArticle"  type="submit" name="formType" value="btnMedal">Създай</button>
 
 
 
@@ -111,7 +113,7 @@
                 <div class="textMedal">
 
                   <label><b>Моля прикачете текст: </b></label>
-                  <textarea name="medalText" class="textareaMedal"></textarea>
+                  <textarea id="theMedalistTextarea" name="medalText" class="textareaMedal"></textarea>
 
 
                 </div>
@@ -184,7 +186,7 @@
                             <div class='textMedal'>
 
                             <label><b>Моля прикачете текст: </b></label>
-                            <textarea name='medalText' class='textareaMedal'>$rowEcho[medal_text]</textarea>
+                            <textarea required id='secondTextArea' name='medalText' class='textareaMedal'>$rowEcho[medal_text]</textarea>
 
                             </div>
                             </div>
@@ -211,6 +213,16 @@
       menuicn.addEventListener("click", () => {
         nav.classList.toggle("navclose");
       })
+
+      
+tinymce.init({
+    selector: '#theMedalistTextarea, #secondTextArea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
+
+ 
+    </script>
     </script>
 
   </body>

@@ -12,7 +12,7 @@
 <?php require "../Dashboard/articleFiles/headerInclude.php"; ?>
 
 
-<h1 class="period-header">2021 - 2025г.</h1>
+<h1 class="period-header"> Период 2021 - 2025г.</h1>
 
 
 <div class="periods-flex-images">

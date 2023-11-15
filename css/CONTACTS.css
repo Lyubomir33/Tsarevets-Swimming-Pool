@@ -155,6 +155,20 @@ ul.contact-info li {
 
 }
 
+@media (min-width: 450px) {
+  #itemTransform {
+    opacity: 0;
+    transform: translateX(-70%);
+    transition: 0.8s;
+  }
+
+  #mapDiv  {
+    opacity: 0;
+    transform: translateX(80%);
+    transition: 0.9s;
+  }
+}
+
 @media (min-width: 768px) {
 
    /* .row {

@@ -62,7 +62,7 @@
   .medalBody{ 
    
     min-height: 100vh;
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793); */
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -282,8 +282,8 @@
   .medalBody{ 
    
     min-height: 100vh;
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
-    background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+    background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed; */
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -371,9 +371,9 @@
   }
   
   .imgMain {
-    height: 400px;
-      width: 100%;
-      object-fit: cover;
+    height: 476px;
+    margin-right: 284px;
+    object-fit: cover;
     
   }
   
@@ -403,7 +403,7 @@
     font-weight: 600;
     align-items: center;
     border: 1px solid black;
-    flex-direction: column;
+    flex-direction: row;
   
       
   }
@@ -437,3 +437,8 @@
 
 }
 
+
+#theMedaltext {
+  display: flex;
+  flex-direction: row;
+}

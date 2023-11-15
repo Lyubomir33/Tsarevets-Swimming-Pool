@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
- 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="/css/headerNavbar.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/reviews.css">
-  
+
   <title>Начална страница</title>
 </head>
 
@@ -39,7 +39,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul id="menusTop" class="navbar-nav ms-auto ">
+          <ul id="menusTop" class="navbar-nav ms-auto ">
 
             <li class="nav-item">
               <a class="nav-link mx-2 btnStyle" href="./4upperMenus/forTheClub.php">ЗА КЛУБА</a>
@@ -55,7 +55,7 @@
             </li>
 
             <li class="nav-item">
-              <a  class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
+              <a class="nav-link mx-2 btnStyle" href="/4upperMenus/events.php">РЕЗУЛТАТИ</a>
             </li>
 
             <li class="nav-item">
@@ -203,12 +203,12 @@
 
         <div id="allThreeOffers">
 
-          <div class="firstOffer offers">
+          <div id="offerOne" class="firstOffer offers">
 
 
-            <img class="sixYearsOld offersImage" src="/images/test5years.png">
+            <img class="sixYearsOld offersImage biggerScreen" src="/images/test5years.png">
             <u>
-              <p class="kidsAge offersImage">Деца на възраст 5+ г.</p>
+              <p class="kidsAge offersImage biggerScreen">Деца на възраст 5+ г.</p>
             </u>
             <div class="beneffits">
               <ul class="ulReveal">
@@ -220,11 +220,11 @@
             </div>
           </div>
 
-          <div class="secondOffer offers">
+          <div id="offerTwo" class="secondOffer offers">
 
-            <img class="tenYearsOld offersImage" src="/images/test10teenagers.png">
+            <img class="tenYearsOld offersImage biggerScreen" src="/images/test10teenagers.png">
             <u>
-              <p class="kidsAge offersImage">Деца на възраст 10+ г.</p>
+              <p class="kidsAge offersImage biggerScreen">Деца на възраст 10+ г.</p>
             </u>
             <div class="beneffits10yearsOld">
               <ul class="ulReveal">
@@ -237,11 +237,11 @@
 
         </div>
 
-        <div class="thirdOffer">
+        <div id="offerThree" class="thirdOffer">
 
-          <img class="sixYearsOld offersImage" src="/images/testAdults.png">
+          <img class="sixYearsOld offersImage biggerScreen" src="/images/testAdults.png">
           <u>
-            <p class="kidsAge offersImage">Обучение за възрастни</p>
+            <p class="kidsAge offersImage biggerScreen">Обучение за възрастни</p>
           </u>
           <div class="beneffits">
             <ul class="ulReveal">
@@ -272,9 +272,6 @@
 
 
   <script>
-
-
-
     //CODE TO RESIZE 2 ICONS INTO 3 
 
     const boxOne = document.getElementById('first')
@@ -309,8 +306,8 @@
 
     window.addEventListener('resize', resizeWidth);
 
-    const firstOffer = document.getElementById('firstTwoOfffers');
-    const allThreeOffers = document.getElementById('allThreeOffers');
+    let firstOffer = document.getElementById('firstTwoOfffers');
+    let allThreeOffers = document.getElementById('allThreeOffers');
 
     function resizeOffers() {
 
@@ -342,7 +339,9 @@
 
     // CODE FOR SCROLL DOWN EFFECT//
 
-    let offers = document.getElementsByClassName('offersImage');
+    if (window.innerWidth < 478) {
+
+      let offers = document.getElementsByClassName('offersImage');
 
     function scrollOffers() {
 
@@ -392,8 +391,59 @@
 
     window.addEventListener('scroll', scrollUlText);
 
+    } else if (window.innerWidth >= 478) {
+
+      let largeScreenOffers = document.getElementsByClassName('biggerScreen');
+
+      function scrollLargeScreenOffers() {
+        let windowHeight = window.innerHeight;
+        let seconds = 0;
+
+        for (let index = 0; index < largeScreenOffers.length; index++) {
+          let reveal = largeScreenOffers[index].getBoundingClientRect().top;
+          let revealPoint = 150;
+
+          if (reveal < windowHeight - revealPoint) {
+            seconds += 100;
+
+            setTimeout(function() {
+              largeScreenOffers[index].classList.add('active');
+            }, 125 + seconds);
+          }
+        }
+      }
+
+      scrollLargeScreenOffers();
+      window.addEventListener('scroll', scrollLargeScreenOffers);
+
+      let largeScreenUlElements = document.getElementsByClassName('ulReveal');
+
+      function scrollLargeScreenUlText() {
+        let heigh = window.innerHeight;
+        let secondsText = 0;
+
+        for (let l = 0; l < largeScreenUlElements.length; l++) {
+          let revealUl = largeScreenUlElements[l].getBoundingClientRect().top;
+          let revPoint = 160;
+
+          if (revealUl < heigh - revPoint) {
+            secondsText += 450;
+
+            setTimeout(function() {
+              largeScreenUlElements[l].classList.add('active');
+            }, 300 + secondsText);
+          }
+        }
+      }
+
+      scrollLargeScreenUlText();
+      window.addEventListener('scroll', scrollLargeScreenUlText);
+    }
 
     //CODE FOR SCROLL DOWN EFFECT//
+
+
+    // Code for animation on scroll effect//
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

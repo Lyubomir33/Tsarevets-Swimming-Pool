@@ -66,7 +66,7 @@
               Ивайло Петров
             </p>
             <p class="text-blk position">
-              Заместник председател
+              Член
             </p>
             <div class="social-media-links">
               <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
@@ -152,7 +152,7 @@
         <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
           <div class="team-card">
             <div class="img-wrapper">
-              <img class="team-img" src="../images/Зам. председател Даниел-Стоянов.jpg">
+              <img class="team-img" src="../images/Светослав Фидаров.jpg">
             </div>
             <p class="text-blk name">
               Светослав Фидалов
@@ -183,10 +183,24 @@
             </div>
           </div>
         </div>
+
         <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
-          <div class="team-card">
+          <div class="team-card DanielResponsive">
+            <div class="img-wrapper">
+              <img class="team-img" src="../images/Зам. председател Даниел-Стоянов.jpg">
+            </div>
+            <p class="text-blk name">
+              Виктор Василев
+            </p>
+            <p class="text-blk position">
+              Помощник треньор
+            </p>
+            <div class="social-media-links">
+              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
+            </div>
           </div>
         </div>
+       
       </div>
     </div>
   </div>
@@ -221,13 +235,13 @@
               headerNames[index].style.opacity = "1";
 
             }
-          }, 700);
+          }, 200);
 
           setTimeout(function() {
             if (index < position.length) {
               position[index].style.opacity = "1";
             }
-          }, 1200);
+          }, 400);
         }
       });
     }
