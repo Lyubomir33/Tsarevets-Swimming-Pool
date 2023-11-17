@@ -56,6 +56,12 @@ a.navbar-brand {
   margin: -20px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1050px) {
+  .logo {
+    width: 250px;
+  }
+}
+
 .logo:hover {
   text-decoration: none;
   color: #e7d172;

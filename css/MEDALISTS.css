@@ -5,7 +5,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
 
   
   .medalistsHTML {
@@ -155,7 +155,7 @@
   }
   
   .imgMain {
-    height: 450px;
+    height: auto;
     width: 100%;
     object-fit: cover;
     padding: 10px;
@@ -219,7 +219,7 @@
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 950px) {
 
   .namingDisplay {
     margin-top: 8px;
@@ -395,7 +395,7 @@
   }
   
   .imgMain {
-    height: 405px;
+    height: 700px;
     object-fit: cover;
     width: 350px;
     
@@ -416,10 +416,8 @@
   
   
   .toggleButtonMedal {
-    height: 520px;
-    border-top-right-radius: 70px;
-    border-bottom-left-radius: 70px;
-    width: 70%;
+    height: auto;
+    width: 80%;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -482,4 +480,53 @@
 #theMedaltext p {
   margin: 10px;
   font-weight: 100;
+}
+
+@media screen and (min-width: 650px) and (max-width: 950px){ 
+    .imgMain {
+      height: 600px;
+    }
+
+    .namingDisplay {
+      font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+  .imgMain { 
+    margin-right: 40px;
+  }
+
+  #theMedaltext { 
+
+  }
+}
+
+
+@media (min-width: 1150px) {
+  .imgMain {
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .imgMain { 
+    margin-right: 65px;
+  }
+
+  .toggleButtonMedal{  
+    width: 70%;
+  } 
+
+}
+
+@media screen and (min-width: 1600px) {
+  .imgMain { 
+    margin-right: 65px;
+  }
+
+  .toggleButtonMedal{  
+    width: 60%;
+  } 
+
 }

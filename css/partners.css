@@ -85,13 +85,23 @@
 
 
 
+
 @media (max-width: 500px) {
   .square-holder img {
     filter: none;
   }
+
+  #universe, #alpen-pharma, #HJT, #ideal-standart{ 
+    height: 160px;
+  }
 }
 
 @media (min-width: 500px) {
+
+  #universe,#alpen-pharma, #HJT, #ideal-standart {
+    height: 180px;
+  }
+  
   .strong-flex {
     display: flex;
   }

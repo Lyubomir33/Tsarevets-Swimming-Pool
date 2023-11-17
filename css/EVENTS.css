@@ -1,3 +1,7 @@
+.eventsBody {
+  height: 100vh;
+}
+
 .headEvents {
   display: flex;
   justify-content: center;
@@ -86,9 +90,10 @@ table {
 /* Responsive */
 @media screen and (max-width: 500px) {
   .input-box {
-    height: 66px;
+    height: 59px;
     margin: 0 8px;
     margin-top: 60px;
+  
   
   }
   .input-box i {
@@ -110,6 +115,7 @@ table {
     max-width: 50%;
     margin: 0 auto;
     margin-top: 100px;
+    margin-bottom: 50px;
   }
   
  

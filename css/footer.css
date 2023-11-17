@@ -1,3 +1,8 @@
+#footerDetails {
+  position: relative;
+  width: 100%;
+}
+
 .footer {
   background-color: black;
   padding: 20px;
@@ -36,6 +41,7 @@
 
 
 
+
 @media (min-width: 600px) {
       .footer {
         width: 100%;
@@ -55,22 +61,43 @@
     margin-top: 30px;
   }
 
-
-}
-
-@media (min-width: 900px) {
-  .pt-5.pb-5.footer {
-   
-  }
-
   .swimmer{
-    height: 127px;
+    height: 100px;
     margin-top: -20px;
-    margin-bottom: 1px;
+    margin-bottom: 30px;
+    margin-left: 18px;
   }
 
-  .footer {
-    /* top: 400px; */
 
-  }
 }
+
+
+
+@media (min-width: 992px) {
+ 
+  .pt-5 {
+    padding-top: 7rem!important;
+  }
+  
+  .pb-5 {
+   padding-bottom: 72px!important
+  }
+ 
+  }
+
+  @media (min-width: 1200px) {
+    .pt-5 {
+      padding-top: 6rem!important;
+    }
+    
+    .pb-5 {
+     padding-bottom: 105px!important
+    }
+  }
+
+  @media (max-width: 375px ) {
+    .swimmer{ 
+      height: 75px;
+    }
+  }
+  

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <link rel="stylesheet" href="../css/partners.css">
   <title>Партньори</title>
@@ -38,8 +39,8 @@
 <div class="row">
 
 
-
-<div class="col-md-8 col-md-8 col-lg-5">
+<!-- ideal standart -->
+<div class="col-md-10 col-lg-6 col-lg-4">
   <a href="https://www.idealstandard.bg/">
 <div class="square-holder">
 <img id="ideal-standart" src="/images/идеал-стандарт.jpg"/>
@@ -47,13 +48,13 @@
 </a>
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<div class="col-md-10 col-lg-6 col-lg-4">
 <div class="square-holder">
 <img alt="" src="" />
 </div>
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<div class="col-md-10 col-lg-6 col-lg-4">
 <a href="https://shop.bags.bg/">
 <div class="square-holder">
 <img src="/images/екстра-пак.jpg" />
@@ -62,7 +63,9 @@
 
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<!-- Кармела -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
 <a href="https://karmela.eu/">
 <div class="square-holder">
 <img src="/images/Карнела.jpg" />
@@ -70,45 +73,62 @@
 </div>
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
-<div class="square-holder">
-<img alt="" src="" />
-</div>
-</div>
+<!-- Хотел Арбанаси -->
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<div class="col-md-10 col-lg-6 col-lg-4">
+<a href="https://sevastokrator.com/?fbclid=IwAR3arwgpkNRQD2Kx-jruuUIEedHX50WBjXQ7ExAtxBTzd9rQqBeXbXIGagQ">
 <div class="square-holder">
-<img alt="" src="" />
-</div>
-</div>
-
-<div class="col-md-8 col-md-8 col-lg-5">
-<div class="square-holder">
-<img alt="" src="" />
-</div>
-</div>
-
-<div class="col-md-8 col-md-8 col-lg-5">
-<a href="">
-<div class="square-holder">
-<img alt="" src="" />
+<img src="/images/арбанаси-хотел.jpg" />
 </div>
 </a>
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<!-- HJT -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
+<a href="https://hitlighting.com/">
+<div class="square-holder">
+<img id="HJT" src="/images/HJT.jpg" />
+</a>
+</div>
+</div>
+
+<!-- Alpen pharma -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
+<a href="https://alpenpharma-bulgaria.bg/?fbclid=IwAR0EWrDCcRbQg9Au-t_osLG6jrWSipulYtvWZ04Aeo_IM90k0c3fadREeXA">
+<div class="square-holder">
+<img id="alpen-pharma" src="/images/alpen-pharma.jpg" />
+</div>
+</a>
+</div>
+
+<!-- юнивърс -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
+<div class="square-holder">
+<img id="universe" src="/images/юнивърс.jpg" />
+</div>
+</div>
+
+<!-- Книжарница отличник -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
 <div class="square-holder">
 <img src="/images/отличник.jpg" />
 </div>
 </div>
 
-<div class="col-md-8 col-md-8 col-lg-5">
+<!-- Комплекс дъга -->
+
+<div class="col-md-10 col-lg-6 col-lg-4">
 <div class="square-holder">
 <img id="rainbow" src="/images/комплекс-дъга.jpg"/>
 </div>
 </div>
-<div class="col-md-8 col-md-8 col-lg-5">
 
+<!-- Pomagalo -->
+<div class="col-md-10 col-lg-6 col-lg-4">
 <a href="https://pomagalo.org/">
 <div class="square-holder">
 <img src="/images/помагало.png" />
@@ -117,7 +137,7 @@
 </div>
 
 <!-- Севда трейд -->
-<div class="col-md-8 col-md-8 col-lg-5">
+<div class="col-md-10 col-lg-6 col-lg-4">
 <a href="https://svedatrade.com/">
 <div class="square-holder">
 <img src="/images/сведа-трейд.jpg" />
@@ -140,6 +160,10 @@
 
 
 <?php include "../footer.php"; ?>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   
 </body>
 </html>

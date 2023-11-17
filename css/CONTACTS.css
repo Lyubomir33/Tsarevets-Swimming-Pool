@@ -57,6 +57,7 @@
 }
 
 
+
 @media screen and (min-width: 400px) and (max-width: 500px) {
   
 
@@ -69,7 +70,7 @@
   }
 
   #frameTelephoneDesign {
-    width: 316px;
+    width: fit-content;
     height: 180px;
   }
 }
@@ -292,6 +293,31 @@ ul.contact-info li {
     animation-duration: 1.5s;
    
 } */
+
+@media (max-width: 360px) {
+  #frameTelephoneDesign {
+    width: 250px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swimmingClass {
+    height: 61px;
+    margin-top: 40px;
+  }
+  
+  .logoMess {
+    border-radius: 15px;
+    height: 85px;
+    margin-top: 30px;
+  }
+
+  .map {
+    width: 260px;
+  }
+
+  
+}
 
  
   @media (max-width: 450px){ 
