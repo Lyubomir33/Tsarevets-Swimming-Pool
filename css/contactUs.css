@@ -68,12 +68,8 @@ svg {
   }
 }
 
-/* .container {
-	height: 100vh;
-} */
 
 .ContactForm {
-  /* min-width: 25rem; */
 
   .title {
     font-family: 'Pacifico', cursive;
@@ -111,13 +107,6 @@ svg {
     position: relative;
     left: 0;
   }
-
-  /* input,
-  textarea {
-    font-family: 'Quicksand', sans-serif;
-    color: #212529;
-    font-size: 1.1rem;
-  } */
 
   .icon {
     color: #57565c;

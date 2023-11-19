@@ -50,11 +50,16 @@
 .toggleButton {
   padding: 15px;
   font-size: 32px;
+  color: white;
+  height: 199px;
+  width: 90%;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .toggleButton:hover {
-  /* color: white;
-  background-color: black; */
+ 
   transition: 0.5s;
 }
 
@@ -67,24 +72,6 @@
   top: 2px;
   left: 1px;
 	box-shadow: none;
-}
-
-#tog {
-  color: white;
-    height: 199px;
-    width: 90%;
-    /* object-fit: cover; */
-    background-position: center;
-    background-size: cover;
-
-}
-
-#tog.paused {
-  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm1tM3NjbmRtYXN4a2g2dHQ4M3p4aTdieHc3a2lpZXhhZ3A2cTdvZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0CRB5dYBKwlkDC48/giphy.gif);
-    color: white;
-    text-shadow: 2px 0 5px black;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
@@ -153,7 +140,7 @@
 
   .flexGal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the width as needed */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   #tog {
@@ -221,7 +208,7 @@
 
 .flexGal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust the width as needed */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
 }
 
 
@@ -280,7 +267,7 @@
 @media (min-width: 1200px) {
   .flexGal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
 
  
@@ -300,7 +287,7 @@
 
   .flexGal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Adjust the width as needed */
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   }
 }
 

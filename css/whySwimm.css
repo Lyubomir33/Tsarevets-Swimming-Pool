@@ -62,16 +62,8 @@
 }
 
 .bodyWhySwimm {
-  /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
-  background-repeat: no-repeat;
-  background-size: cover;   */
-  /* height: 100vh; 
- background-image: linear-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad);  */
-  /* background-color: #185b78;  */
-  /* background-color: rgb(0, 55, 255, 0.7); */
-  min-height: 100vh;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
-  background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed;
+
+ 
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php require "../Dashboard/articleFiles/headerInclude.php"; ?>
+<?php require "../headerInclude.php"; ?>
 
 
 <h1 class="period-header">Период 2011 - 2015г.</h1>

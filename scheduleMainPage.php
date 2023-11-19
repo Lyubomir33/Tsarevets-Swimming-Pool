@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="./css/headerNavbar.css">
   <link rel="stylesheet" href="./css/scheduleMainPage.css">
   <script src="https://cdn.tiny.cloud/1/888o7m22n9qvu43oeop8rgfjphhlib69u7lmqrnzlnageh4e/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
   <title>График</title>
 </head>
 
 <body>
 
-  <?php include "./Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php include "./headerInclude.php"; ?>
 
   <div class="twoDivs">
 
@@ -39,7 +40,7 @@
 
       <div>
         <h1 class="headersScheduleMain">Басейн "Радио"</h1>
-        <img class="imgSchedule" src="./images/pool3.jpg">
+        <img alt="schedule" class="imgSchedule" src="./images/pool3.jpg">
         <p class="p-for-pools">
           <b>Адрес:</b> бул. Никола Габровкси 60, 5005 ж.к. Колю Фичето, Велико Търново<br>
           <b> Вид: </b>спортен правоъгълен<br>
@@ -53,8 +54,8 @@
 
       <div>
         <h1 class="headersScheduleMain">Басейн "Емилиян Станев"</h1>
-        <img class="imgSchedule" src="./images/pool2.jpg">
-        <img class="imgSchedule" src="./images/Биляна.jpg">
+        <img alt="pool-one" class="imgSchedule" src="./images/pool2.jpg">
+        <img alt="pool-two" class="imgSchedule" src="./images/Биляна.jpg">
         <p class="p-for-pools">
           <b>Адрес:</b> ул. Мария Габровска , 5005 ж.к. Колю Фичето<br>
           <b>Вид:</b> Спортен правоъгълен<br>
@@ -73,8 +74,7 @@
 
       <div>
 
-        <img class="imgSchedule" src="./images/club17.jpg">
-        <!-- <img class="imgSchedule" src="./images/kidos.jpg"> -->
+        <img alt="club-17" class="imgSchedule" src="./images/club17.jpg">
         <p class="p-for-pools"> 
           <b>Адрес:</b> ул.Козлодуй 29, 5000 Индустриална зона, Велико Търново<br>
           <b>Вид:</b> специализиран с неправилна форма за спа<br>
@@ -86,9 +86,6 @@
 
         </p>
       </div>
-
-
-
 
     </div>
 

@@ -6,8 +6,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <link rel="stylesheet" href="/css/headerNavbar.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -24,7 +24,7 @@
         <div style="display: flex;">
 
           <a class="logo" class="navbar-brand" href="/index.php">
-            <img class="oldImage" src="./images/по-нова_снимка-removebg-preview.png"><span class="tsarevets-name">СКП ЦАРЕВЕЦ</span>
+            <img alt="old-image" class="oldImage" src="./images/по-нова_снимка-removebg-preview.png"><span class="tsarevets-name">СКП ЦАРЕВЕЦ</span>
           </a>
 
         </div>
@@ -184,7 +184,7 @@
           <div id="offerOne" class="firstOffer offers">
 
 
-            <img class="sixYearsOld offersImage biggerScreen" src="/images/test5years.png">
+            <img alt="six-year-old" class="sixYearsOld offersImage biggerScreen" src="/images/test5years.png">
             <u>
               <p class="kidsAge offersImage biggerScreen">Деца на възраст 5+ г.</p>
             </u>
@@ -200,7 +200,7 @@
 
           <div id="offerTwo" class="secondOffer offers">
 
-            <img class="tenYearsOld offersImage biggerScreen" src="/images/test10teenagers.png">
+            <img alt="ten-years-old" class="tenYearsOld offersImage biggerScreen" src="/images/test10teenagers.png">
             <u>
               <p class="kidsAge offersImage biggerScreen">Деца на възраст 10+ г.</p>
             </u>
@@ -217,7 +217,7 @@
 
         <div id="offerThree" class="thirdOffer">
 
-          <img class="sixYearsOld offersImage biggerScreen" src="/images/testAdults.png">
+          <img alt="six-year-old-biggerscreen" class="sixYearsOld offersImage biggerScreen" src="/images/testAdults.png">
           <u>
             <p class="kidsAge offersImage biggerScreen">Обучение за възрастни</p>
           </u>
@@ -249,7 +249,7 @@
 
 
 
-  <script>
+  <script async>
     //CODE TO RESIZE 2 ICONS INTO 3 
 
     const boxOne = document.getElementById('first')
@@ -282,7 +282,7 @@
     }
     resizeWidth();
 
-    window.addEventListener('resize', resizeWidth);
+    window.addEventListener('resize', resizeWidth, {passive: true});
 
 
     const menu = document.getElementById('togglerID');
@@ -327,7 +327,7 @@
 
     scrollOffers();
 
-    window.addEventListener('scroll', scrollOffers);
+    window.addEventListener('scroll', scrollOffers, {passive: true});
 
     let ul = document.getElementsByClassName('ulReveal'); 
 
@@ -342,16 +342,13 @@
 
         if(revealUl < heigh - revPoint) {
           ul[j].classList.add('active');
-        } else {
-          ul[j].classList.remove('active');
-
-        }
+        } 
 
       }
 
     } scrollUlText ();
 
-    window.addEventListener('scroll', scrollUlText);
+    window.addEventListener('scroll', scrollUlText, {passive: true});
 
 
     //CODE FOR SCROLL DOWN EFFECT//
@@ -360,11 +357,10 @@
     // Code for animation on scroll effect//
   </script>
 
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

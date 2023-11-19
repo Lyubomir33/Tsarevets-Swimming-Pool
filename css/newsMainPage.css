@@ -119,13 +119,6 @@ font-weight: 600;
   transition: 0.5s;
 }
 
-.newsMainPageBody {
-  /* background-color: rgb(0, 55, 255, 0.7); */
-
-  /*font-family: 'Edu TAS Beginner', cursive;*/
-  /* background: linear-gradient(90deg, rgb(136 202 255) 0%, rgba(59,179,255,1) 100%);  */
-  
-}
 
 .textareaMain {
   padding: 6px;
@@ -145,11 +138,6 @@ u {
   text-decoration: none;
 }
 
-/* #content {
-  width: 100%;
-    height: 250px;
-  padding: 15px; */
-/* } */
 
 .boxBlog {
   height: 452px;
@@ -202,7 +190,6 @@ font-family: 'Comfortaa', sans-serif;
     align-items: center;
     justify-content: space-between;
     margin-right: 10px;
-    /* margin-top: -13px; */
     margin-bottom: -30px;
 }
 
@@ -231,7 +218,6 @@ font-family: 'Comfortaa', sans-serif;
     align-items: center;
     flex-wrap: wrap;
     padding: 40px;
-    /* flex: 0 0 calc(25.33%  - 10px); */
 
   
   }
@@ -280,8 +266,6 @@ font-family: 'Comfortaa', sans-serif;
   }
   
 
-  
-  
   .formStyles {
     display: flex;
     border: 2px solid black;

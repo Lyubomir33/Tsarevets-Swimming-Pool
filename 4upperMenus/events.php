@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include "../Dashboard/articleFiles/headerInclude.php"; ?>
+<?php include "../headerInclude.php"; ?>
 
 <h1 class='headEvents'>Резултати</h1>
 
@@ -46,23 +46,16 @@
 </div>
 
 
-
-
-
-
 <?php include "../footer.php"; ?>
 
 
 
-<script src="./js/jquery-3.7.1.min.js"></script>
 <script>
   $(document).ready(function(){
     $('.search-person').on('click',function(){
         let search_term = $('#search_input').val();
         let formData = {
 					search_term: search_term,
-          
-
 				};
 
 				$.ajax({
@@ -86,6 +79,10 @@
     });
   });
 </script>
+
+
+<script src="./js/jquery-3.7.1.min.js"></script>
+
   
 </body>
 </html>

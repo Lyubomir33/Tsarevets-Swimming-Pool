@@ -13,7 +13,7 @@
 
 <body class="medalBody">
 
-  <?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php require "./headerInclude.php"; ?>
 
 
   <h1 class="headerMedals">Медалисти</h1>
@@ -35,7 +35,7 @@
     <div>
         <div>
             <div class='toggleButtonMedal'>
-                <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+                <img alt='main-image' class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
                 <p class='textInMedalists'>$row[name]</p>
                 <div id='theMedaltext'>$row[medal_text]</div>
             </div>
@@ -48,7 +48,7 @@ echo "<div class='containerGallery'>
     <div>
         <div>
             <div class='toggleButtonMedal'>
-                <img class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
+                <img alt='main-image-changescreen' class='imgMain' src='./Dashboard/medalistsImages/$row[medal_img]'>
                 <div id='theMedaltext'><span class='namingDisplay'>$row[name]</span> $row[medal_text]</div>
             </div>
         </div>
@@ -61,9 +61,9 @@ echo "<div class='containerGallery'>
   }
 
 
-
-
   ?>
+
+  
   </div>
 
   <p></p>

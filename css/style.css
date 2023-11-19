@@ -189,11 +189,10 @@ body {
     align-content: flex-end;
     list-style: none;
     color: white;
-    font-size: 22px;
     justify-content: center;
     text-shadow: 1px 1px 4px black;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 26px;
 
 
 }
@@ -204,7 +203,7 @@ body {
     margin-top: 25px;
     height: 175px;
     padding: 15px;
-    background-image: url(/images/galerry.jpg);
+    background-image: url(/images/galerry.png);
     background-size: cover;
     background-position: right -250px center;
     margin-top: 20px; 
@@ -226,7 +225,7 @@ body {
 .offer {
   margin-top: 40px;
   width: 100%;
-  height: 1880px;
+  height: 1900px;
   background-color: rgb(0, 55, 255, 0.7);
 
 }
@@ -369,7 +368,6 @@ body {
   display: none;
   margin-top: 20px;
   width: 100%;
-  /* background-color: rgb(0, 55, 255, 0.7); */
   background-color: currentColor;
   ;
   height: 1250px;
@@ -612,16 +610,44 @@ body {
     align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 345px) {
+
+  #navBtn {
+    width: 20%;
+  }
+
   .logo {
-    width: 230px;
+    width: 100%;
     font-size: 23px;
   }
+
+  .imgP  {
+    font-size: 22px;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+
+  .fourthP { 
+    font-size: 22px;
+  }
+
+  .thirdP  {
+    font-size: 26px;
+  }
+
+  .secondP  {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+
 
   .nav-link.mx-2 {
     font-size: 15px;
     margin: 10px;
-    /* border-radius: 15px; */
     width: 120px;
     color: white;
 }
@@ -655,6 +681,28 @@ body {
 }
 
 @media (min-width: 768px){ 
+
+  .contact-title {
+    font-size: 35px;
+  }
+
+  ul.contact-info {
+    margin-top: 28px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  color: #ececec;
+}
+
+.swimmingClass {
+  height: 84px;
+}
+
+.locationFrame {
+  margin-top: 20px;
+}
+
   #menusTop {
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
   }
@@ -766,11 +814,6 @@ body {
 
   .tenYearsOld {
     height: 180px;
-    /* margin: 0 auto;
-    display: flex;
-    margin-top: 30px;
-    margin-left: 250px;
-    margin-right: 250px; */
   }
 }
 
@@ -880,11 +923,6 @@ body {
   .textSwimming {
     height: 500px;
   }
-
-  /* .secondOffer {
-    margin-right: 125px;
-    margin-left: 125px;
-  } */
 
   .offer {
     height: 770px;

@@ -6,11 +6,12 @@
   
   <link rel="icon" type="image/x-icon" href="/images/по-нова_снимка-removebg-preview.png">
   <link rel="stylesheet" href="../css/partners.css">
+  
   <title>Партньори</title>
 </head>
 <body>
 
-<?php include "../Dashboard/articleFiles/headerInclude.php"; ?>
+<?php include "../headerInclude.php"; ?>
 
 
 <section class="section section-default mt-none mb-none">
@@ -36,7 +37,7 @@
   
 </div>
   
-<div class="row">
+<div id="partRow" class="row">
 
 
 <!-- ideal standart -->

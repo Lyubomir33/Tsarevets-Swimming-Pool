@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
+<?php require "./headerInclude.php"; ?>
 
 <h1 style="text-align: center;">История на клуба</h1>
 

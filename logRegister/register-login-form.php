@@ -29,7 +29,7 @@ if(isset($_SESSION['emailLog'])) {
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<!-- <form method="post" >
+				<form method="post" >
 					<label for="chk" aria-hidden="true">Форма за регистрация</label>
 					<u><span id="message" class="displayMessage"><?php  require "../logRegister/registerLogic.php";  echo $displayMessage; ?></span></u>
 					<input type="hidden" name="formType" value="register">
@@ -37,7 +37,7 @@ if(isset($_SESSION['emailLog'])) {
 					<input type="password" name="passReg" placeholder="Парола" required="">
           <input type="password" name="passRegRepeat" placeholder="Повтори парола" required="">
 					<button>Регистрация</button>
-				</form> -->
+				</form>
 			</div>
 
 			<div class="login">
@@ -51,16 +51,6 @@ if(isset($_SESSION['emailLog'])) {
        
 			</div>
 	</div>
-
-
-<script>
-
-	const timeOutMessage = document.getElementById('message');
-
-	setTimeout(timeOutMessage, 10000);
-
-
-</script>
 
 
 </body>

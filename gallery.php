@@ -15,7 +15,7 @@
 <body class="bodyGalerry">
 
 
-  <?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php require "./headerInclude.php"; ?>
   <div class="flexGal">
 
 

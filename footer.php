@@ -13,7 +13,7 @@
           <p class="pr-5 text-white-50"> Ако искате да разберете повече за нас и нашата дейност, може да посетите нашата Facebook страница </p><br>
           <div class="fbAndSwimmer">
           <a href="https://www.facebook.com/profile.php?id=100057188630835" target="_blank"><i class="fa-brands fa-square-facebook fa-beat" style="color: #0866ff; font-size: 80px;"></a></i></p>
-          <img class="swimmer" src="/images/swimmerJPG-removebg-preview.png">
+          <img alt="swimmer" class="swimmer" src="/images/swimmerJPG-removebg-preview.png">
           </div>
         </div>
         <div class="col-lg-3 col-xs-12 links">
@@ -24,7 +24,7 @@
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 location">
-          <p style="margin-top: 15px;" class="text-white-50">Велико търново, България<img class="bulgarian-flag" src="../images/Flag_of_Bulgaria.svg.png" alt=""></p>
+          <p style="margin-top: 15px;" class="text-white-50">Велико търново, България<img class="bulgarian-flag" src="../images/Flag_of_Bulgaria.svg.png" alt="bg-flag"></p>
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0898 579 010</p>
           <p class="mb-0 text-white-50"><i class="fa fa-phone mr-3"></i>&nbsp 0878 687 555</p>
           <p class="text-white-50"><i class="fa fa-envelope-o mr-3 "></i>&nbsp skmp_carevec@abv.bg</p>
