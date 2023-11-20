@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
@@ -284,3 +285,267 @@
 #navbarNavDropdown{
     flex-grow: 0;
 }
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+.cleintsReviews { 
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 25px 
+}
+
+
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 475px;
+ 
+}
+
+@media (max-width: 1045px) {
+      .wrapper {
+        margin-bottom: 1px;
+      }
+}
+
+.wrapper .box{
+  margin: -50px;
+  margin-bottom: -350px;
+  background: #fff;
+  width: calc(33% - 10px);
+  padding: 35px;
+  border-radius: 3px;
+  box-shadow: 1px 4px 8px rgba(0,0,0,0.5);
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #17a2b8;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #17a2b8;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #17a2b8;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+
+
+#Menus { 
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-link.mx-2.btnStyle {
+  text-align: center;
+}
+
+#firstLink, #secondLink, #thirdLink, #fourthLink, #fifthLink, #sixthLink {
+  color: white;
+}
+
+#firstLink:hover, #secondLink:hover, #thirdLink:hover, #fourthLink:hover, #fifthLink:hover, #sixthLink:hover {
+  color: #00C9FF;
+}
+
+
+.btnStyle:hover {
+  color: #00C9FF;
+
+}
+
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+
+ 
+  
+  
+}
+
+
+@media (max-width: 798px) {
+  .cleintsReviews {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 112px;
+    font-size: 25px;
+  }
+
+
+ 
+}
+
+@media (max-width: 450px) {
+ 
+
+  .btnStyle {
+    font-size: 18px;
+    border-radius: 15px;
+    width: 94px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #oneBtn, #twoBtn, #threeBtn, #fourBtn {
+    color: black;
+    text-decoration: none;
+  }
+ 
+}
+
+@media (min-width: 300px) {
+  .btnStyle {
+    padding: 0.5em 1em;
+    background-color: #0ebac5;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: initial;
+    position: relative;
+    
+}
+
+
+#oneBtn:hover, #twoBtn:hover, #threeBtn:hover, #fourBtn:hover {
+  color: #00C9FF;
+}
+
+
+.btnStyle:hover::after, .btnStyle:hover::before {
+    content: '';
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    animation: move-right-side 1s ease infinite;
+}
+
+.btnStyle:hover::before {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    inset: 0;
+    animation: move-left-side 1s ease infinite;
+    z-index: -2;
+}
+
+.btnStyle:hover {
+    background-color: #fff;
+    color: #00C9FF;
+  }
+
+
+
+@keyframes move-right-side {
+    0% {
+        inset: 0.3em 0 0 0.3em;
+    }
+
+    33% {
+        inset: 0 0.3em 0.3em 0;
+    }
+        
+    66% {
+      
+        inset: 1em 0 0 0.5em; 
+    }
+
+    100% {
+        inset:0  1em 0.5em 0;
+    }
+}
+
+
+@keyframes move-left-side {
+    0% {
+        right: -1em;
+        top: -0.5em;
+    }
+
+    33% {
+        bottom: -1em;
+        left: -0.5em;
+    }
+
+    66% {
+        top: 0;
+        right:-0.7;
+    }
+
+    100% {
+        right: -1em;
+        top: -0.5em;
+    }
+}
+}
+
+
+@media (min-width: 1400px) {
+  #containerReviews {
+    max-width: 1329px;
+  }
+}
+
+>>>>>>> 5c201ac3fd85f13aaab70baede40e1c96ec59aa2

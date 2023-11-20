@@ -16,8 +16,11 @@
 
 
   <?php require "./headerInclude.php"; ?>
+<<<<<<< HEAD
   
   
+=======
+>>>>>>> 5c201ac3fd85f13aaab70baede40e1c96ec59aa2
   <div class="flexGal">
 
 
