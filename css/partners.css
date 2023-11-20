@@ -79,8 +79,9 @@
  font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
-.row {
+#partRow {
   justify-content: center;
+  --bs-gutter-x: 0;
 }
 
 

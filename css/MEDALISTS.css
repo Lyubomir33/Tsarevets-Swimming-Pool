@@ -1,5 +1,5 @@
 
-@media (max-width: 500px){ 
+@media (max-width: 950px){ 
   .containerGallery {
     display: none;
   }
@@ -66,7 +66,6 @@
   .medalBody{ 
    
     min-height: 100vh;
-    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793); */
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -112,7 +111,7 @@
   
   .picAndBTN {
     display: flex;
-      flex-direction: column;/* justify-content: space-evenly; */
+      flex-direction: column;
       align-items: baseline;
   }
   
@@ -136,7 +135,6 @@
     color: black;
     text-align: center;
     border: 2px solid black;
-    /* margin-top: -30px; */
     
   }
   
@@ -238,11 +236,9 @@
 
   .makeFlex {
     display: flex;
-    /* grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
     justify-content: center;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjust the width as needed */
+   
    
   
   }
@@ -306,8 +302,6 @@
   .medalBody{ 
    
     min-height: 100vh;
-    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
-    background: -webkit-gradient(to right top, #185b78, #1b6885, #1e7593, #2182a0, #2490ad) fixed; */
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -352,7 +346,7 @@
   
   .picAndBTN {
     display: flex;
-      flex-direction: column;/* justify-content: space-evenly; */
+      flex-direction: column;
       align-items: baseline;
   }
   
@@ -376,7 +370,6 @@
     color: black;
     text-align: center;
     border: 2px solid black;
-    /* margin-top: -30px; */
     
   }
   
@@ -484,7 +477,7 @@
 
 @media screen and (min-width: 650px) and (max-width: 950px){ 
     .imgMain {
-      height: 600px;
+      height: auto;
     }
 
     .namingDisplay {

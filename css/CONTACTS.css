@@ -7,18 +7,12 @@
   align-items: center;
 }
 
-/* #sectionAddress {
- 
-} */
-
 .locationFrame {
   display: none;
-  margin-top: 121px;
-  
-  width: 480px;
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 27px;
- 
-  
+  height: 140px;
 }
 
 .background {
@@ -67,6 +61,7 @@
 
   .twoImages {
     margin-top: 60px;
+    margin-bottom: 20px;
   }
 
   #frameTelephoneDesign {
@@ -132,7 +127,6 @@ ul.contact-info li {
 .twoImages {
   width: auto;
   display: flex;
-  margin-left: 40px;
   
 }
 
@@ -154,6 +148,10 @@ ul.contact-info li {
 }
 
 
+.row {
+  justify-content: center;
+}
+
 
 
 @media only screen and (max-width: 767px) {
@@ -174,10 +172,28 @@ ul.contact-info li {
 }
 
 @media (min-width: 500px) {
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pAlign {
+    text-align: center;
+  }
+
+  .flexImgLocation {
+    display: flex;
+    justify-content: center;
+}
+
   #itemTransform {
     opacity: 0;
     transform: translateX(-70%);
     transition: 0.8s;
+    flex-direction: column;
+
   }
 
   #mapDiv  {
@@ -185,17 +201,14 @@ ul.contact-info li {
     transform: translateX(80%);
     transition: 0.9s;
   }
+
+
+  
+
 }
 
 @media (min-width: 768px) {
 
-   /* .row {
-    justify-content: center;
-  } */
-/* 
-  .row>* {
-    width: auto;
-  } */ 
 
   .contact-info {
     padding: 0 30px 0px 0;
@@ -205,7 +218,7 @@ ul.contact-info li {
   .locationFrame {
   display: block;
   margin-top: 85px;
-  height: 350px;
+
   width: 400px;
   margin-bottom: 27px;
   
@@ -221,12 +234,9 @@ ul.contact-info li {
   align-items: end;
   justify-content: center;
   align-content: space-around;
-  
+  margin: 0 auto;
 } 
 
-.background {
-  /* margin-bottom: -400px; */
-}
 
 .logoMess {
   margin-right: 100px;
@@ -237,7 +247,7 @@ ul.contact-info li {
 }
 
 .swimmingClass {
-  /* height: 125px; */
+ 
   height: 90px;
   margin-top: 25px;
   margin-left: -61px;
@@ -283,17 +293,6 @@ ul.contact-info li {
 }
 
 
-
- 
-  
-  
-  /* #logoAndHeader.animate__animated.animate__bounceInLeft { 
-    display: flex;
-    opacity: 1; 
-    animation-duration: 1.5s;
-   
-} */
-
 @media (max-width: 360px) {
   #frameTelephoneDesign {
     width: 250px;
@@ -324,6 +323,7 @@ ul.contact-info li {
     
   #firstNumber {
     opacity: 0;
+  
   }
   
   #secondNumber { 
@@ -349,12 +349,26 @@ ul.contact-info li {
 
   #twoImg {
     display: flex;
+   
+  }
 
+  .row { 
+    justify-content: center;
   }
 
   }
 
   @media (min-width: 992px) {
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .pAlign {
+      text-align: justify;
+    }
     
     .background {
       height: 600px;
@@ -385,7 +399,6 @@ ul.contact-info li {
   @media (min-width: 1100px) {
     .locationFrame {
       display: block;
-      margin-top: 85px;
       height: 350px;
       width: 590px;
       margin-bottom: 27px;

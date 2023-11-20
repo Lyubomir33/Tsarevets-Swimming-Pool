@@ -13,7 +13,7 @@
 
 <body>
 
-  <?php require "../Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php require "../headerInclude.php"; ?>
 
 
 
@@ -36,7 +36,6 @@
               Председател
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0898 579 010</i> -->
             </div>
           </div>
         </div>
@@ -54,7 +53,6 @@
               Заместник председател
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -70,7 +68,6 @@
               Член
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -78,9 +75,6 @@
     </div>
   </div>
 
-
-
-  <!-- COACHES -->
   <div style="margin-top: -50px;"></div>
 
   <div class="responsive-container-block outer-container">
@@ -102,7 +96,6 @@
               Главен треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0898 579 010</i> -->
             </div>
           </div>
         </div>
@@ -120,7 +113,6 @@
               Помощник треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -136,7 +128,6 @@
               Помощник треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -162,7 +153,6 @@
               Помощник треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0898 579 010</i> -->
             </div>
           </div>
         </div>
@@ -180,7 +170,6 @@
               Помощник треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -197,7 +186,6 @@
               Помощник треньор
             </p>
             <div class="social-media-links">
-              <!-- <i class="fas fa-mobile-alt" &nbsp> 0878 687 555</i> -->
             </div>
           </div>
         </div>
@@ -209,7 +197,7 @@
 
   <?php require "../footer.php"; ?>
 
-  <script>
+  <script async>
     let wrapperEls = document.querySelectorAll('.img-wrapper');
 
     let headerName = document.querySelectorAll('.text-blk.name');

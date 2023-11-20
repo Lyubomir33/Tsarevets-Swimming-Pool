@@ -15,7 +15,9 @@
 <body class="bodyGalerry">
 
 
-  <?php require "./Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php require "./headerInclude.php"; ?>
+  
+  
   <div class="flexGal">
 
 
@@ -66,7 +68,7 @@
 
 
 
-  <script>
+  <script async>
 
     let containG = document.querySelectorAll('.containerGallery');
     

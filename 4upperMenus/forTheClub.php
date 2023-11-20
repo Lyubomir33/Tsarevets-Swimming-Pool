@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php include '../Dashboard/articleFiles/headerInclude.php'; ?>
+<?php include '../headerInclude.php'; ?>
 
 
 <h1 class="futureEvents">Страницата е в процес на разработка. : )</h1>

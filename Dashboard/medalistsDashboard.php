@@ -162,7 +162,7 @@
             }
 
 
-            $sqlEcho = "SELECT * FROM medalists";
+            $sqlEcho = "SELECT * FROM medalists ORDER BY ID DESC ";
             $queryEcho = mysqli_query($conn, $sqlEcho);
 
             while ($rowEcho = mysqli_fetch_assoc($queryEcho)) {

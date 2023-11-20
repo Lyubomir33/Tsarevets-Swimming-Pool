@@ -13,9 +13,9 @@
 <body class="bodyWhySwimm">
 
 
-  <?php include "./Dashboard/articleFiles/headerInclude.php"; ?>
+  <?php include "./headerInclude.php"; ?>
 
-  <img id="imageDisplay" class="imgArticleKids" src="./images/articleKids.jpg">
+  <img alt="article-image" id="imageDisplay" class="imgArticleKids" src="./images/articleKids.jpg">
 
   <h1 class="headerWhy">Ползи от плуването</h1>
 
@@ -42,17 +42,12 @@
 
     <b>11.За много хора плуването е удоволствие.</span>
 
-    <img id="imageTelephone" class="imgArticleKids" src="./images/articleKids.jpg">
-
-
-
+    <img alt="article-image-screenchange" id="imageTelephone" class="imgArticleKids" src="./images/articleKids.jpg">
 
 
   </div>
 
   
-
-
   <?php include "./footer.php"; ?>
 
 

@@ -1,35 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .periods-flex-images {
-  padding: 15px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  justify-items: center;
-  box-shadow: 0 1px 15px #00000024;
-  margin: 5px;  
-  border-radius: 15px;
+     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    justify-items: center;
+    box-shadow: 0 1px 15px #00000024;
+    margin: 5px;
+    margin-bottom: 40px;
 
 }
 
 .periods-images {
   width: 90%;
-  height: 210px;
+    height: auto;
   object-fit: cover;
   margin-top: 15px;
 }
 
 .period-header {
-  text-align: center;
-  margin-top: 30px;
-  box-shadow: 0 1px 5px;
-  width: 318px;
-  padding: 12px;
-  margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 35px;
-  border-radius: 20px;
-  font-family: 'Caveat', cursive;
+ text-align: center;
+    margin-top: 30px;
+    max-width: 350px;
+    box-shadow: 0 1px 5px;
+    width: auto;
+    padding: 12px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 35px;
+    border-radius: 50px;
+    font-family: 'Lobster', sans-serif;
 }
 
 @media screen and (min-width: 451px) and (max-width: 840px) {
@@ -41,7 +42,7 @@
 @media (min-width: 450px){ 
   .periods-images {
    
-    height: 246px;
+    height: auto;
     width: 390px;
     object-fit: cover;
     margin-top: 15px;
@@ -62,7 +63,7 @@
 
   .periods-images {
     width: 475px;
-    height: 246px;
+    height: auto;
     object-fit: cover;
     margin-top: 15px;
   } 
@@ -74,7 +75,7 @@
 
   .periods-images {
     width: 520px;
-    height: 246px;
+    height: auto;
     object-fit: cover;
     margin-top: 30px;
   } 
@@ -85,7 +86,7 @@
 
   .periods-images {
     width: 560px;
-    height: 246px;
+    height: auto;
     object-fit: cover;
     margin-top: 15px;
   } 
@@ -95,6 +96,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     justify-items: center;
+        margin-bottom: 40px;
   
   }
 
@@ -104,7 +106,7 @@
 
   .periods-images {
     width: 430px;
-    height: 246px;
+    height: auto;
     object-fit: cover;
     margin-top: 15px;
   } 
@@ -115,7 +117,7 @@
 
   .periods-images {
     width: 450px;
-    height: 246px;
+    height: auto;
     object-fit: cover;
     margin-top: 15px;
   } 
