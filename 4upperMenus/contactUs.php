@@ -17,11 +17,6 @@
 
 	<div id="flexContainer" class="container ">
 
-		<!-- // SVG
-					from: https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm 
-  -------------------------------------------------------------
-  -- Note: need to use inline svg to manipulate its components
-  ------------------------------------------------------------>
 
 
 
@@ -366,7 +361,6 @@
 
 				<div class="section full-height">
 					<button class="btnSubmitForm">Изпрати съобщение</button>
-					<!-- type="submit" onclick="showWindow()"; -->
 				</div>
 
 
